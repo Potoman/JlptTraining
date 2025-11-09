@@ -1,9 +1,10 @@
 import csv
-from colorama import init, Fore, Style
+from colorama import init, Fore
+from difflib import SequenceMatcher
 
 init(autoreset=True)
 
-# Définition de la classe pour représenter un mot
+
 class Word:
     def __init__(self, kanji, kana, romaji, meaning, jlpt_level):
         self.kanji = kanji
@@ -15,10 +16,10 @@ class Word:
     def __repr__(self):
         return f"Word({self.kanji}, {self.kana}, {self.romaji}, {self.meaning}, {self.jlpt_level})"
 
-# Liste pour stocker tous les mots
+
 words = []
 
-# Lecture du fichier CSV
+
 with open('all_hiragana.csv', newline='', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile)
     next(reader)  # Ignore la première ligne (en-tête)
@@ -34,23 +35,30 @@ import random, re
 
 word_id = random.randint(0, count_word - 1)
 
-def check_solution(response: str, word: Word) -> bool:
+
+def check_solution(response: str, word: Word) -> (bool, float | None):
     if not response:
-        return False
+        return False, None
+    ratio_resonse = 0.0
     for meaning in word.meaning.split(";"):
         clean_text = re.sub(r'\s*\(.*?\)\s*', '', meaning)
-        if clean_text == response:
-            return True
-    return False
+        tmp_ratio_resonse = SequenceMatcher(None, clean_text, response).ratio()
+        ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
+    return ratio_resonse > 0.6, ratio_resonse
 
-# Vérification
-for w in words[:]:  # affiche les 5 premiers
-    if w.jlpt_level == "JLPT_5":
-        print(w.kanji + "\t" + w.kana + " : ?")
-        response = input()
-        if check_solution(response, w):
-            print(Fore.GREEN + "Good ! " + Fore.BLACK + w.meaning)
-        else:
-            print(Fore.RED + "Nop ! " + Fore.BLACK + w.meaning)
-    print("")
 
+def main():
+    for w in words[:]:
+        if w.jlpt_level == "JLPT_5":
+            print(w.kanji + "\t" + w.kana + " : ?")
+            response = input()
+            is_ok, ratio = check_solution(response, w)
+            if is_ok:
+                print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
+            else:
+                print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
+        print("")
+
+
+if __name__ == '__main__':
+    main()
