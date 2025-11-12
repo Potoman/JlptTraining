@@ -1,12 +1,14 @@
 import csv
 from colorama import init, Fore
 from difflib import SequenceMatcher
+from pathlib import Path
 
 init(autoreset=True)
 
 
 class Word:
-    def __init__(self, kanji, kana, romaji, meaning, jlpt_level):
+    def __init__(self, index: int, kanji, kana, romaji, meaning, jlpt_level):
+        self.index = index
         self.kanji = kanji
         self.kana = kana
         self.romaji = romaji
@@ -23,11 +25,13 @@ words = []
 with open('all_hiragana.csv', newline='', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile)
     next(reader)  # Ignore la première ligne (en-tête)
+    index = 0
     for row in reader:
         # row = [kanji, kana, romaji, meaning, jlpt_level]
+        index = index + 1
         if len(row) != 5:
             continue  # ignore les lignes mal formées
-        word = Word(*row)
+        word = Word(index - 1, *row)
         words.append(word)
 
 count_word = len(words)
@@ -47,12 +51,38 @@ def check_solution(response: str, word: Word) -> (bool, float | None):
     return ratio_resonse > 0.6, ratio_resonse
 
 
+def save_result(index: int, flag: bool, ) -> None:
+    if not flag:
+        return
+
+    path = Path("result.txt")
+    lines = []
+
+    if path.exists():
+        with path.open("r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f.readlines()]
+
+    while len(lines) <= index:
+        lines.append("0")
+
+    try:
+        value = int(lines[index])
+    except ValueError:
+        value = 0
+    lines[index] = str(value + 1)
+
+    with path.open("w", encoding="utf-8") as f:
+        for line in lines:
+            f.write(line + "\n")
+
+
 def main():
     for w in words[:]:
         if w.jlpt_level == "JLPT_5":
             print(w.kanji + "\t" + w.kana + " : ?")
             response = input()
             is_ok, ratio = check_solution(response, w)
+            save_result(w.index, is_ok)
             if is_ok:
                 print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
             else:
