@@ -76,17 +76,28 @@ def save_result(index: int, flag: bool, ) -> None:
             f.write(line + "\n")
 
 
-def main():
+def prepare_test(jlpt: int):
+    session_words = []
     for w in words[:]:
-        if w.jlpt_level == "JLPT_5":
-            print(w.kanji + "\t" + w.kana + " : ?")
-            response = input()
-            is_ok, ratio = check_solution(response, w)
+        if w.jlpt_level == f"JLPT_{jlpt}":
+            session_words.append(w)
+    random.shuffle(session_words)
+    return session_words
+
+
+def main():
+    item = 0
+    session_words = prepare_test(5)
+    for w in session_words:
+        item = item + 1
+        print(f"[{item}/{len(session_words)}] {w.kanji} \t {w.kana} : ?")
+        response = input()
+        is_ok, ratio = check_solution(response, w)
+        if is_ok:
             save_result(w.index, is_ok)
-            if is_ok:
-                print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
-            else:
-                print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
+            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
+        else:
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
         print("")
 
 
