@@ -133,22 +133,24 @@ def main():
     parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
     for w in session_words:
         item = item + 1
-        print(f"[{item}/{len(session_words)}] {w.kanji} \t {w.kana} : ?")
-        response = input()
-        args, unknown = parser.parse_known_args(response.split())
-        if args.f is not None:
-            if previous_w is None:
-                print("No previous word")
+        while True:
+            print(f"[{item}/{len(session_words)}] {w.kanji} \t {w.kana} : ?")
+            response = input()
+            args, unknown = parser.parse_known_args(response.split())
+            if args.f is not None:
+                if previous_w is None:
+                    print("No previous word")
+                else:
+                    overlay_add_forbid(previous_w.index, ' '.join(args.f))
             else:
-                overlay_add_forbid(previous_w.index, ' '.join(args.f))
+                break
+        is_ok, ratio = check_solution(response, w)
+        if is_ok:
+            save_result(w.index, is_ok)
+            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
         else:
-            is_ok, ratio = check_solution(response, w)
-            if is_ok:
-                save_result(w.index, is_ok)
-                print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
-            else:
-                print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + w.meaning + " (forbid = " + Fore.RED + w.forbid + Fore.BLACK + ")")
-            print("")
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + w.meaning + " (forbid = " + Fore.RED + w.forbid + Fore.BLACK + ")")
+        print("")
         previous_w = w
 
 if __name__ == '__main__':
