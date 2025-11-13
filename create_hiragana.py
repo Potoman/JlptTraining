@@ -18,7 +18,7 @@ with open(input_file, "r", encoding="utf-8") as fin, open(output_file, "w", enco
             fout.write(parts[0] + "," + parts[1] + ",romaji," + parts[2] + "," + parts[3] + "\n")
             continue
 
-        romaji = katsu.romaji(parts[1]).lower().replace(" ", "")
+        romaji = katsu.romaji(parts[1]).lower().replace(" ", "").replace(",", ";")
         fout.write(parts[0] + "," + parts[1] + "," + romaji + "," + parts[2] + "," + parts[3] + "\n")
 
 print("Done. Cleaned lines written to", output_file)
