@@ -122,6 +122,8 @@ def overlay_add_forbid(index: int, description: str):
         for line in lines:
             f.write(line + "\n")
 
+    print(f"Add forbidden description '{description}' to the word '{words[index].kanji},{words[index].kana}'")
+
 
 def main():
     item = 0
