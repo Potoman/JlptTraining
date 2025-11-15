@@ -16,6 +16,7 @@ class Word:
         self.meaning = meaning
         self.jlpt_level = jlpt_level
         self.forbid = ""
+        self.description = ""
 
     def __repr__(self):
         return f"Word({self.kanji}, {self.kana}, {self.romaji}, {self.meaning}, {self.jlpt_level})"
@@ -43,6 +44,17 @@ try:
         for line in f.readlines():
             line = line.strip()
             words[index].forbid = line
+            index = index + 1
+except:
+    print("Err")
+
+try:
+    path = Path("overlay_description.txt")
+    index = 0
+    with path.open("r", encoding="utf-8") as f:
+        for line in f.readlines():
+            line = line.strip()
+            words[index].description = line
             index = index + 1
 except:
     print("Err")
@@ -103,8 +115,8 @@ def prepare_test(jlpt: int):
     return session_words
 
 
-def overlay_add_forbid(index: int, description: str):
-    path = Path("overlay_forbid.txt")
+def _add_entry_file(index: int, description: str, file: str):
+    path = Path(file)
     lines = []
 
     if path.exists():
@@ -122,7 +134,15 @@ def overlay_add_forbid(index: int, description: str):
         for line in lines:
             f.write(line + "\n")
 
+
+def overlay_add_forbid(index: int, description: str):
+    _add_entry_file(index, description, "overlay_forbid.txt")
     print(f"Add forbidden description '{description}' to the word '{words[index].kanji},{words[index].kana}'")
+
+
+def overlay_add_description(index: int, description: str):
+    _add_entry_file(index, description, "overlay_description.txt")
+    print(f"Add new description '{description}' to the word '{words[index].kanji},{words[index].kana}'")
 
 
 def main():
@@ -131,6 +151,7 @@ def main():
     previous_w = None
     parser = argparse.ArgumentParser()
     parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
+    parser.add_argument('-a', type=str, nargs="+", help="Add a word of sentence for a solution.")
     for w in session_words:
         item = item + 1
         while True:
@@ -142,15 +163,23 @@ def main():
                     print("No previous word")
                 else:
                     overlay_add_forbid(previous_w.index, ' '.join(args.f))
+            elif args.a is not None:
+                if previous_w is None:
+                    print("No previous word")
+                else:
+                    overlay_add_description(previous_w.index, ' '.join(args.a))
             else:
                 break
         is_ok, ratio = check_solution(response, w)
+        meaning = w.meaning
+        if w.description != "":
+            meaning = meaning + ";" + w.description
         if is_ok:
             save_result(w.index, is_ok)
             print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
         else:
             forbid_test = " (forbid = " + Fore.RED + w.forbid + Fore.BLACK + ")" if w.forbid != "" else ""
-            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + w.meaning + forbid_test)
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
         print("")
         previous_w = w
 
