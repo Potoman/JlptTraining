@@ -110,7 +110,8 @@ def prepare_test(jlpt: int):
     session_words = []
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
-            session_words.append(w)
+            if not is_word_burn(w):
+                session_words.append(w)
     random.shuffle(session_words)
     return session_words
 
@@ -135,6 +136,24 @@ def _add_entry_file(index: int, description: str, file: str):
             f.write(line + "\n")
 
 
+def _get_entry_file(index: int, file: str) -> str | None:
+    path = Path(file)
+    lines = []
+
+    if path.exists():
+        with path.open("r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f.readlines()]
+
+    while len(lines) <= index:
+        return None
+
+    return lines[index]
+
+
+def is_word_burn(word: Word):
+    return _get_entry_file(word.index, "burn.txt") == 'o'
+
+
 def overlay_add_forbid(index: int, description: str):
     _add_entry_file(index, description, "overlay_forbid.txt")
     print(f"Add forbidden description '{description}' to the word '{words[index].kanji},{words[index].kana}'")
@@ -145,6 +164,11 @@ def overlay_add_description(index: int, description: str):
     print(f"Add new description '{description}' to the word '{words[index].kanji},{words[index].kana}'")
 
 
+def burn_word(index: int):
+    _add_entry_file(index, "o", "burn.txt")
+    print(f"The word '{words[index].kanji},{words[index].kana}' has been burned.")
+
+
 def main():
     item = 0
     session_words = prepare_test(5)
@@ -152,6 +176,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
     parser.add_argument('-a', type=str, nargs="+", help="Add a word of sentence for a solution.")
+    parser.add_argument('-b', action='store_true', help="Burn the last question (It will never been ask anymore).")
     for w in session_words:
         item = item + 1
         while True:
@@ -168,6 +193,8 @@ def main():
                     print("No previous word")
                 else:
                     overlay_add_description(previous_w.index, ' '.join(args.a))
+            elif args.b:
+                burn_word(previous_w.index)
             else:
                 break
         is_ok, ratio = check_solution(response, w)
