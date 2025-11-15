@@ -74,6 +74,10 @@ def check_solution(response: str, word: Word) -> (bool, float | None):
         clean_text = re.sub(r'\s*\(.*?\)\s*', '', meaning)
         tmp_ratio_resonse = SequenceMatcher(None, clean_text, response).ratio()
         ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
+    # Here the overlay :
+    for description in word.description.split(";"):
+        tmp_ratio_resonse = SequenceMatcher(None, description, response).ratio()
+        ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
     for forbid in word.forbid.split(";"):
         tmp_ratio_resonse = SequenceMatcher(None, forbid, response).ratio()
         ratio_forbid_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_forbid_resonse else ratio_forbid_resonse
@@ -203,7 +207,7 @@ def main():
             meaning = meaning + ";" + w.description
         if is_ok:
             save_result(w.index, is_ok)
-            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
+            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
         else:
             forbid_test = " (forbid = " + Fore.RED + w.forbid + Fore.BLACK + ")" if w.forbid != "" else ""
             print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
