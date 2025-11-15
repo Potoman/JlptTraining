@@ -70,9 +70,9 @@ def check_solution(response: str, word: Word) -> (bool, float | None):
         return False, None
     ratio_resonse = 0.0
     ratio_forbid_resonse = 0.0
-    for meaning in word.meaning.split(";"):
-        clean_text = re.sub(r'\s*\(.*?\)\s*', '', meaning)
-        tmp_ratio_resonse = SequenceMatcher(None, clean_text, response).ratio()
+    meanings = re.sub(r'\s*\(.*?\)\s*', '', word.meaning)
+    for meaning in meanings.split(";"):
+        tmp_ratio_resonse = SequenceMatcher(None, meaning, response).ratio()
         ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
     # Here the overlay :
     for description in word.description.split(";"):
