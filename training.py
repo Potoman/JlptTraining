@@ -149,7 +149,8 @@ def main():
             save_result(w.index, is_ok)
             print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + w.meaning)
         else:
-            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + w.meaning + " (forbid = " + Fore.RED + w.forbid + Fore.BLACK + ")")
+            forbid_test = " (forbid = " + Fore.RED + w.forbid + Fore.BLACK + ")" if w.forbid != "" else ""
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + w.meaning + forbid_test)
         print("")
         previous_w = w
 
