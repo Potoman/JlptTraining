@@ -3,6 +3,7 @@ from colorama import init, Fore
 from difflib import SequenceMatcher
 from pathlib import Path
 import argparse
+import random, re
 
 init(autoreset=True)
 
@@ -60,7 +61,6 @@ except:
     print("Err")
 
 count_word = len(words)
-import random, re
 
 word_id = random.randint(0, count_word - 1)
 
