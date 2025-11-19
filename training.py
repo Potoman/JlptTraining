@@ -4,8 +4,20 @@ from difflib import SequenceMatcher
 from pathlib import Path
 import argparse
 import random, re
+import json
 
 init(autoreset=True)
+
+
+class Kanji:
+    def __init__(self, element):
+        self.strokes = int(element["strokes"])
+        self.grade = None if element["grade"] is None else int(element["grade"])
+        self.freq = None if element["freq"] is None else int(element["freq"])
+        self.jlpt_old = None if element["jlpt_old"] is None else int(element["jlpt_old"])
+        self.jlpt_new = None if element["jlpt_new"] is None else int(element["jlpt_new"])
+        self.meanings = element["meanings"]
+        self.radicals = element["wk_radicals"]
 
 
 class Word:
@@ -23,7 +35,17 @@ class Word:
         return f"Word({self.kanji}, {self.kana}, {self.romaji}, {self.meaning}, {self.jlpt_level})"
 
 
+def load_kanji() -> dict[str, Kanji]:
+    kanjis = {}
+    file_path = Path("kanji.json")
+    with open(file_path, "r", encoding="utf-8") as f:
+        for kanji, info in json.load(f).items():
+            kanjis[kanji] = Kanji(info)
+    return kanjis
+
+
 words = []
+kanjis = load_kanji()
 
 
 with open('all_hiragana.csv', newline='', encoding='utf-8') as csvfile:
@@ -173,6 +195,14 @@ def burn_word(index: int):
     print(f"The word '{words[index].kanji},{words[index].kana}' has been burned.")
 
 
+def show_help(word_kanji: str):
+    for letter in word_kanji:
+        if letter in kanjis:
+            kanji = kanjis[letter]
+            meanings = ", ".join(kanji.meanings)
+            print(f"\t{letter} : {meanings}")
+
+
 def main():
     item = 0
     session_words = prepare_test(5)
@@ -211,6 +241,7 @@ def main():
         else:
             forbid_test = " (forbid = " + Fore.RED + w.forbid + Fore.BLACK + ")" if w.forbid != "" else ""
             print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
+            show_help(w.kanji)
         print("")
         previous_w = w
 
