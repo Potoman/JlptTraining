@@ -209,27 +209,55 @@ def show_help(word_kanji: str):
             print(f"\t{letter} : {meanings}")
 
 
+def is_help(word_kanji: str):
+    for letter in word_kanji:
+        if letter in kanjis:
+            if len(word_kanji) > 1:
+                return True
+            else:
+                return False
+    return False
+
+
 def ask_word(session: Session, item: int, word: Word):
     parser = argparse.ArgumentParser()
     parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
     parser.add_argument('-a', type=str, nargs="+", help="Add a word of sentence for a solution.")
     parser.add_argument('-b', action='store_true', help="Burn the last question (It will never been ask anymore).")
+    flag = False
+    help = False
     while True:
-        print(f"[{item}/{len(session.words)}] {word.kanji} \t {word.kana} : ?")
+        if not help:
+            print(f"[{item}/{len(session.words)}] {word.kanji} \t {word.kana} : ?")
+        if help:
+            show_help(word.kanji)
+        flag = False
         response = input()
         args, unknown = parser.parse_known_args(response.split())
         if args.f is not None:
+            flag = True
             if session.last_word is None:
                 print("No previous word")
             else:
                 overlay_add_forbid(session.last_word.index, ' '.join(args.f))
         elif args.a is not None:
+            flag = True
             if session.last_word is None:
                 print("No previous word")
             else:
                 overlay_add_description(session.last_word.index, ' '.join(args.a))
         elif args.b:
+            flag = True
             burn_word(session.last_word.index)
+        elif response == "":
+            # Print help
+            if help:
+                break
+            else:
+                if is_help(word.kanji):
+                    help = True
+                else:
+                    break
         else:
             break
     is_ok, ratio = check_solution(response, word)
