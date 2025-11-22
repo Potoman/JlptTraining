@@ -35,6 +35,12 @@ class Word:
         return f"Word({self.kanji}, {self.kana}, {self.romaji}, {self.meaning}, {self.jlpt_level})"
 
 
+class Session:
+    def __init__(self, words: list[Word]):
+        self.last_word = None
+        self.words = words
+
+
 def load_kanji() -> dict[str, Kanji]:
     kanjis = {}
     file_path = Path("kanji.json")
@@ -203,47 +209,54 @@ def show_help(word_kanji: str):
             print(f"\t{letter} : {meanings}")
 
 
-def main():
-    item = 0
-    session_words = prepare_test(5)
-    previous_w = None
+def ask_word(session: Session, item: int, word: Word):
     parser = argparse.ArgumentParser()
     parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
     parser.add_argument('-a', type=str, nargs="+", help="Add a word of sentence for a solution.")
     parser.add_argument('-b', action='store_true', help="Burn the last question (It will never been ask anymore).")
-    for w in session_words:
-        item = item + 1
-        while True:
-            print(f"[{item}/{len(session_words)}] {w.kanji} \t {w.kana} : ?")
-            response = input()
-            args, unknown = parser.parse_known_args(response.split())
-            if args.f is not None:
-                if previous_w is None:
-                    print("No previous word")
-                else:
-                    overlay_add_forbid(previous_w.index, ' '.join(args.f))
-            elif args.a is not None:
-                if previous_w is None:
-                    print("No previous word")
-                else:
-                    overlay_add_description(previous_w.index, ' '.join(args.a))
-            elif args.b:
-                burn_word(previous_w.index)
+    while True:
+        print(f"[{item}/{len(session.words)}] {word.kanji} \t {word.kana} : ?")
+        response = input()
+        args, unknown = parser.parse_known_args(response.split())
+        if args.f is not None:
+            if session.last_word is None:
+                print("No previous word")
             else:
-                break
-        is_ok, ratio = check_solution(response, w)
-        meaning = w.meaning
-        if w.description != "":
-            meaning = meaning + ";" + w.description
-        if is_ok:
-            save_result(w.index, is_ok)
-            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
+                overlay_add_forbid(session.last_word.index, ' '.join(args.f))
+        elif args.a is not None:
+            if session.last_word is None:
+                print("No previous word")
+            else:
+                overlay_add_description(session.last_word.index, ' '.join(args.a))
+        elif args.b:
+            burn_word(session.last_word.index)
         else:
-            forbid_test = " (forbid = " + Fore.RED + w.forbid + Fore.BLACK + ")" if w.forbid != "" else ""
-            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
-            show_help(w.kanji)
-        print("")
-        previous_w = w
+            break
+    is_ok, ratio = check_solution(response, word)
+    meaning = word.meaning
+    if word.description != "":
+        meaning = meaning + ";" + word.description
+    if is_ok:
+        save_result(word.index, is_ok)
+        print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
+    else:
+        forbid_test = " (forbid = " + Fore.RED + word.forbid + Fore.BLACK + ")" if word.forbid != "" else ""
+        print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
+        show_help(word.kanji)
+    print("")
+    session.last_word = word
+
+
+def main():
+    item = 0
+    words = prepare_test(5)
+
+    session = Session(words)
+
+    for word in words:
+        item = item + 1
+        ask_word(session, item, word)
+
 
 if __name__ == '__main__':
     main()
