@@ -30,7 +30,8 @@ class Word:
         self.jlpt_level = jlpt_level
         self.forbid = ""
         self.overlay_meaning = ""
-        self.burn = False
+        self.burn_meaning = False
+        self.burn_romaji = False
 
     def __repr__(self):
         return f"Word({self.kanji}, {self.kana}, {self.romaji}, {self.meaning}, {self.jlpt_level})"
@@ -91,7 +92,7 @@ except:
 
 
 try:
-    path = Path("burn.txt")
+    path = Path("burn_meaning.txt")
     lines = []
 
     if path.exists():
@@ -99,7 +100,21 @@ try:
             lines = [line.strip() for line in f.readlines()]
 
     for index in range(len(lines)):
-        words[index].burn = lines[index] == 'o'
+        words[index].burn_meaning = lines[index] == 'o'
+except:
+    print("Err")
+
+
+try:
+    path = Path("burn_romaji.txt")
+    lines = []
+
+    if path.exists():
+        with path.open("r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f.readlines()]
+
+    for index in range(len(lines)):
+        words[index].burn_romaji = lines[index] == 'o'
 except:
     print("Err")
 
@@ -114,7 +129,7 @@ def check_solution(response: str, word: Word) -> (bool, float | None):
         return False, None
     ratio_resonse = 0.0
     ratio_forbid_resonse = 0.0
-    if not word.burn:
+    if not word.burn_meaning:
         meanings = re.sub(r'\s*\(.*?\)\s*', '', word.meaning)
         for meaning in meanings.split(";"):
             tmp_ratio_resonse = SequenceMatcher(None, meaning, response).ratio()
@@ -161,7 +176,8 @@ def prepare_test(jlpt: int):
     session_words = []
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
-            session_words.append(w)
+            if not w.burn_meaning and not w.burn_romaji:
+                session_words.append(w)
     random.shuffle(session_words)
     return session_words
 
@@ -170,7 +186,7 @@ def list_burn(jlpt: int):
     session_words = []
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
-            if w.burn:
+            if w.burn_meaning:
                 session_words.append(w)
     random.shuffle(session_words)
     return session_words
@@ -206,8 +222,13 @@ def overlay_add_meaning(index: int, meaning: str):
     print(f"Add new meaning '{meaning}' to the word '{words[index].kanji},{words[index].kana}'")
 
 
-def burn_word(index: int):
-    _add_entry_file(index, "o", "burn.txt")
+def burn_word_meaning(index: int):
+    _add_entry_file(index, "o", "burn_meaning.txt")
+    print(f"The word '{words[index].kanji},{words[index].kana}' has been burned.")
+
+
+def burn_word_romaji(index: int):
+    _add_entry_file(index, "o", "burn_romaji.txt")
     print(f"The word '{words[index].kanji},{words[index].kana}' has been burned.")
 
 
@@ -238,7 +259,7 @@ def ask_word(session: Session, item: int, word: Word):
     help = False
     while True:
         if not help:
-            if word.burn:
+            if word.burn_meaning:
                 print(f"[{item}/{len(session.words)}] {word.kanji} : romaji ?")
             else:
                 print(f"[{item}/{len(session.words)}] {word.kanji} \t {word.kana} : meaning ?")
@@ -261,10 +282,10 @@ def ask_word(session: Session, item: int, word: Word):
                 overlay_add_meaning(session.last_word.index, ' '.join(args.a))
         elif args.b:
             flag = True
-            if word.burn:
-                print("You can't burn this word.")
+            if word.burn_meaning:
+                burn_word_romaji(session.last_word.index)
             else:
-                burn_word(session.last_word.index)
+                burn_word_meaning(session.last_word.index)
         elif response == "":
             # Print help
             if help:
@@ -282,12 +303,12 @@ def ask_word(session: Session, item: int, word: Word):
         meaning = meaning + ";" + word.overlay_meaning
     if is_ok:
         save_result(word.index, is_ok)
-        if word.burn:
+        if word.burn_meaning:
             print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + word.romaji)
         else:
             print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
     else:
-        if word.burn:
+        if word.burn_meaning:
             print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + word.romaji)
         else:
             forbid_test = " (forbid = " + Fore.RED + word.forbid + Fore.BLACK + ")" if word.forbid != "" else ""
