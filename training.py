@@ -176,7 +176,7 @@ def prepare_test(jlpt: int):
     session_words = []
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
-            if not w.burn_meaning and not w.burn_romaji:
+            if not w.burn_meaning or not w.burn_romaji:
                 session_words.append(w)
     random.shuffle(session_words)
     return session_words
