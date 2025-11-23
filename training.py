@@ -30,6 +30,7 @@ class Word:
         self.jlpt_level = jlpt_level
         self.forbid = ""
         self.description = ""
+        self.burn = False
 
     def __repr__(self):
         return f"Word({self.kanji}, {self.kana}, {self.romaji}, {self.meaning}, {self.jlpt_level})"
@@ -88,6 +89,21 @@ try:
 except:
     print("Err")
 
+
+try:
+    path = Path("burn.txt")
+    lines = []
+
+    if path.exists():
+        with path.open("r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f.readlines()]
+
+    for index in range(len(lines)):
+        words[index].burn = lines[index] == 'o'
+except:
+    print("Err")
+
+
 count_word = len(words)
 
 word_id = random.randint(0, count_word - 1)
@@ -142,7 +158,7 @@ def prepare_test(jlpt: int):
     session_words = []
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
-            if not is_word_burn(w):
+            if not w.burn:
                 session_words.append(w)
     random.shuffle(session_words)
     return session_words
@@ -152,7 +168,7 @@ def list_burn(jlpt: int):
     session_words = []
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
-            if is_word_burn(w):
+            if w.burn:
                 session_words.append(w)
     random.shuffle(session_words)
     return session_words
@@ -176,24 +192,6 @@ def _add_entry_file(index: int, description: str, file: str):
     with path.open("w", encoding="utf-8") as f:
         for line in lines:
             f.write(line + "\n")
-
-
-def _get_entry_file(index: int, file: str) -> str | None:
-    path = Path(file)
-    lines = []
-
-    if path.exists():
-        with path.open("r", encoding="utf-8") as f:
-            lines = [line.strip() for line in f.readlines()]
-
-    while len(lines) <= index:
-        return None
-
-    return lines[index]
-
-
-def is_word_burn(word: Word):
-    return _get_entry_file(word.index, "burn.txt") == 'o'
 
 
 def overlay_add_forbid(index: int, description: str):
