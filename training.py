@@ -29,7 +29,7 @@ class Word:
         self.meaning = meaning
         self.jlpt_level = jlpt_level
         self.forbid = ""
-        self.description = ""
+        self.overlay_meaning = ""
         self.burn = False
 
     def __repr__(self):
@@ -79,12 +79,12 @@ except:
     print("Err")
 
 try:
-    path = Path("overlay_description.txt")
+    path = Path("overlay_meaning.txt")
     index = 0
     with path.open("r", encoding="utf-8") as f:
         for line in f.readlines():
             line = line.strip()
-            words[index].description = line
+            words[index].overlay_meaning = line
             index = index + 1
 except:
     print("Err")
@@ -119,8 +119,8 @@ def check_solution(response: str, word: Word) -> (bool, float | None):
         tmp_ratio_resonse = SequenceMatcher(None, meaning, response).ratio()
         ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
     # Here the overlay :
-    for description in word.description.split(";"):
-        tmp_ratio_resonse = SequenceMatcher(None, description, response).ratio()
+    for overlay_meaning in word.overlay_meaning.split(";"):
+        tmp_ratio_resonse = SequenceMatcher(None, overlay_meaning, response).ratio()
         ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
     for forbid in word.forbid.split(";"):
         tmp_ratio_resonse = SequenceMatcher(None, forbid, response).ratio()
@@ -174,7 +174,7 @@ def list_burn(jlpt: int):
     return session_words
 
 
-def _add_entry_file(index: int, description: str, file: str):
+def _add_entry_file(index: int, text: str, file: str):
     path = Path(file)
     lines = []
 
@@ -187,21 +187,21 @@ def _add_entry_file(index: int, description: str, file: str):
 
     if lines[index] != "":
         lines[index] = lines[index] + ";"
-    lines[index] = description
+    lines[index] = text
 
     with path.open("w", encoding="utf-8") as f:
         for line in lines:
             f.write(line + "\n")
 
 
-def overlay_add_forbid(index: int, description: str):
-    _add_entry_file(index, description, "overlay_forbid.txt")
-    print(f"Add forbidden description '{description}' to the word '{words[index].kanji},{words[index].kana}'")
+def overlay_add_forbid(index: int, meaning: str):
+    _add_entry_file(index, meaning, "overlay_forbid.txt")
+    print(f"Add forbidden meaning '{meaning}' to the word '{words[index].kanji},{words[index].kana}'")
 
 
-def overlay_add_description(index: int, description: str):
-    _add_entry_file(index, description, "overlay_description.txt")
-    print(f"Add new description '{description}' to the word '{words[index].kanji},{words[index].kana}'")
+def overlay_add_meaning(index: int, meaning: str):
+    _add_entry_file(index, meaning, "overlay_meaning.txt")
+    print(f"Add new meaning '{meaning}' to the word '{words[index].kanji},{words[index].kana}'")
 
 
 def burn_word(index: int):
@@ -253,7 +253,7 @@ def ask_word(session: Session, item: int, word: Word):
             if session.last_word is None:
                 print("No previous word")
             else:
-                overlay_add_description(session.last_word.index, ' '.join(args.a))
+                overlay_add_meaning(session.last_word.index, ' '.join(args.a))
         elif args.b:
             flag = True
             burn_word(session.last_word.index)
@@ -270,8 +270,8 @@ def ask_word(session: Session, item: int, word: Word):
             break
     is_ok, ratio = check_solution(response, word)
     meaning = word.meaning
-    if word.description != "":
-        meaning = meaning + ";" + word.description
+    if word.overlay_meaning != "":
+        meaning = meaning + ";" + word.overlay_meaning
     if is_ok:
         save_result(word.index, is_ok)
         print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
