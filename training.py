@@ -129,7 +129,9 @@ def check_solution(response: str, word: Word) -> (bool, float | None):
         return False, None
     ratio_resonse = 0.0
     ratio_forbid_resonse = 0.0
-    if not word.burn_meaning:
+    if word.burn_meaning:
+        ratio_resonse = SequenceMatcher(None, word.romaji, response).ratio()
+    else:
         meanings = re.sub(r'\s*\(.*?\)\s*', '', word.meaning)
         for meaning in meanings.split(";"):
             tmp_ratio_resonse = SequenceMatcher(None, meaning, response).ratio()
@@ -141,8 +143,6 @@ def check_solution(response: str, word: Word) -> (bool, float | None):
         for forbid in word.forbid.split(";"):
             tmp_ratio_resonse = SequenceMatcher(None, forbid, response).ratio()
             ratio_forbid_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_forbid_resonse else ratio_forbid_resonse
-    else:
-        ratio_resonse = SequenceMatcher(None, word.romaji, response).ratio()
     return (False if ratio_forbid_resonse > 0.85 else ratio_resonse > 0.6,
             0.0 if ratio_forbid_resonse > 0.85 else ratio_resonse)
 
