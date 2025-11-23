@@ -114,17 +114,20 @@ def check_solution(response: str, word: Word) -> (bool, float | None):
         return False, None
     ratio_resonse = 0.0
     ratio_forbid_resonse = 0.0
-    meanings = re.sub(r'\s*\(.*?\)\s*', '', word.meaning)
-    for meaning in meanings.split(";"):
-        tmp_ratio_resonse = SequenceMatcher(None, meaning, response).ratio()
-        ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
-    # Here the overlay :
-    for overlay_meaning in word.overlay_meaning.split(";"):
-        tmp_ratio_resonse = SequenceMatcher(None, overlay_meaning, response).ratio()
-        ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
-    for forbid in word.forbid.split(";"):
-        tmp_ratio_resonse = SequenceMatcher(None, forbid, response).ratio()
-        ratio_forbid_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_forbid_resonse else ratio_forbid_resonse
+    if not word.burn:
+        meanings = re.sub(r'\s*\(.*?\)\s*', '', word.meaning)
+        for meaning in meanings.split(";"):
+            tmp_ratio_resonse = SequenceMatcher(None, meaning, response).ratio()
+            ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
+        # Here the overlay :
+        for overlay_meaning in word.overlay_meaning.split(";"):
+            tmp_ratio_resonse = SequenceMatcher(None, overlay_meaning, response).ratio()
+            ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
+        for forbid in word.forbid.split(";"):
+            tmp_ratio_resonse = SequenceMatcher(None, forbid, response).ratio()
+            ratio_forbid_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_forbid_resonse else ratio_forbid_resonse
+    else:
+        ratio_resonse = SequenceMatcher(None, word.romaji, response).ratio()
     return (False if ratio_forbid_resonse > 0.85 else ratio_resonse > 0.6,
             0.0 if ratio_forbid_resonse > 0.85 else ratio_resonse)
 
@@ -158,8 +161,7 @@ def prepare_test(jlpt: int):
     session_words = []
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
-            if not w.burn:
-                session_words.append(w)
+            session_words.append(w)
     random.shuffle(session_words)
     return session_words
 
@@ -236,7 +238,10 @@ def ask_word(session: Session, item: int, word: Word):
     help = False
     while True:
         if not help:
-            print(f"[{item}/{len(session.words)}] {word.kanji} \t {word.kana} : ?")
+            if word.burn:
+                print(f"[{item}/{len(session.words)}] {word.kanji} : romaji ?")
+            else:
+                print(f"[{item}/{len(session.words)}] {word.kanji} \t {word.kana} : meaning ?")
         if help:
             show_help(word.kanji)
         flag = False
@@ -256,7 +261,10 @@ def ask_word(session: Session, item: int, word: Word):
                 overlay_add_meaning(session.last_word.index, ' '.join(args.a))
         elif args.b:
             flag = True
-            burn_word(session.last_word.index)
+            if word.burn:
+                print("You can't burn this word.")
+            else:
+                burn_word(session.last_word.index)
         elif response == "":
             # Print help
             if help:
@@ -274,10 +282,16 @@ def ask_word(session: Session, item: int, word: Word):
         meaning = meaning + ";" + word.overlay_meaning
     if is_ok:
         save_result(word.index, is_ok)
-        print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
+        if word.burn:
+            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + word.romaji)
+        else:
+            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
     else:
-        forbid_test = " (forbid = " + Fore.RED + word.forbid + Fore.BLACK + ")" if word.forbid != "" else ""
-        print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
+        if word.burn:
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + word.romaji)
+        else:
+            forbid_test = " (forbid = " + Fore.RED + word.forbid + Fore.BLACK + ")" if word.forbid != "" else ""
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
         show_help(word.kanji)
     print("")
     session.last_word = word
