@@ -148,6 +148,16 @@ def prepare_test(jlpt: int):
     return session_words
 
 
+def list_burn(jlpt: int):
+    session_words = []
+    for w in words[:]:
+        if w.jlpt_level == f"JLPT_{jlpt}":
+            if is_word_burn(w):
+                session_words.append(w)
+    random.shuffle(session_words)
+    return session_words
+
+
 def _add_entry_file(index: int, description: str, file: str):
     path = Path(file)
     lines = []
