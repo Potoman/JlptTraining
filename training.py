@@ -232,6 +232,16 @@ def burn_word_romaji(index: int):
     print(f"The word '{words[index].kanji},{words[index].kana}' has been burned.")
 
 
+def unburn_word_meaning(index: int):
+    _add_entry_file(index, "", "burn_meaning.txt")
+    print(f"The word '{words[index].kanji},{words[index].kana}' has been unburned.")
+
+
+def unburn_word_romaji(index: int):
+    _add_entry_file(index, "", "burn_romaji.txt")
+    print(f"The word '{words[index].kanji},{words[index].kana}' has been unburned.")
+
+
 def show_help(word_kanji: str):
     for letter in word_kanji:
         if letter in kanjis:
@@ -255,6 +265,7 @@ def ask_word(session: Session, item: int, word: Word):
     parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
     parser.add_argument('-a', type=str, nargs="+", help="Add a word of sentence for a solution.")
     parser.add_argument('-b', action='store_true', help="Burn the last question (It will never been ask anymore).")
+    parser.add_argument('-u', action='store_true', help="Unburn the last question.")
     flag = False
     help = False
     while True:
@@ -284,8 +295,18 @@ def ask_word(session: Session, item: int, word: Word):
             flag = True
             if word.burn_meaning:
                 burn_word_romaji(session.last_word.index)
+                word.burn_romaji = True
             else:
                 burn_word_meaning(session.last_word.index)
+                word.burn_meaning = True
+        elif args.u:
+            flag = True
+            if word.burn_meaning:
+                unburn_word_meaning(session.last_word.index)
+                word.burn_meaning = False
+            else:
+                unburn_word_romaji(session.last_word.index)
+                word.burn_romaji = False
         elif response == "":
             # Print help
             if help:
