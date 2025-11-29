@@ -22,9 +22,9 @@ class Kanji:
 
 
 class Word:
-    def __init__(self, index: int, kanji, kana, romaji, meaning, jlpt_level):
+    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level):
         self.index = index
-        self.kanji = kanji
+        self.word = word
         self.kana = kana
         self.romaji = romaji
         self.meaning = meaning
@@ -33,9 +33,6 @@ class Word:
         self.overlay_meaning = ""
         self.burn_meaning = False
         self.burn_romaji = False
-
-    def __repr__(self):
-        return f"Word({self.kanji}, {self.kana}, {self.romaji}, {self.meaning}, {self.jlpt_level})"
 
 
 class Session:
@@ -175,17 +172,17 @@ def save_result(index: int, flag: bool, ) -> None:
 
 def prepare_test(jlpt: int):
     session_words = []
-    for w in words[:]:
-        if w.jlpt_level == f"JLPT_{jlpt}":
-            if w.burn_meaning:
-                if len(list_kanji(w.kanji)) == 0:
+    for word in words[:]:
+        if word.jlpt_level == f"JLPT_{jlpt}":
+            if word.burn_meaning:
+                if len(list_kanji(word.word)) == 0:
                     # No Kanji in this word. No reason to ask romaji.
                     continue
-                if is_katakana_present(w.kanji):
+                if is_katakana_present(word.word):
                     # No ask romaji for katakana word.
                     continue
-            if not w.burn_meaning or not w.burn_romaji:
-                session_words.append(w)
+            if not word.burn_meaning or not word.burn_romaji:
+                session_words.append(word)
     random.shuffle(session_words)
     return session_words
 
@@ -232,25 +229,25 @@ def overlay_add_meaning(index: int, meaning: str):
 
 def burn_word_meaning(word: Word):
     _add_entry_file(word.index, "o", "burn_meaning.txt")
-    print(f"The word '{word.kanji},{word.kana}' has been burned.")
+    print(f"The word '{word.word},{word.kana}' has been burned.")
     word.burn_meaning = True
 
 
 def burn_word_romaji(word: Word):
     _add_entry_file(word.index, "o", "burn_romaji.txt")
-    print(f"The word '{word.kanji},{word.kana}' has been burned.")
+    print(f"The word '{word.word},{word.kana}' has been burned.")
     word.burn_romaji = True
 
 
 def unburn_word_meaning(word: Word):
     _add_entry_file(word.index, "", "burn_meaning.txt")
-    print(f"The word '{word.kanji},{word.kana}' has been unburned.")
+    print(f"The word '{word.word},{word.kana}' has been unburned.")
     word.burn_meaning = False
 
 
 def unburn_word_romaji(word: Word):
     _add_entry_file(word.index, "", "burn_romaji.txt")
-    print(f"The word '{word.kanji},{word.kana}' has been unburned.")
+    print(f"The word '{word.word},{word.kana}' has been unburned.")
     word.burn_romaji = False
 
 
@@ -297,11 +294,11 @@ def ask_word(session: Session, item: int, word: Word):
     while True:
         if not help:
             if word.burn_meaning:
-                print(f"[{item}/{len(session.words)}] {word.kanji} : romaji ?")
+                print(f"[{item}/{len(session.words)}] {word.word} : romaji ?")
             else:
-                print(f"[{item}/{len(session.words)}] {word.kanji} \t {word.kana} : meaning ?")
+                print(f"[{item}/{len(session.words)}] {word.word} \t {word.kana} : meaning ?")
         if help:
-            show_help(word.kanji)
+            show_help(word.word)
         flag = False
         response = input()
         args, unknown = parser.parse_known_args(response.split())
@@ -334,7 +331,7 @@ def ask_word(session: Session, item: int, word: Word):
             if help:
                 break
             else:
-                if is_help(word.kanji):
+                if is_help(word.word):
                     help = True
                 else:
                     break
@@ -356,7 +353,7 @@ def ask_word(session: Session, item: int, word: Word):
         else:
             forbid_test = " (forbid = " + Fore.RED + word.forbid + Fore.BLACK + ")" if word.forbid != "" else ""
             print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
-        show_help(word.kanji)
+        show_help(word.word)
     print("")
     session.last_word = word
 
