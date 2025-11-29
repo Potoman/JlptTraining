@@ -177,10 +177,14 @@ def prepare_test(jlpt: int):
     session_words = []
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
-            if not w.burn_meaning or not w.burn_romaji:
-                if w.burn_meaning and len(list_kanji(w.kanji)) == 0:
+            if w.burn_meaning:
+                if len(list_kanji(w.kanji)) == 0:
                     # No Kanji in this word. No reason to ask romaji.
-                    pass
+                    continue
+                if is_katakana_present(w.kanji):
+                    # No ask romaji for katakana word.
+                    continue
+            if not w.burn_meaning or not w.burn_romaji:
                 session_words.append(w)
     random.shuffle(session_words)
     return session_words
@@ -256,6 +260,14 @@ def list_kanji(text: str) -> list[Kanji]:
         if letter in kanjis:
             tmp_kanjis.append(kanjis[letter])
     return tmp_kanjis
+
+
+def is_katakana_present(text: str):
+    katakana = "ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶー・ヽヾ"
+    for character in text:
+        if character in katakana:
+            return True
+    return False
 
 
 def show_help(word_kanji: str):
