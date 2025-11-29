@@ -330,7 +330,7 @@ def ask_word(session: Session, item: int, word: Word):
             print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
     else:
         if word.burn_meaning:
-            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + word.romaji)
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + word.romaji + " (" + word.meaning + ")")
         else:
             forbid_test = " (forbid = " + Fore.RED + word.forbid + Fore.BLACK + ")" if word.forbid != "" else ""
             print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
