@@ -222,24 +222,28 @@ def overlay_add_meaning(index: int, meaning: str):
     print(f"Add new meaning '{meaning}' to the word '{words[index].kanji},{words[index].kana}'")
 
 
-def burn_word_meaning(index: int):
-    _add_entry_file(index, "o", "burn_meaning.txt")
-    print(f"The word '{words[index].kanji},{words[index].kana}' has been burned.")
+def burn_word_meaning(word: Word):
+    _add_entry_file(word.index, "o", "burn_meaning.txt")
+    print(f"The word '{word.kanji},{word.kana}' has been burned.")
+    word.burn_meaning = True
 
 
-def burn_word_romaji(index: int):
-    _add_entry_file(index, "o", "burn_romaji.txt")
-    print(f"The word '{words[index].kanji},{words[index].kana}' has been burned.")
+def burn_word_romaji(word: Word):
+    _add_entry_file(word.index, "o", "burn_romaji.txt")
+    print(f"The word '{word.kanji},{word.kana}' has been burned.")
+    word.burn_romaji = True
 
 
-def unburn_word_meaning(index: int):
-    _add_entry_file(index, "", "burn_meaning.txt")
-    print(f"The word '{words[index].kanji},{words[index].kana}' has been unburned.")
+def unburn_word_meaning(word: Word):
+    _add_entry_file(word.index, "", "burn_meaning.txt")
+    print(f"The word '{word.kanji},{word.kana}' has been unburned.")
+    word.burn_meaning = False
 
 
-def unburn_word_romaji(index: int):
-    _add_entry_file(index, "", "burn_romaji.txt")
-    print(f"The word '{words[index].kanji},{words[index].kana}' has been unburned.")
+def unburn_word_romaji(word: Word):
+    _add_entry_file(word.index, "", "burn_romaji.txt")
+    print(f"The word '{word.kanji},{word.kana}' has been unburned.")
+    word.burn_romaji = False
 
 
 def show_help(word_kanji: str):
@@ -294,19 +298,15 @@ def ask_word(session: Session, item: int, word: Word):
         elif args.b:
             flag = True
             if word.burn_meaning:
-                burn_word_romaji(session.last_word.index)
-                word.burn_romaji = True
+                burn_word_romaji(session.last_word)
             else:
-                burn_word_meaning(session.last_word.index)
-                word.burn_meaning = True
+                burn_word_meaning(session.last_word)
         elif args.u:
             flag = True
             if word.burn_meaning:
-                unburn_word_meaning(session.last_word.index)
-                word.burn_meaning = False
+                unburn_word_meaning(session.last_word)
             else:
-                unburn_word_romaji(session.last_word.index)
-                word.burn_romaji = False
+                unburn_word_romaji(session.last_word)
         elif response == "":
             # Print help
             if help:
