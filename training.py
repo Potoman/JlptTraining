@@ -10,7 +10,8 @@ init(autoreset=True)
 
 
 class Kanji:
-    def __init__(self, element):
+    def __init__(self, kanji: str, element):
+        self.kanji = kanji
         self.strokes = int(element["strokes"])
         self.grade = None if element["grade"] is None else int(element["grade"])
         self.freq = None if element["freq"] is None else int(element["freq"])
@@ -48,7 +49,7 @@ def load_kanji() -> dict[str, Kanji]:
     file_path = Path("kanji.json")
     with open(file_path, "r", encoding="utf-8") as f:
         for kanji, info in json.load(f).items():
-            kanjis[kanji] = Kanji(info)
+            kanjis[kanji] = Kanji(kanji, info)
     return kanjis
 
 
@@ -177,6 +178,9 @@ def prepare_test(jlpt: int):
     for w in words[:]:
         if w.jlpt_level == f"JLPT_{jlpt}":
             if not w.burn_meaning or not w.burn_romaji:
+                if w.burn_meaning and len(list_kanji(w.kanji)) == 0:
+                    # No Kanji in this word. No reason to ask romaji.
+                    pass
                 session_words.append(w)
     random.shuffle(session_words)
     return session_words
@@ -246,12 +250,18 @@ def unburn_word_romaji(word: Word):
     word.burn_romaji = False
 
 
-def show_help(word_kanji: str):
-    for letter in word_kanji:
+def list_kanji(text: str) -> list[Kanji]:
+    tmp_kanjis = []
+    for letter in text:
         if letter in kanjis:
-            kanji = kanjis[letter]
-            meanings = ", ".join(kanji.meanings)
-            print(f"\t{letter} : {meanings}")
+            tmp_kanjis.append(kanjis[letter])
+    return tmp_kanjis
+
+
+def show_help(word_kanji: str):
+    for kanji in list_kanji(word_kanji):
+        meanings = ", ".join(kanji.meanings)
+        print(f"\t{kanji.kanji} : {meanings}")
 
 
 def is_help(word_kanji: str):
