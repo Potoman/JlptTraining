@@ -44,6 +44,18 @@ class Word:
         print(f"The word '{self.word},{self.kana}' has been burned.")
         self.burn_romaji = True
 
+    def burn(self, field: str):
+        if field == 'romaji':
+            self.burn_word_romaji()
+        elif field == 'meaning':
+            self.burn_word_meaning()
+
+    def unburn(self, field: str):
+        if field == 'romaji':
+            self.unburn_word_romaji()
+        elif field == 'meaning':
+            self.unburn_word_meaning()
+
     def unburn_word_meaning(self):
         _add_entry_file(self.index, "", "burn_meaning.txt")
         print(f"The word '{self.word},{self.kana}' has been unburned.")
@@ -54,11 +66,50 @@ class Word:
         print(f"The word '{self.word},{self.kana}' has been unburned.")
         self.burn_romaji = False
 
+    def add_forbid(self, forbid: str):
+        overlay_add_forbid(self.index, forbid)
+
+    def add_meaning(self, meaning: str):
+        overlay_add_meaning(self.index, meaning)
+
+    def success(self, ratio: float, field: str):
+        if field == 'romaji':
+            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + self.romaji)
+        elif field == 'meaning':
+            meaning = self.meaning
+            if self.overlay_meaning != "":
+                meaning = meaning + ";" + self.overlay_meaning
+            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
+
+    def error(self, ratio: float, field: str):
+        if field == 'romaji':
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + self.romaji + " (" + self.meaning + ")")
+        elif field == 'meaning':
+            meaning = self.meaning
+            if self.overlay_meaning != "":
+                meaning = meaning + ";" + self.overlay_meaning
+            forbid_test = " (forbid = " + Fore.RED + self.forbid + Fore.BLACK + ")" if self.forbid != "" else ""
+            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
+
+    def help(self, field: str):
+        for kanji in list_kanji(self.word):
+            meanings = ", ".join(kanji.meanings)
+            print(f"\t{kanji.kanji} : {meanings}")
+
 
 class Session:
     def __init__(self, words: list[Word]):
         self.last_word = None
+        self.last_field = None
         self.words = words
+
+    def ask(self, index: int, word: Word) -> str:
+        if word.burn_meaning:
+            print(f"[{index}/{len(self.words)}] {word.word} : romaji ?")
+            return 'romaji'
+        else:
+            print(f"[{index}/{len(self.words)}] {word.word} \t {word.kana} : meaning ?")
+            return 'meaning'
 
 
 def load_kanji() -> dict[str, Kanji]:
@@ -142,27 +193,29 @@ count_word = len(words)
 word_id = random.randint(0, count_word - 1)
 
 
+def check_field(response: str, solutions: list[str], forbids: list[str]) -> (bool, float | None):
+    ratio_resonse = 0.0
+    ratio_forbid_resonse = 0.0
+    for solution in solutions:
+        tmp_ratio_resonse = SequenceMatcher(None, solution, response).ratio()
+        ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
+    for forbid in forbids:
+        tmp_ratio_resonse = SequenceMatcher(None, forbid, response).ratio()
+        ratio_forbid_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_forbid_resonse else ratio_forbid_resonse
+    return (False if ratio_forbid_resonse > 0.85 else ratio_resonse > 0.6,
+            0.0 if ratio_forbid_resonse > 0.85 else ratio_resonse)
+
 def check_solution(response: str, word: Word) -> (bool, float | None):
     if not response:
         return False, None
-    ratio_resonse = 0.0
-    ratio_forbid_resonse = 0.0
     if word.burn_meaning:
-        ratio_resonse = SequenceMatcher(None, word.romaji, response).ratio()
+        solutions = word.romaji.split(";")
+        forbids = []
     else:
-        meanings = re.sub(r'\s*\(.*?\)\s*', '', word.meaning)
-        for meaning in meanings.split(";"):
-            tmp_ratio_resonse = SequenceMatcher(None, meaning, response).ratio()
-            ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
-        # Here the overlay :
-        for overlay_meaning in word.overlay_meaning.split(";"):
-            tmp_ratio_resonse = SequenceMatcher(None, overlay_meaning, response).ratio()
-            ratio_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_resonse else ratio_resonse
-        for forbid in word.forbid.split(";"):
-            tmp_ratio_resonse = SequenceMatcher(None, forbid, response).ratio()
-            ratio_forbid_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_forbid_resonse else ratio_forbid_resonse
-    return (False if ratio_forbid_resonse > 0.85 else ratio_resonse > 0.6,
-            0.0 if ratio_forbid_resonse > 0.85 else ratio_resonse)
+        solutions = re.sub(r'\s*\(.*?\)\s*', '', word.meaning).split(";")
+        solutions = solutions + word.overlay_meaning.split(";")
+        forbids = word.forbid.split(";")
+    return check_field(response, solutions, forbids)
 
 
 def save_result(index: int, flag: bool, ) -> None:
@@ -239,12 +292,12 @@ def _add_entry_file(index: int, text: str, file: str):
 
 def overlay_add_forbid(index: int, meaning: str):
     _add_entry_file(index, meaning, "overlay_forbid.txt")
-    print(f"Add forbidden meaning '{meaning}' to the word '{words[index].kanji},{words[index].kana}'")
+    print(f"Add forbidden meaning '{meaning}' to the word '{words[index].word},{words[index].kana}'")
 
 
 def overlay_add_meaning(index: int, meaning: str):
     _add_entry_file(index, meaning, "overlay_meaning.txt")
-    print(f"Add new meaning '{meaning}' to the word '{words[index].kanji},{words[index].kana}'")
+    print(f"Add new meaning '{meaning}' to the word '{words[index].word},{words[index].kana}'")
 
 
 def list_kanji(text: str) -> list[Kanji]:
@@ -261,12 +314,6 @@ def is_katakana_present(text: str):
         if character in katakana:
             return True
     return False
-
-
-def show_help(word_kanji: str):
-    for kanji in list_kanji(word_kanji):
-        meanings = ", ".join(kanji.meanings)
-        print(f"\t{kanji.kanji} : {meanings}")
 
 
 def is_help(word_kanji: str):
@@ -289,12 +336,9 @@ def ask_word(session: Session, item: int, word: Word):
     help = False
     while True:
         if not help:
-            if word.burn_meaning:
-                print(f"[{item}/{len(session.words)}] {word.word} : romaji ?")
-            else:
-                print(f"[{item}/{len(session.words)}] {word.word} \t {word.kana} : meaning ?")
+            field = session.ask(item, word)
         if help:
-            show_help(word.word)
+            word.help(field)
         flag = False
         response = input()
         args, unknown = parser.parse_known_args(response.split())
@@ -303,25 +347,19 @@ def ask_word(session: Session, item: int, word: Word):
             if session.last_word is None:
                 print("No previous word")
             else:
-                overlay_add_forbid(session.last_word.index, ' '.join(args.f))
+                session.last_word.add_forbid(' '.join(args.f))
         elif args.a is not None:
             flag = True
             if session.last_word is None:
                 print("No previous word")
             else:
-                overlay_add_meaning(session.last_word.index, ' '.join(args.a))
+                session.last_word.add_meaning(field, ' '.join(args.a))
         elif args.b:
             flag = True
-            if session.last_word.burn_meaning:
-                session.last_word.burn_word_romaji()
-            else:
-                session.last_word.burn_word_meaning()
+            session.last_word.burn(session.last_field)
         elif args.u:
             flag = True
-            if session.last_word.burn_meaning:
-                session.last_word.unburn_word_meaning()
-            else:
-                session.last_word.unburn_word_romaji()
+            session.last_word.unburn(session.last_field)
         elif response == "":
             # Print help
             if help:
@@ -334,24 +372,15 @@ def ask_word(session: Session, item: int, word: Word):
         else:
             break
     is_ok, ratio = check_solution(response, word)
-    meaning = word.meaning
-    if word.overlay_meaning != "":
-        meaning = meaning + ";" + word.overlay_meaning
     if is_ok:
         save_result(word.index, is_ok)
-        if word.burn_meaning:
-            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + word.romaji)
-        else:
-            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
+        word.success(ratio, field)
     else:
-        if word.burn_meaning:
-            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + word.romaji + " (" + word.meaning + ")")
-        else:
-            forbid_test = " (forbid = " + Fore.RED + word.forbid + Fore.BLACK + ")" if word.forbid != "" else ""
-            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
-        show_help(word.word)
+        word.error(ratio, field)
+        word.help(field)
     print("")
     session.last_word = word
+    session.last_field = field
 
 
 def main():
