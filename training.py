@@ -98,12 +98,74 @@ class Word:
 
 
 class Session:
-    def __init__(self, words: list[Word]):
+    def __init__(self, jlpt: int):
         self.last_word = None
         self.last_field = None
-        self.words = words
+        self.words = prepare_test(jlpt)
 
-    def ask(self, index: int, word: Word) -> str:
+    def ask(self):
+        item = 0
+        for word in self.words:
+            item = item + 1
+            self.ask_item(item, word)
+
+    def ask_item(self, item: int, word: Word):
+        parser = argparse.ArgumentParser()
+        parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
+        parser.add_argument('-a', type=str, nargs="+", help="Add a word of sentence for a solution.")
+        parser.add_argument('-b', action='store_true', help="Burn the last question (It will never been ask anymore).")
+        parser.add_argument('-u', action='store_true', help="Unburn the last question.")
+        flag = False
+        help = False
+        while True:
+            if not help:
+                field = self.ask_word(item, word)
+            if help:
+                word.help(field)
+            flag = False
+            response = input()
+            args, unknown = parser.parse_known_args(response.split())
+            if args.f is not None:
+                flag = True
+                if self.last_word is None:
+                    print("No previous word")
+                else:
+                    self.last_word.add_forbid(' '.join(args.f))
+            elif args.a is not None:
+                flag = True
+                if self.last_word is None:
+                    print("No previous word")
+                else:
+                    self.last_word.add_meaning(field, ' '.join(args.a))
+            elif args.b:
+                flag = True
+                self.last_word.burn(self.last_field)
+            elif args.u:
+                flag = True
+                self.last_word.unburn(self.last_field)
+            elif response == "":
+                # Print help
+                if help:
+                    break
+                else:
+                    if is_help(word.word):
+                        help = True
+                    else:
+                        break
+            else:
+                break
+        is_ok, ratio = check_solution(response, word)
+        if is_ok:
+            save_result(word.index, is_ok)
+            word.success(ratio, field)
+        else:
+            word.error(ratio, field)
+            word.help(field)
+        print("")
+        self.last_word = word
+        self.last_field = field
+
+    def ask_word(self, index: int, word: Word) -> str:
         if word.burn_meaning:
             print(f"[{index}/{len(self.words)}] {word.word} : romaji ?")
             return 'romaji'
@@ -326,72 +388,9 @@ def is_help(word_kanji: str):
     return False
 
 
-def ask_word(session: Session, item: int, word: Word):
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
-    parser.add_argument('-a', type=str, nargs="+", help="Add a word of sentence for a solution.")
-    parser.add_argument('-b', action='store_true', help="Burn the last question (It will never been ask anymore).")
-    parser.add_argument('-u', action='store_true', help="Unburn the last question.")
-    flag = False
-    help = False
-    while True:
-        if not help:
-            field = session.ask(item, word)
-        if help:
-            word.help(field)
-        flag = False
-        response = input()
-        args, unknown = parser.parse_known_args(response.split())
-        if args.f is not None:
-            flag = True
-            if session.last_word is None:
-                print("No previous word")
-            else:
-                session.last_word.add_forbid(' '.join(args.f))
-        elif args.a is not None:
-            flag = True
-            if session.last_word is None:
-                print("No previous word")
-            else:
-                session.last_word.add_meaning(field, ' '.join(args.a))
-        elif args.b:
-            flag = True
-            session.last_word.burn(session.last_field)
-        elif args.u:
-            flag = True
-            session.last_word.unburn(session.last_field)
-        elif response == "":
-            # Print help
-            if help:
-                break
-            else:
-                if is_help(word.word):
-                    help = True
-                else:
-                    break
-        else:
-            break
-    is_ok, ratio = check_solution(response, word)
-    if is_ok:
-        save_result(word.index, is_ok)
-        word.success(ratio, field)
-    else:
-        word.error(ratio, field)
-        word.help(field)
-    print("")
-    session.last_word = word
-    session.last_field = field
-
-
 def main():
-    item = 0
-    words = prepare_test(5)
-
-    session = Session(words)
-
-    for word in words:
-        item = item + 1
-        ask_word(session, item, word)
+    session = Session(5)
+    session.ask()
 
 
 if __name__ == '__main__':
