@@ -69,8 +69,8 @@ class Word:
     def add_forbid(self, forbid: str):
         overlay_add_forbid(self.index, forbid)
 
-    def add_meaning(self, meaning: str):
-        overlay_add_meaning(self.index, meaning)
+    def add_meaning(self, field: str, meaning: str):
+        overlay_add_meaning(self.index, field, meaning)
 
     def success(self, ratio: float, field: str):
         if field == 'romaji':
@@ -357,8 +357,8 @@ def overlay_add_forbid(index: int, meaning: str):
     print(f"Add forbidden meaning '{meaning}' to the word '{words[index].word},{words[index].kana}'")
 
 
-def overlay_add_meaning(index: int, meaning: str):
-    _add_entry_file(index, meaning, "overlay_meaning.txt")
+def overlay_add_meaning(index: int, field: str, meaning: str):
+    _add_entry_file(index, meaning, "overlay_word_" + field + ".txt")
     print(f"Add new meaning '{meaning}' to the word '{words[index].word},{words[index].kana}'")
 
 
