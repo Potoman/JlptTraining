@@ -160,7 +160,8 @@ class Session:
             word.success(ratio, field)
         else:
             word.error(ratio, field)
-            word.help(field)
+            if not help:
+                word.help(field)
         print("")
         self.last_word = word
         self.last_field = field
