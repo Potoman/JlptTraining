@@ -17,8 +17,19 @@ class Kanji:
         self.freq = None if element["freq"] is None else int(element["freq"])
         self.jlpt_old = None if element["jlpt_old"] is None else int(element["jlpt_old"])
         self.jlpt_new = None if element["jlpt_new"] is None else int(element["jlpt_new"])
-        self.meanings = element["meanings"]
-        self.radicals = element["wk_radicals"]
+        self.meanings = ";".join(element["meanings"])
+        self.radicals = None if element["wk_radicals"] is None else ";".join(element["wk_radicals"])
+
+    @staticmethod
+    def fields() -> list[tuple[str, list[str]]]:
+        return [('meanings', ['kanji'])]
+
+    def help(self):
+        meanings = ", ".join(self.radicals)
+        print(f"\t{', '.join(self.radicals)}")
+
+    def is_help(self):
+        return self.meanings
 
 
 class Word:
@@ -41,8 +52,7 @@ class Word:
 
     def help(self):
         for kanji in list_kanji(self.word):
-            meanings = ", ".join(kanji.meanings)
-            print(f"\t{kanji.kanji} : {meanings}")
+            print(f"\t{kanji.kanji} : {kanji.meanings}")
 
     def is_help(self) -> bool:
         for letter in self.word:
@@ -71,6 +81,10 @@ class Question:
             self.overlay_meaning['romaji__word'] = ""
             self.forbid_meaning['meaning__word_kana'] = item.forbid_meaning
             self.forbid_meaning['romaji__word'] = ""
+        if isinstance(item, Kanji):
+            self._burn['meanings__kanji'] = False
+            self.overlay_meaning['meanings__kanji'] = ""
+            self.forbid_meaning['meanings__kanji'] = ""
         for field in item.fields():
             field_name = field[0]
             if self._burn[field_name + "__" + "_".join(field[1])]:
@@ -100,13 +114,13 @@ class Question:
     def burn(self):
         index = self.item.index
         _add_entry_file(index, "o", "burn_" + self.field[0] + ".txt")
-        print(f"The word '{', '.join(self.field[1])}' has been burned.")
+        print(f"The word '{getattr(self.item, self.field[0])}' has been burned.")
         self._burn[self.field[0] + '__' + '_'.join(self.field[1])] = True
 
     def unburn(self):
         index = self.item.index
         _add_entry_file(index, "", "burn_" + self.field[0] + ".txt")
-        print(f"The word '{', '.join(self.field[1])}' has been unburned.")
+        print(f"The word '{getattr(self.item, self.field[0])}' has been unburned.")
         self._burn[self.field[0] + '__' + '_'.join(self.field[1])] = False
 
     def help(self):
@@ -178,6 +192,12 @@ class Session:
             if word.jlpt_level == f"JLPT_{jlpt}":
                 try:
                     self.questions.append(Question(word))
+                except:
+                    pass # This item is burned.
+        for kanji in kanjis.values():
+            if kanji.jlpt_new == jlpt:
+                try:
+                    self.questions.append(Question(kanji))
                 except:
                     pass # This item is burned.
         random.shuffle(self.questions)
