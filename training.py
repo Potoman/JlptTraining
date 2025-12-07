@@ -29,150 +29,218 @@ class Word:
         self.romaji = romaji
         self.meaning = meaning
         self.jlpt_level = jlpt_level
-        self.forbid = ""
         self.overlay_meaning = ""
+        self.forbid_meaning = ""
         self.burn_meaning = False
         self.burn_romaji = False
 
-    def burn_word_meaning(self):
-        _add_entry_file(self.index, "o", "burn_meaning.txt")
-        print(f"The word '{self.word},{self.kana}' has been burned.")
-        self.burn_meaning = True
+    @staticmethod
+    def fields() -> list[tuple[str, list[str]]]:
+        return [('meaning', ['word', 'kana']),
+                ('romaji', ['word'])]
 
-    def burn_word_romaji(self):
-        _add_entry_file(self.index, "o", "burn_romaji.txt")
-        print(f"The word '{self.word},{self.kana}' has been burned.")
-        self.burn_romaji = True
-
-    def burn(self, field: str):
-        if field == 'romaji':
-            self.burn_word_romaji()
-        elif field == 'meaning':
-            self.burn_word_meaning()
-
-    def unburn(self, field: str):
-        if field == 'romaji':
-            self.unburn_word_romaji()
-        elif field == 'meaning':
-            self.unburn_word_meaning()
-
-    def unburn_word_meaning(self):
-        _add_entry_file(self.index, "", "burn_meaning.txt")
-        print(f"The word '{self.word},{self.kana}' has been unburned.")
-        self.burn_meaning = False
-
-    def unburn_word_romaji(self):
-        _add_entry_file(self.index, "", "burn_romaji.txt")
-        print(f"The word '{self.word},{self.kana}' has been unburned.")
-        self.burn_romaji = False
-
-    def add_forbid(self, forbid: str):
-        overlay_add_forbid(self.index, forbid)
-
-    def add_meaning(self, field: str, meaning: str):
-        overlay_add_meaning(self.index, field, meaning)
-
-    def success(self, ratio: float, field: str):
-        if field == 'romaji':
-            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + self.romaji)
-        elif field == 'meaning':
-            meaning = self.meaning
-            if self.overlay_meaning != "":
-                meaning = meaning + ";" + self.overlay_meaning
-            print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + meaning)
-
-    def error(self, ratio: float, field: str):
-        if field == 'romaji':
-            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + self.romaji + " (" + self.meaning + ")")
-        elif field == 'meaning':
-            meaning = self.meaning
-            if self.overlay_meaning != "":
-                meaning = meaning + ";" + self.overlay_meaning
-            forbid_test = " (forbid = " + Fore.RED + self.forbid + Fore.BLACK + ")" if self.forbid != "" else ""
-            print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + meaning + forbid_test)
-
-    def help(self, field: str):
+    def help(self):
         for kanji in list_kanji(self.word):
             meanings = ", ".join(kanji.meanings)
             print(f"\t{kanji.kanji} : {meanings}")
 
+    def is_help(self) -> bool:
+        for letter in self.word:
+            if letter in kanjis:
+                if len(self.word) > 1:
+                    return True
+                else:
+                    return False
+        return False
+
+    def __str__(self):
+        return self.word
+
+
+class Question:
+    def __init__(self, item: Kanji | Word):
+        self.item = item
+        self.field = None
+        self._burn = {}
+        self.overlay_meaning = {}
+        self.forbid_meaning = {}
+        if isinstance(item, Word):
+            self._burn['meaning__word_kana'] = item.burn_meaning
+            self._burn['romaji__word'] = item.burn_romaji
+            self.overlay_meaning['meaning__word_kana'] = item.overlay_meaning
+            self.overlay_meaning['romaji__word'] = ""
+            self.forbid_meaning['meaning__word_kana'] = item.forbid_meaning
+            self.forbid_meaning['romaji__word'] = ""
+        for field in item.fields():
+            field_name = field[0]
+            if self._burn[field_name + "__" + "_".join(field[1])]:
+                continue
+            if self.is_questionnable(item, field_name):
+                self.field = field
+                return
+        raise Exception("No field unburn for item : " + str(self.item))
+
+    def is_questionnable(self, item: Kanji | Word, field: str) -> bool:
+        if isinstance(item, Word):
+            if field == 'meaning':
+                if self._burn['meaning__word_kana']:
+                    if len(list_kanji(item.word)) == 0:
+                        # No Kanji in this word. No reason to ask romaji.
+                        return False
+                    if is_katakana_present(item.word):
+                        # No ask romaji for katakana word.
+                        return False
+            return True
+        else:
+            return True
+
+    def ask(self, prefix: str):
+        print(f"{prefix} {', '.join([getattr(self.item, field) for field in self.field[1]])} : {self.field[0]} ?")
+
+    def burn(self):
+        index = self.item.index
+        _add_entry_file(index, "o", "burn_" + self.field[0] + ".txt")
+        print(f"The word '{', '.join(self.field[1])}' has been burned.")
+        self._burn[self.field[0] + '__' + '_'.join(self.field[1])] = True
+
+    def unburn(self):
+        index = self.item.index
+        _add_entry_file(index, "", "burn_" + self.field[0] + ".txt")
+        print(f"The word '{', '.join(self.field[1])}' has been unburned.")
+        self._burn[self.field[0] + '__' + '_'.join(self.field[1])] = False
+
+    def help(self):
+        self.item.help()
+
+    def is_help(self) -> bool:
+        return self.item.is_help()
+
+    def add_forbid(self, forbid: str):
+        index = self.item.index
+        _add_entry_file(index, forbid, "overlay_forbid_" + self.field[0] + ".txt")
+        print(f"Add forbidden meaning '{forbid}' to the word '{words[index].word},{words[index].kana}'")
+
+    def add_meaning(self, meaning: str):
+        index = self.item.index
+        _add_entry_file(index, meaning, "overlay_response_" + self.field[0] + ".txt")
+        print(f"Add new meaning '{meaning}' to the word '{words[index].word},{words[index].kana}'")
+
+    def success(self, ratio: float):
+        response = getattr(self.item, self.field[0])
+        if self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])] != "":
+            response = '; '.join((response + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
+        print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + response)
+
+    def error(self, ratio: float):
+        response = '; '.join((getattr(self.item, self.field[0]) + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
+        forbid = '; '.join(self.forbid_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";"))
+        forbid = " (forbid = " + Fore.RED + forbid + Fore.BLACK + ")" if forbid != "" else ""
+        print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + response + forbid)
+
+    def save_result(self, flag: bool, ) -> None:
+        if not flag:
+            return
+
+        path = Path("word_result_meaning.txt")
+        lines = []
+
+        if path.exists():
+            with path.open("r", encoding="utf-8") as f:
+                lines = [line.strip() for line in f.readlines()]
+
+        while len(lines) <= self.item.index:
+            lines.append("0")
+
+        try:
+            value = int(lines[self.item.index])
+        except ValueError:
+            value = 0
+        lines[self.item.index] = str(value + 1)
+
+        with path.open("w", encoding="utf-8") as f:
+            for line in lines:
+                f.write(line + "\n")
+
+    def check_solution(self, response: str) -> (bool, float | None):
+        if not response:
+            return False, None
+        solutions = re.sub(r'\s*\(.*?\)\s*', '', getattr(self.item, self.field[0])).split(";")
+        solutions = solutions + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";")
+        forbids = self.forbid_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";")
+        return check_field(response, solutions, forbids)
+
 
 class Session:
     def __init__(self, jlpt: int):
-        self.last_word = None
-        self.last_field = None
-        self.words = prepare_test(jlpt)
+        self.last_question = None
+        self.questions = []
+        for word in words[:]:
+            if word.jlpt_level == f"JLPT_{jlpt}":
+                try:
+                    self.questions.append(Question(word))
+                except:
+                    pass # This item is burned.
+        random.shuffle(self.questions)
 
     def ask(self):
-        item = 0
-        for word in self.words:
-            item = item + 1
-            self.ask_item(item, word)
+        for index in range(len(self.questions)):
+            self.ask_question(index + 1, self.questions[index])
 
-    def ask_item(self, item: int, word: Word):
+    def ask_question(self, index: int, question: Question):
         parser = argparse.ArgumentParser()
-        parser.add_argument('-f', type=str, nargs="+", help="Forbid a word of sentence from a solution.")
-        parser.add_argument('-a', type=str, nargs="+", help="Add a word of sentence for a solution.")
-        parser.add_argument('-b', action='store_true', help="Burn the last question (It will never been ask anymore).")
+        parser.add_argument('-f', type=str, nargs="+", help="Forbid a description of sentence from a solution.")
+        parser.add_argument('-a', type=str, nargs="+", help="Add a description of sentence for a solution.")
+        parser.add_argument('-b', action='store_true', help="Burn the last question.")
         parser.add_argument('-u', action='store_true', help="Unburn the last question.")
         flag = False
         help = False
         while True:
             if not help:
-                field = self.ask_word(item, word)
+                question.ask("[" + str(index) + "/" + str(len(self.questions)) + "]")
             if help:
-                word.help(field)
+                question.help()
             flag = False
             response = input()
             args, unknown = parser.parse_known_args(response.split())
             if args.f is not None:
                 flag = True
-                if self.last_word is None:
+                if self.last_question is None:
                     print("No previous word")
                 else:
-                    self.last_word.add_forbid(' '.join(args.f))
+                    self.last_question.add_forbid(' '.join(args.f))
             elif args.a is not None:
                 flag = True
-                if self.last_word is None:
+                if self.last_question is None:
                     print("No previous word")
                 else:
-                    self.last_word.add_meaning(field, ' '.join(args.a))
+                    self.last_question.add_meaning(' '.join(args.a))
             elif args.b:
                 flag = True
-                self.last_word.burn(self.last_field)
+                self.last_question.burn()
             elif args.u:
                 flag = True
-                self.last_word.unburn(self.last_field)
+                self.last_question.unburn()
             elif response == "":
                 # Print help
                 if help:
                     break
                 else:
-                    if is_help(word.word):
+                    if question.is_help():
                         help = True
                     else:
                         break
             else:
                 break
-        is_ok, ratio = check_solution(response, word)
+        is_ok, ratio = question.check_solution(response)
         if is_ok:
-            save_result(word.index, is_ok)
-            word.success(ratio, field)
+            question.save_result(is_ok)
+            question.success(ratio)
         else:
-            word.error(ratio, field)
+            question.error(ratio)
             if not help:
-                word.help(field)
+                question.help()
         print("")
-        self.last_word = word
-        self.last_field = field
-
-    def ask_word(self, index: int, word: Word) -> str:
-        if word.burn_meaning:
-            print(f"[{index}/{len(self.words)}] {word.word} : romaji ?")
-            return 'romaji'
-        else:
-            print(f"[{index}/{len(self.words)}] {word.word} \t {word.kana} : meaning ?")
-            return 'meaning'
+        self.last_question = question
 
 
 def load_kanji() -> dict[str, Kanji]:
@@ -201,18 +269,18 @@ with open('all_hiragana.csv', newline='', encoding='utf-8') as csvfile:
         words.append(word)
 
 try:
-    path = Path("overlay_forbid.txt")
+    path = Path("overlay_forbid_meaning.txt")
     index = 0
     with path.open("r", encoding="utf-8") as f:
         for line in f.readlines():
             line = line.strip()
-            words[index].forbid = line
+            words[index].forbid_meaning = line
             index = index + 1
 except:
     print("Err")
 
 try:
-    path = Path("overlay_meaning.txt")
+    path = Path("overlay_response_meaning.txt")
     index = 0
     with path.open("r", encoding="utf-8") as f:
         for line in f.readlines():
@@ -268,60 +336,6 @@ def check_field(response: str, solutions: list[str], forbids: list[str]) -> (boo
     return (False if ratio_forbid_resonse > 0.85 else ratio_resonse > 0.6,
             0.0 if ratio_forbid_resonse > 0.85 else ratio_resonse)
 
-def check_solution(response: str, word: Word) -> (bool, float | None):
-    if not response:
-        return False, None
-    if word.burn_meaning:
-        solutions = word.romaji.split(";")
-        forbids = []
-    else:
-        solutions = re.sub(r'\s*\(.*?\)\s*', '', word.meaning).split(";")
-        solutions = solutions + word.overlay_meaning.split(";")
-        forbids = word.forbid.split(";")
-    return check_field(response, solutions, forbids)
-
-
-def save_result(index: int, flag: bool, ) -> None:
-    if not flag:
-        return
-
-    path = Path("result.txt")
-    lines = []
-
-    if path.exists():
-        with path.open("r", encoding="utf-8") as f:
-            lines = [line.strip() for line in f.readlines()]
-
-    while len(lines) <= index:
-        lines.append("0")
-
-    try:
-        value = int(lines[index])
-    except ValueError:
-        value = 0
-    lines[index] = str(value + 1)
-
-    with path.open("w", encoding="utf-8") as f:
-        for line in lines:
-            f.write(line + "\n")
-
-
-def prepare_test(jlpt: int):
-    session_words = []
-    for word in words[:]:
-        if word.jlpt_level == f"JLPT_{jlpt}":
-            if word.burn_meaning:
-                if len(list_kanji(word.word)) == 0:
-                    # No Kanji in this word. No reason to ask romaji.
-                    continue
-                if is_katakana_present(word.word):
-                    # No ask romaji for katakana word.
-                    continue
-            if not word.burn_meaning or not word.burn_romaji:
-                session_words.append(word)
-    random.shuffle(session_words)
-    return session_words
-
 
 def list_burn(jlpt: int):
     session_words = []
@@ -353,16 +367,6 @@ def _add_entry_file(index: int, text: str, file: str):
             f.write(line + "\n")
 
 
-def overlay_add_forbid(index: int, meaning: str):
-    _add_entry_file(index, meaning, "overlay_forbid.txt")
-    print(f"Add forbidden meaning '{meaning}' to the word '{words[index].word},{words[index].kana}'")
-
-
-def overlay_add_meaning(index: int, field: str, meaning: str):
-    _add_entry_file(index, meaning, "overlay_word_" + field + ".txt")
-    print(f"Add new meaning '{meaning}' to the word '{words[index].word},{words[index].kana}'")
-
-
 def list_kanji(text: str) -> list[Kanji]:
     tmp_kanjis = []
     for letter in text:
@@ -376,16 +380,6 @@ def is_katakana_present(text: str):
     for character in text:
         if character in katakana:
             return True
-    return False
-
-
-def is_help(word_kanji: str):
-    for letter in word_kanji:
-        if letter in kanjis:
-            if len(word_kanji) > 1:
-                return True
-            else:
-                return False
     return False
 
 
