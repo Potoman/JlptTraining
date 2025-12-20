@@ -101,9 +101,9 @@ class Question:
                     if len(list_kanji(item.word)) == 0:
                         # No Kanji in this word. No reason to ask romaji.
                         return False
-                    if is_katakana_present(item.word):
-                        # No ask romaji for katakana word.
-                        return False
+            if is_katakana_present(item.word):
+                # No ask romaji for katakana word.
+                return False
             return True
         else:
             return True
