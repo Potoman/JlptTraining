@@ -342,11 +342,6 @@ except:
     print("Err")
 
 
-count_word = len(words)
-
-word_id = random.randint(0, count_word - 1)
-
-
 def check_field(response: str, solutions: list[str], forbids: list[str]) -> (bool, float | None):
     ratio_resonse = 0.0
     ratio_forbid_resonse = 0.0
