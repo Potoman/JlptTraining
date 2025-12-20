@@ -355,16 +355,6 @@ def check_field(response: str, solutions: list[str], forbids: list[str]) -> (boo
             0.0 if ratio_forbid_resonse > 0.85 else ratio_resonse)
 
 
-def list_burn(jlpt: int):
-    session_words = []
-    for w in words[:]:
-        if w.jlpt_level == f"JLPT_{jlpt}":
-            if w.burn_meaning:
-                session_words.append(w)
-    random.shuffle(session_words)
-    return session_words
-
-
 def _add_entry_file(index: int, text: str, file: str):
     path = Path(file)
     lines = []
