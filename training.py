@@ -187,24 +187,35 @@ class Question:
 class Session:
     def __init__(self, jlpt: int):
         self.last_question = None
-        self.questions = []
+        self.questions_word = []
+        self.questions_kanji = []
         for word in words[:]:
             if word.jlpt_level == f"JLPT_{jlpt}":
                 try:
-                    self.questions.append(Question(word))
+                    self.questions_word.append(Question(word))
                 except:
                     pass # This item is burned.
         for kanji in kanjis.values():
             if kanji.jlpt_new == jlpt:
                 try:
-                    self.questions.append(Question(kanji))
+                    self.questions_kanji.append(Question(kanji))
                 except:
                     pass # This item is burned.
-        random.shuffle(self.questions)
+        random.shuffle(self.questions_word)
+        random.shuffle(self.questions_kanji)
+        self.questions_word_length_initial = len(self.questions_word)
+        self.questions_kanji_length_initial = len(self.questions_kanji)
+        self.questions_length_initial = self.questions_word_length_initial + self.questions_kanji_length_initial
 
     def ask(self):
-        for index in range(len(self.questions)):
-            self.ask_question(index + 1, self.questions[index])
+        while self.questions_word and self.questions_kanji:
+            index = random.randint(0, len(self.questions_word) + len(self.questions_kanji) - 1)
+            question = None
+            if index < len(self.questions_word):
+                question = self.questions_word.pop()
+            else:
+                question = self.questions_kanji.pop()
+            self.ask_question(index + 1, question)
 
     def ask_question(self, index: int, question: Question):
         parser = argparse.ArgumentParser()
@@ -216,7 +227,7 @@ class Session:
         help = False
         while True:
             if not help:
-                question.ask("[" + str(index) + "/" + str(len(self.questions)) + "]")
+                question.ask(f"[{str(index)}/{self.questions_length_initial} (k:{str(len(self.questions_kanji))}/{str(self.questions_kanji_length_initial)}, w:{str(len(self.questions_word))}/{str(self.questions_word_length_initial)})]")
             if help:
                 question.help()
             flag = False
