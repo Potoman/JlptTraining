@@ -26,8 +26,7 @@ class Kanji:
         return [('meanings', ['kanji'])]
 
     def help(self):
-        meanings = ", ".join(self.radicals)
-        print(f"\t{', '.join(self.radicals)}")
+        print(f"\t{self.radicals}")
 
     def is_help(self):
         return self.meanings
