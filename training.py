@@ -10,7 +10,8 @@ init(autoreset=True)
 
 
 class Kanji:
-    def __init__(self, kanji: str, element):
+    def __init__(self, index: int, kanji: str, element):
+        self.index = index
         self.kanji = kanji
         self.strokes = int(element["strokes"])
         self.grade = None if element["grade"] is None else int(element["grade"])
@@ -267,8 +268,10 @@ def load_kanji() -> dict[str, Kanji]:
     kanjis = {}
     file_path = Path("kanji.json")
     with open(file_path, "r", encoding="utf-8") as f:
+        index = 0
         for kanji, info in json.load(f).items():
-            kanjis[kanji] = Kanji(kanji, info)
+            kanjis[kanji] = Kanji(index, kanji, info)
+            index = index + 1
     return kanjis
 
 
