@@ -24,7 +24,7 @@ class Kanji:
 
     @staticmethod
     def fields() -> list[tuple[str, list[str]]]:
-        return [('meanings', ['kanji'])]
+        return [('meanings', ['kanji'], [])]
 
     def help(self):
         print(f"\t{self.radicals}")
@@ -48,8 +48,8 @@ class Word:
 
     @staticmethod
     def fields() -> list[tuple[str, list[str]]]:
-        return [('meaning', ['word', 'kana']),
-                ('romaji', ['word'])]
+        return [('meaning', ['word', 'kana'], []),
+                ('romaji', ['word'], ['meaning'])]
 
     def help(self):
         for kanji in list_kanji(self.word):
@@ -156,7 +156,10 @@ class Question:
         response = '; '.join((getattr(self.item, self.field[0]) + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
         forbid = '; '.join(self.forbid_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";"))
         forbid = " (forbid = " + Fore.RED + forbid + Fore.BLACK + ")" if forbid != "" else ""
-        print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + response + forbid)
+        other_field = []
+        for field in self.field[2]:
+            other_field.append(getattr(self.item, field))
+        print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + response + forbid + "; " + Fore.BLACK + ", ".join(other_field))
 
     def save_result(self, flag: bool, ) -> None:
         if not flag:
