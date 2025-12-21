@@ -20,6 +20,7 @@ class Kanji:
         self.jlpt_new = None if element["jlpt_new"] is None else int(element["jlpt_new"])
         self.meanings = ";".join(element["meanings"])
         self.radicals = None if element["wk_radicals"] is None else ";".join(element["wk_radicals"])
+        self.burn_meanings = False
 
     @staticmethod
     def fields() -> list[tuple[str, list[str]]]:
@@ -82,7 +83,7 @@ class Question:
             self.forbid_meaning['meaning__word_kana'] = item.forbid_meaning
             self.forbid_meaning['romaji__word'] = ""
         if isinstance(item, Kanji):
-            self._burn['meanings__kanji'] = False
+            self._burn['meanings__kanji'] = item.burn_meanings
             self.overlay_meaning['meanings__kanji'] = ""
             self.forbid_meaning['meanings__kanji'] = ""
         for field in item.fields():
@@ -106,6 +107,9 @@ class Question:
                 return False
             return True
         else:
+            if field == 'meanings':
+                if self._burn['meanings__kanji']:
+                    return False
             return True
 
     def ask(self, prefix: str):
@@ -185,22 +189,24 @@ class Question:
 
 
 class Session:
-    def __init__(self, jlpt: int):
+    def __init__(self, jlpt: int, test: str):
         self.last_question = None
         self.questions_word = []
         self.questions_kanji = []
-        for word in words[:]:
-            if word.jlpt_level == f"JLPT_{jlpt}":
-                try:
-                    self.questions_word.append(Question(word))
-                except:
-                    pass # This item is burned.
-        for kanji in kanjis.values():
-            if kanji.jlpt_new == jlpt:
-                try:
-                    self.questions_kanji.append(Question(kanji))
-                except:
-                    pass # This item is burned.
+        if test in ["w", "b"]:
+            for word in words[:]:
+                if word.jlpt_level == f"JLPT_{jlpt}":
+                    try:
+                        self.questions_word.append(Question(word))
+                    except:
+                        pass # This item is burned.
+        if test in ["k", "b"]:
+            for kanji in kanjis.values():
+                if kanji.jlpt_new == jlpt:
+                    try:
+                        self.questions_kanji.append(Question(kanji))
+                    except:
+                        pass # This item is burned.
         random.shuffle(self.questions_word)
         random.shuffle(self.questions_kanji)
         self.questions_word_length_initial = len(self.questions_word)
@@ -348,6 +354,20 @@ try:
 
     for index in range(len(lines)):
         words[index].burn_romaji = lines[index] == 'o'
+except:
+    print("Err")
+
+
+try:
+    path = Path("burn_meanings.txt")
+    lines = []
+
+    if path.exists():
+        with path.open("r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f.readlines()]
+
+    for index in range(len(lines)):
+        kanjis[list(kanjis.keys())[index]].burn_meanings = lines[index] == 'o'
 except:
     print("Err")
 
