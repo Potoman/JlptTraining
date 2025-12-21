@@ -1,5 +1,5 @@
 import csv
-from colorama import init, Fore
+from colorama import init, Back, Fore
 from difflib import SequenceMatcher
 from pathlib import Path
 import argparse
@@ -7,6 +7,17 @@ import random, re
 import json
 
 init(autoreset=True)
+
+
+def get_back_color(field: str):
+    if field == 'meaning':
+        return Back.LIGHTCYAN_EX
+    if field == 'meanings':
+        return Back.LIGHTCYAN_EX
+    elif field == 'romaji':
+        return Back.LIGHTYELLOW_EX
+    else:
+        return Back.RESET
 
 
 class Kanji:
@@ -116,7 +127,7 @@ class Question:
             return True
 
     def ask(self, prefix: str):
-        print(f"{prefix} {', '.join([getattr(self.item, field) for field in self.field[1]])} : {self.field[0]} ?")
+        print(f"{prefix} {', '.join([getattr(self.item, field) for field in self.field[1]])} : {get_back_color(self.field[0])}{self.field[0]}{Back.RESET} ?")
 
     def burn(self):
         index = self.item.index
