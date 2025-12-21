@@ -424,7 +424,8 @@ def is_katakana_present(text: str):
 
 
 def main():
-    session = Session(5)
+    r = input("What test : Kanji, Word, Both ?")
+    session = Session(5, r)
     session.ask()
 
 
