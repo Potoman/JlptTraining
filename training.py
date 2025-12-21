@@ -214,14 +214,16 @@ class Session:
         self.questions_length_initial = self.questions_word_length_initial + self.questions_kanji_length_initial
 
     def ask(self):
-        while self.questions_word and self.questions_kanji:
+        count = 1
+        while self.questions_word or self.questions_kanji:
             index = random.randint(0, len(self.questions_word) + len(self.questions_kanji) - 1)
             question = None
             if index < len(self.questions_word):
                 question = self.questions_word.pop()
             else:
                 question = self.questions_kanji.pop()
-            self.ask_question(index + 1, question)
+            self.ask_question(count, question)
+            count = count + 1
 
     def ask_question(self, index: int, question: Question):
         parser = argparse.ArgumentParser()
