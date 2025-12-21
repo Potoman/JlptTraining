@@ -141,6 +141,12 @@ class Question:
         print(f"The word '{getattr(self.item, self.field[0])}' has been unburned.")
         self._burn[self.field[0] + '__' + '_'.join(self.field[1])] = False
 
+    def reset(self):
+        for field in self.item.fields():
+            _add_entry_file(index, "", "burn_" + field[0] + ".txt")
+            self._burn[field[0] + '__' + '_'.join(field[1])] = False
+        print(f"The word '{getattr(self.item, field[0])}' has been reset.")
+
     def help(self):
         self.item.help()
 
@@ -248,6 +254,7 @@ class Session:
         parser.add_argument('-a', type=str, nargs="+", help="Add a description of sentence for a solution.")
         parser.add_argument('-b', action='store_true', help="Burn the last question.")
         parser.add_argument('-u', action='store_true', help="Unburn the last question.")
+        parser.add_argument('-r', action='store_true', help="Reset the last question.")
         flag = False
         help = False
         while True:
@@ -276,6 +283,9 @@ class Session:
             elif args.u:
                 flag = True
                 self.last_question.unburn()
+            elif args.r:
+                flag = True
+                self.last_question.reset()
             elif response == "":
                 # Print help
                 if help:
