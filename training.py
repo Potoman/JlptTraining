@@ -105,6 +105,9 @@ class Question:
             if is_katakana_present(item.word):
                 # No ask romaji for katakana word.
                 return False
+            if field == 'romaji' and not is_kanji_present(item.word):
+                # No ask romaji for kana word.
+                return False
             return True
         else:
             if field == 'meanings':
@@ -421,6 +424,10 @@ def is_katakana_present(text: str):
         if character in katakana:
             return True
     return False
+
+
+def is_kanji_present(text: str) -> bool:
+    return len(list_kanji(text)) != 0
 
 
 def main():
