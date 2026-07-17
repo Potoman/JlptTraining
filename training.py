@@ -49,13 +49,14 @@ class Kanji:
 
 
 class Word:
-    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level):
+    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, part_of_speech):
         self.index = index
         self.word = word
         self.kana = kana
         self.romaji = romaji
         self.meaning = meaning
         self.jlpt_level = jlpt_level
+        self.part_of_speech = part_of_speech
         self.overlay_meaning = ""
         self.forbid_meaning = ""
         self.burn_meaning = False
@@ -216,13 +217,15 @@ class Question:
 
 
 class Session:
-    def __init__(self, jlpt: int, test: str):
+    def __init__(self, jlpt: int, test: str, part_of_speech: str = None):
         self.last_question = None
         self.questions_word = []
         self.questions_kanji = []
         if test in ["w", "b"]:
             for word in words[:]:
                 if word.jlpt_level == f"JLPT_{jlpt}":
+                    if part_of_speech is not None and word.part_of_speech != part_of_speech:
+                        continue
                     try:
                         self.questions_word.append(Question(word))
                     except:
@@ -328,14 +331,14 @@ words = []
 kanjis = load_kanji()
 
 
-with open('all_hiragana.csv', newline='', encoding='utf-8') as csvfile:
+with open('all_hiragana_with_pos.csv', newline='', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile)
     next(reader)  # Ignore la première ligne (en-tête)
     index = 0
     for row in reader:
         # row = [kanji, kana, romaji, meaning, jlpt_level]
         index = index + 1
-        if len(row) != 5:
+        if len(row) != 6:
             raise Exception("Malformed line : " + str(row))
         word = Word(index - 1, *row)
         words.append(word)
@@ -458,9 +461,22 @@ def is_kanji_present(text: str) -> bool:
     return len(list_kanji(text)) != 0
 
 
+POS_CHOICES = {
+    "all": None,
+    "noun": "noun",
+    "adj": "adjective",
+    "adv": "adverb",
+    "verb": "verb",
+}
+
+
 def main():
     r = input("What test : Kanji (k), Word (w), Both (b) ?")
-    session = Session(5, r)
+    part_of_speech = None
+    if r in ["w", "b"]:
+        pos = input("What kind of word : All (all), Adjective (adj), Noun (noun), Adverb (adv), Verb (verb) ?")
+        part_of_speech = POS_CHOICES.get(pos)
+    session = Session(5, r, part_of_speech)
     session.ask()
 
 
