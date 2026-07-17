@@ -226,13 +226,13 @@ class Question:
 
 
 class Session:
-    def __init__(self, jlpt: int, test: str, part_of_speech: str = None):
+    def __init__(self, jlpt_levels: list[int] | None, test: str, part_of_speech: str = None):
         self.last_question = None
         self.questions_word = []
         self.questions_kanji = []
         if test in ["w", "b"]:
             for word in words[:]:
-                if word.jlpt_level == f"JLPT_{jlpt}":
+                if jlpt_levels is None or word.jlpt() in jlpt_levels:
                     if part_of_speech is not None and word.part_of_speech != part_of_speech:
                         continue
                     try:
@@ -241,7 +241,7 @@ class Session:
                         pass # This item is burned.
         if test in ["k", "b"]:
             for kanji in kanjis.values():
-                if kanji.jlpt_new == jlpt:
+                if jlpt_levels is None or kanji.jlpt() in jlpt_levels:
                     try:
                         self.questions_kanji.append(Question(kanji))
                     except:
@@ -485,7 +485,9 @@ def main():
     if r in ["w", "b"]:
         pos = input("What kind of word : All (all), Adjective (adj), Noun (noun), Adverb (adv), Verb (verb) ?")
         part_of_speech = POS_CHOICES.get(pos)
-    session = Session(5, r, part_of_speech)
+    jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
+    jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
+    session = Session(jlpt_levels, r, part_of_speech)
     session.ask()
 
 
