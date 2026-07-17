@@ -455,7 +455,7 @@ def is_kanji_present(text: str) -> bool:
 
 
 def main():
-    r = input("What test : Kanji, Word, Both ?")
+    r = input("What test : Kanji (k), Word (w), Both (b) ?")
     session = Session(5, r)
     session.ask()
 
