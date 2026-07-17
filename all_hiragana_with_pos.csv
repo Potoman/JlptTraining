@@ -4828,7 +4828,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 以前,いぜん,izen,in the past; before,JLPT_3,noun
 板,いた,ita,board; plank,JLPT_2,noun
 偉大,いだい,idai,greatness,JLPT_2,adjective
-抱く,いだく,idaku,to hold (v.t.) (written expression); to embrace; to harbor,JLPT_3,verb
+抱く,いだく,idaku,to hold in arms (v.t.) (written expression); to embrace; to harbor,JLPT_3,verb
 いたずら,いたずら,itazura,trick; practical joke,JLPT_2,noun
 いただきます,いただきます,itadakimasu,expression of gratitude before meals,JLPT_2,verb
 痛み,いたみ,itami,pain; ache; sore,JLPT_2,noun
@@ -4888,7 +4888,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 動かす,うごかす,ugokasu,to move; to shift,JLPT_2,verb
 兎,うさぎ,usagi,rabbit; hare,JLPT_2,noun
 牛,うし,ushi,cattle; cow,JLPT_3,noun
-失う,うしなう,ushinau,to lose; to part with,JLPT_3,verb
+失う,うしなう,ushinau,to lose (something important or abstract); to part with,JLPT_3,verb
 疑う,うたがう,utagau,to doubt; to distrust,JLPT_2,verb
 宇宙,うちゅう,uchuu,universe; cosmos; space,JLPT_2,noun
 討つ,うつ,utsu,to attack; to avenge,JLPT_2,verb
@@ -5296,7 +5296,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 欠点,けってん,ketten,faults; defect; weakness,JLPT_2,noun
 結論,けつろん,ketsuron,conclusion,JLPT_2,noun
 煙,けむり,kemuri,smoke; fumes,JLPT_2,noun
-蹴る,ける,keru,to kick,JLPT_3,verb
+蹴る,ける,keru,to kick (with the feet),JLPT_3,verb
 券,けん,ken,ticket; certificate,JLPT_2,noun
 県,けん,ken,prefecture,JLPT_3,noun
 見解,けんかい,kenkai,opinion; point of view,JLPT_2,noun
@@ -5393,7 +5393,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 小屋,こや,koya,hut; cabin; shed,JLPT_2,noun
 これら,これら,korera,these,JLPT_2,noun
 殺す,ころす,korosu,to kill,JLPT_2,verb
-転ぶ,ころぶ,korobu,to fall down; to fall over,JLPT_3,verb
+転ぶ,ころぶ,korobu,to fall down (on the floor); to fall over,JLPT_3,verb
 今回,こんかい,konkai,now; this time; lately,JLPT_2,noun
 今後,こんご,kongo,from now on; hereafter,JLPT_2,noun
 混雑,こんざつ,konzatsu,confusion; congestion,JLPT_2,noun
@@ -7533,7 +7533,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 先,さき,saki,future; recent; previous,JLPT_5,noun
 咲く,さく,saku,to bloom,JLPT_3,verb
 作文,さくぶん,sakubun,essay; composition,JLPT_5,noun
-差す,さす,sasu,to raise (stretch out) hands; to raise (e.g.; umbrella),JLPT_3,verb
+差す,さす,sasu,to raise (an umbrella); to raise (stretch out) hands,JLPT_3,verb
 ～冊,～さつ,~satsu,counter for books,JLPT_5,noun
 雑誌,ざっし,zasshi,magazine; journal,JLPT_5,noun
 砂糖,さとう,satou,sugar,JLPT_5,noun
