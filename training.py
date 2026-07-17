@@ -47,6 +47,9 @@ class Kanji:
     def is_help(self):
         return self.meanings
 
+    def jlpt(self) -> int:
+        return self.jlpt_new
+
 
 class Word:
     def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, part_of_speech):
@@ -55,7 +58,7 @@ class Word:
         self.kana = kana
         self.romaji = romaji
         self.meaning = meaning
-        self.jlpt_level = jlpt_level
+        self.jlpt_level = int(jlpt_level.replace("JLPT_", ""))
         self.part_of_speech = part_of_speech
         self.overlay_meaning = ""
         self.forbid_meaning = ""
@@ -79,6 +82,9 @@ class Word:
                 else:
                     return False
         return False
+
+    def jlpt(self) -> int:
+        return self.jlpt_level
 
     def __str__(self):
         return self.word
@@ -157,6 +163,9 @@ class Question:
 
     def is_help(self) -> bool:
         return self.item.is_help()
+
+    def jlpt(self) -> str:
+        return self.item.jlpt()
 
     def add_forbid(self, forbid: str):
         index = self.item.index
@@ -266,7 +275,7 @@ class Session:
         help = False
         while True:
             if not help:
-                question.ask(f"[{str(index)}/{self.questions_length_initial} (k:{str(len(self.questions_kanji))}/{str(self.questions_kanji_length_initial)}, w:{str(len(self.questions_word))}/{str(self.questions_word_length_initial)})]")
+                question.ask(f"[{str(index)}/{self.questions_length_initial} (k:{str(len(self.questions_kanji))}/{str(self.questions_kanji_length_initial)}, w:{str(len(self.questions_word))}/{str(self.questions_word_length_initial)}) JLPT:{question.jlpt()}]")
             if help:
                 question.help()
             flag = False
