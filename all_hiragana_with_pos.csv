@@ -7271,7 +7271,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 明日,あした,ashita,tomorrow,JLPT_3,noun
 あそこ,あそこ,asoko,there; over there; that place,JLPT_5,noun
 遊ぶ,あそぶ,asobu,to play; to spend time pleasantly; to hang out,JLPT_5,verb
-暖かい,あたたかい,atatakai,warm,JLPT_N5,adjective
+暖かい,あたたかい,atatakai,warm,JLPT_5,adjective
 頭,あたま,atama,head,JLPT_5,noun
 新しい,あたらしい,atarashii,new,JLPT_5,adjective
 あちら,あちら,achira,this way (polite),JLPT_5,noun
@@ -7382,7 +7382,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 お姉さん,おねえさん,oneesan,older sister (formal),JLPT_5,noun
 伯母さん; 叔母さん,おばさん,obasan,aunt,JLPT_5,noun
 お祖母さん,おばあさん,obaasan,grandmother; female senior-citizen,JLPT_5,noun
-お風呂,おふろ,ofuro,a bath,JLPT_N5,noun
+お風呂,おふろ,ofuro,a bath,JLPT_5,noun
 お弁当,おべんとう,obentou,a boxed lunch,JLPT_5,noun
 覚える,おぼえる,oboeru,to learn; to commit to memory; to remember; to memorize,JLPT_5,verb
 おまわりさん,おまわりさん,omawarisan,policeman (friendly term),JLPT_5,noun
@@ -7438,7 +7438,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 カレー,カレー,curry,curry (abbr. for curry and rice),JLPT_1,noun
 カレンダー,カレンダー,calendar,calendar,JLPT_5,noun
 川; 河,かわ,kawa,river,JLPT_3,noun
-～側,～がわ,~gawa,~ side,JLPT_N5,noun
+～側,～がわ,~gawa,~ side,JLPT_5,noun
 可愛い,かわいい,kawaii,cute; adorable,JLPT_5,adjective
 漢字,かんじ,kanji,kanji; Chinese character,JLPT_3,noun
 木,き,ki,tree; wood; timber,JLPT_5,noun
@@ -7918,7 +7918,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 物,もの,mono,thing (concrete object),JLPT_3,noun
 門,もん,mon,gate,JLPT_5,noun
 問題,もんだい,mondai,a problem,JLPT_5,noun
-～屋,～や,~ya,~ shop,JLPT_N5,noun
+～屋,～や,~ya,~ shop,JLPT_5,noun
 八百屋,やおや,yaoya,greengrocer,JLPT_5,noun
 野菜,やさい,yasai,vegetable,JLPT_5,noun
 易しい,やさしい,yasashii,easy; plain; simple,JLPT_5,adjective
