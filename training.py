@@ -9,6 +9,10 @@ import json
 init(autoreset=True)
 
 
+def print_radicals(radicals: list[str]):
+    print("\t" + Back.LIGHTGREEN_EX + "Radicals" + Back.RESET + " : " + (",").join(radicals))
+
+
 def get_back_color(field: str):
     if field == 'meaning':
         return Back.LIGHTCYAN_EX
@@ -38,7 +42,7 @@ class Kanji:
         return [('meanings', ['kanji'], [])]
 
     def help(self):
-        print(f"\t{self.radicals}")
+        print_radicals(self.radicals)
 
     def is_help(self):
         return self.meanings
