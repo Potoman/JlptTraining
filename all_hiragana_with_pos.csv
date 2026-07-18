@@ -4676,7 +4676,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 過ごす,すごす,sugosu,to pass; to spend (time),JLPT_3,verb
 筋,すじ,suji,muscle; string; line,JLPT_2,noun
 進める,すすめる,susumeru,to advance; to promote; to hasten,JLPT_2,verb
-勧める,すすめる,susumeru,to urge (someone) to do (something); to recommend,JLPT_3,verb
+勧める,すすめる,susumeru,to persuade; to urge; to recommend; to advise,JLPT_3,verb
 スター,スター,star,star,JLPT_2,noun
 スタイル,スタイル,style,style,JLPT_2,noun
 スタンド,スタンド,stand,stand,JLPT_2,noun
@@ -5246,7 +5246,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 位,くらい,kurai,grade; rank; about,JLPT_2,noun
 暮らし,くらし,kurashi,living; life style,JLPT_3,noun
 クラシック,クラシック,classic,classic(s),JLPT_2,noun
-暮らす,くらす,kurasu,to live; to get along,JLPT_3,verb
+暮らす,くらす,kurasu,to live (on; by; with; etc); to get along,JLPT_3,verb
 グラス,グラス,glass,glass; grass,JLPT_2,noun
 グランド,グランド,grand,gland; grand; (electrical) ground,JLPT_2,noun
 クリーム,クリーム,cream,cream,JLPT_2,noun
@@ -7000,7 +7000,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 済む,すむ,sumu,to finish; to end,JLPT_4,verb
 ハンバーグ,ハンバーグ,hamburg,hamburger steak,JLPT_4,noun
 市,し,shi,city,JLPT_4,noun
-引き出し,ひきだし,hikidashi,drawer,JLPT_4,verb
+引き出し,ひきだし,hikidashi,drawer,JLPT_4,noun
 遊び,あそび,asobi,play,JLPT_4,noun
 支度,したくする,shitakusuru,preparation,JLPT_4,noun
 ～始める,～はじめる,~hajimeru,to start doing ~,JLPT_4,verb
@@ -7030,7 +7030,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 プレゼント,プレゼント,present,present; gift,JLPT_4,noun
 ～(に) よると,～(に) よると,~(ni)yoruto,according to ~,JLPT_4,verb
 妻,つま,tsuma,wife (humble),JLPT_4,noun
-帰り,かえり,kaeri,return; coming back,JLPT_4,verb
+帰り,かえり,kaeri,return; coming back,JLPT_4,noun
 具合,ぐあい,guai,condition; state; health,JLPT_4,noun
 堅; 硬; 固い,かたい,katai,solid; hard; firm,JLPT_4,adjective
 駐車場,ちゅうしゃじょう,chuushajou,parking lot,JLPT_4,noun
