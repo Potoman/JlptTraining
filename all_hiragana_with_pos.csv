@@ -350,7 +350,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 届,とどけ,todoke,report; notification; registration,JLPT_1,noun
 滞る,とどこおる,todokooru,to stagnate; to be delayed,JLPT_1,verb
 整える,ととのえる,totonoeru,to put in order; to arrange; to adjust; to get ready; to prepare; to raise money,JLPT_1,verb
-止める,とどめる,todomeru,to end; to stop; to cease; to resign,JLPT_1,verb
+止める,とどめる,todomeru,to end; to stop; to cease; to resign,JLPT_4,verb
 唱える,となえる,tonaeru,to recite; to chant; to call upon,JLPT_1,verb
 殿様,とのさま,tonosama,feudal lord,JLPT_1,noun
 土俵,どひょう,dohyou,arena,JLPT_1,noun
@@ -829,7 +829,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 頭,かしら,kashira,head; chief,JLPT_1,noun
 微か,かすか,kasuka,faint; dim; weak,JLPT_1,adjective
 霞む,かすむ,kasumu,to grow hazy; to be misty,JLPT_1,verb
-擦る,かする,kasuru,to rub; to chafe,JLPT_1,verb
+擦る,かする,kasuru,to rub; to chafe,JLPT_2,verb
 火星,かせい,kasei,Mars,JLPT_1,noun
 化石,かせき,kaseki,fossil; petrifaction; fossilization,JLPT_1,noun
 河川,かせん,kasen,rivers,JLPT_1,noun
@@ -959,7 +959,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 議題,ぎだい,gidai,topic of discussion; agenda,JLPT_1,noun
 鍛える,きたえる,kitaeru,to forge; to train; to discipline,JLPT_1,verb
 気立て,きだて,kidate,good-natured; kind-hearted,JLPT_1,noun
-来る,きたる,kitaru,to come; to approach;,JLPT_1,verb
+来る,きたる,kitaru,to come; to approach;,JLPT_5,verb
 きちっと,きちっと,kichitto,exactly; perfectly,JLPT_1,adverb
 几帳面,きちょうめん,kichoumen,methodical; punctual; steady,JLPT_1,noun
 きっかり,きっかり,kikkari,exactly; precisely,JLPT_1,adverb
@@ -1782,7 +1782,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 告げる,つげる,tsugeru,to inform,JLPT_1,verb
 つじつま (はなしの～),つじつま (はなしの～),tsujitsuma(hanashino~),coherence; consistency,JLPT_1,noun
 筒,つつ,tsutsu,pipe; tube,JLPT_1,noun
-突く,つつく,tsutsuku,to thrust; to strike; to attack; to poke; to nudge; to pick at,JLPT_1,verb
+突く,つつく,tsutsuku,to thrust; to strike; to attack; to poke; to nudge; to pick at,JLPT_2,verb
 突っ突く,つっつく,tsuttsuku,to prompt someone,JLPT_1,verb
 謹む,つつしむ,tsutsushimu,to be careful; to be chaste or discreet,JLPT_1,verb
 突っ張る,つっぱる,tsupparu,to support; to become stiff; to thrust (ones opponent); to stick to (ones opinion); to insist on,JLPT_1,verb
@@ -1915,7 +1915,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 橋渡し,はしわたし,hashiwatashi,bridge building'; mediation,JLPT_1,noun
 弾む,はずむ,hazumu,to bounce; to be encouraged; to splurge on,JLPT_1,verb
 破損,はそん,wason,damage,JLPT_1,noun
-叩く,はたく,hataku,to strike; to clap; to dust; to beat,JLPT_1,verb
+叩く,はたく,hataku,to strike; to clap; to dust; to beat,JLPT_3,verb
 裸足,はだし,hadashi,barefoot,JLPT_1,noun
 果たす,はたす,hatasu,to accomplish; to fulfill; to carry out; to achieve,JLPT_1,verb
 蜂蜜,はちみつ,hachimitsu,honey,JLPT_1,noun
@@ -2233,7 +2233,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 ほっぺた,ほっぺた,hoppeta,cheek,JLPT_1,noun
 ぼつぼつ,ぼつぼつ,botsubotsu,gradually; here and there; spots,JLPT_1,adverb
 没落,ぼつらく,botsuraku,ruin; fall; collapse,JLPT_1,noun
-解ける,ほどける,hodokeru,to come untied; to come apart,JLPT_1,verb
+解ける,ほどける,hodokeru,to come untied; to come apart,JLPT_3,verb
 施す,ほどこす,hodokosu,to give; to conduct; to perform,JLPT_1,verb
 ほとり,ほとり,hotori,vicinity of lake; river,JLPT_1,noun
 ぼやく,ぼやく,boyaku,to grumble; to complain,JLPT_1,verb
@@ -2524,7 +2524,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 抑制,よくせい,yokusei,control; restraint; suppression,JLPT_1,noun
 欲深い,よくふかい,yokufukai,greedy,JLPT_1,adjective
 欲望,よくぼう,yokubou,desire; appetite,JLPT_1,noun
-避ける,よける,yokeru,to avoid (physical contact with; to ward off; to avert,JLPT_1,verb
+避ける,よける,yokeru,to avoid (physical contact with; to ward off; to avert,JLPT_3,verb
 予言,よげん,yogen,prediction; promise; prognostication,JLPT_1,noun
 横綱,よこづな,yokozuna,sumo grand champion,JLPT_1,noun
 汚れ,よごれ,yogore,dirt; filth,JLPT_1,noun
@@ -3781,7 +3781,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 特定,とくてい,tokutei,specific; special; particular,JLPT_2,noun
 特売,とくばい,tokubai,special sale,JLPT_2,noun
 溶け込む,とけこむ,tokekomu,to melt into; to become a part of,JLPT_2,verb
-退ける,どける,dokeru,to dislodge; to put something out of the way,JLPT_2,verb
+退ける,どける,dokeru,to dislodge; to put something out of the way,JLPT_1,verb
 床の間,とこのま,tokonoma,alcove,JLPT_2,noun
 ～ところ,～ところ,~tokoro,about to do ~,JLPT_2,noun
 所々,ところどころ,tokorodokoro,here and there; some parts (of something),JLPT_2,noun
@@ -4109,7 +4109,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 ポスター,ポスター,poster,poster,JLPT_2,noun
 北極,ほっきょく,hokkyoku,North Pole,JLPT_2,noun
 坊っちゃん,ぼっちゃん,bocchan,son (of others),JLPT_2,noun
-解く,ほどく,hodoku,to unfasten,JLPT_2,verb
+解く,ほどく,hodoku,to unfasten,JLPT_3,verb
 掘る,ほる,horu,to dig; to excavate,JLPT_2,verb
 彫る,ほる,horu,to carve; to chisel,JLPT_2,verb
 ぼろ,ぼろ,boro,rag; tattered clothes,JLPT_2,noun
@@ -4216,7 +4216,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 モーター,モーター,motor,motor,JLPT_2,noun
 木材,もくざい,mokuzai,lumber; timber; wood,JLPT_2,noun
 目次,もくじ,mokuji,table of contents,JLPT_2,noun
-潜る,もぐる,moguru,to drive; to pass through; to evade; to hide,JLPT_2,verb
+潜る,もぐる,moguru,to drive; to pass through; to evade; to hide,JLPT_1,verb
 もしかしたら,もしかしたら,moshikashitara,perhaps; maybe; by some chance,JLPT_2,verb
 もたれる,もたれる,motareru,to lean against; to lean on,JLPT_2,verb
 モダン,モダン,modern,modern,JLPT_2,noun
@@ -4232,7 +4232,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 紅葉,もみじ,momiji,(Japanese) maple,JLPT_2,noun
 揉む,もむ,momu,to rub; to crumple (up); to wrinkle,JLPT_2,verb
 催し,もよおし,moyooshi,event; festivities; function,JLPT_2,noun
-盛る,もる,moru,to serve (food); to fill up; to prescribe,JLPT_2,verb
+盛る,もる,moru,to serve (food); to fill up; to prescribe,JLPT_1,verb
 ～問,～もん,~mon,counter for questions,JLPT_2,noun
 問答,もんどう,mondou,questions and answers; dialogue,JLPT_2,noun
 ～夜,～や,~ya,counter for nights,JLPT_2,noun
@@ -4449,13 +4449,13 @@ expression,reading,romaji,meaning,tags,part_of_speech
 作法,さほう,sahou,manners; etiquette; propriety,JLPT_2,noun
 様々,さまざま,samazama,varied; various,JLPT_2,noun
 冷ます,さます,samasu,to cool; to let cool,JLPT_2,verb
-覚ます,さます,samasu,to awaken,JLPT_2,verb
+覚ます,さます,samasu,to awaken,JLPT_3,verb
 冷める,さめる,sameru,to become cool; to wear off,JLPT_2,verb
-覚める,さめる,sameru,to wake; to wake up,JLPT_2,verb
+覚める,さめる,sameru,to wake; to wake up,JLPT_3,verb
 左右,さゆう,sayuu,left and right; influence,JLPT_2,noun
 皿,さら,sara,plate; dish,JLPT_3,noun
 更に,さらに,sarani,furthermore; moreover,JLPT_2,adverb
-去る,さる,saru,to leave; to go away,JLPT_2,verb
+去る,さる,saru,to leave; to go away,JLPT_3,verb
 猿,さる,saru,monkey,JLPT_3,noun
 騒ぎ,さわぎ,sawagi,uproar; disturbance,JLPT_2,noun
 参加,さんか,sanka,participation,JLPT_2,noun
@@ -4487,12 +4487,12 @@ expression,reading,romaji,meaning,tags,part_of_speech
 事情,じじょう,jijou,circumstances; situation; reasons,JLPT_2,noun
 詩人,しじん,shijin,poet,JLPT_2,noun
 自身,じしん,jishin,oneself,JLPT_3,noun
-沈む,しずむ,shizumu,to sink; to feel depressed,JLPT_2,verb
+沈む,しずむ,shizumu,to sink; to feel depressed,JLPT_3,verb
 自然,しぜん,shizen,nature; spontaneous,JLPT_2,adjective
 思想,しそう,shisou,thought; idea,JLPT_2,noun
 舌,した,shita,tongue,JLPT_2,noun
 次第,しだい,shidai,order; circumstances; immediate(ly),JLPT_2,noun
-従う,したがう,shitagau,to abide (by the rules); to obey,JLPT_2,verb
+従う,したがう,shitagau,to abide (by the rules); to obey,JLPT_3,verb
 したがって,したがって,shitagatte,therefore; consequently,JLPT_2,other
 親しい,したしい,shitashii,intimate; close (e.g.; friend),JLPT_2,adjective
 質,しつ,shitsu,quality; nature (of person),JLPT_2,noun
@@ -4519,14 +4519,14 @@ expression,reading,romaji,meaning,tags,part_of_speech
 しばしば,しばしば,shibashiba,often; again and again; frequently,JLPT_2,adverb
 芝生,しばふ,shibafu,lawn,JLPT_2,noun
 支払,しはらい,shiharai,payment,JLPT_2,noun
-支払う,しはらう,shiharau,to pay,JLPT_2,verb
+支払う,しはらう,shiharau,to pay,JLPT_3,verb
 死亡,しぼう,shibou,death,JLPT_2,noun
 資本,しほん,shihon,funds; capital,JLPT_2,noun
 姉妹,しまい,shimai,sisters,JLPT_2,noun
 しまった (かん),しまった (かん),shimatta(kan),Damn it!,JLPT_2,noun
 自慢,じまん,jiman,pride; boast,JLPT_2,noun
 地味,じみ,jimi,quiet; plain; conservative,JLPT_2,noun
-示す,しめす,shimesu,to show; to indicate,JLPT_2,verb
+示す,しめす,shimesu,to show; to indicate,JLPT_3,verb
 占める,しめる,shimeru,to take up; to account for,JLPT_3,verb
 湿る,しめる,shimeru,to be wet; to be damp,JLPT_2,verb
 下,しも,shimo,under; below; beneath,JLPT_2,noun
@@ -4588,7 +4588,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 少女,しょうじょ,shoujo,young girl,JLPT_2,noun
 少々,しょうしょう,shoushiyoo,a little; short (time) (formal for 少し (すこし)),JLPT_3,adverb
 症状,しょうじょう,shoujou,symptoms; condition,JLPT_3,noun
-生じる,しょうじる,shoujiru,to occur; to arise; to be generated,JLPT_2,verb
+生じる,しょうじる,shoujiru,to occur; to arise; to be generated,JLPT_3,verb
 状態,じょうたい,joutai,condition; situation,JLPT_2,noun
 上達,じょうたつ,joutatsu,improvement; advance,JLPT_2,noun
 冗談,じょうだん,joudan,a joke,JLPT_3,noun
@@ -4638,7 +4638,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 深刻,しんこく,shinkoku,serious,JLPT_2,adjective
 診察,しんさつ,shinsatsu,medical examination (of a patient),JLPT_3,noun
 人種,じんしゅ,jinshu,race (of people),JLPT_2,noun
-信じる,しんじる,shinjiru,to believe,JLPT_2,verb
+信じる,しんじる,shinjiru,to believe,JLPT_3,verb
 人生,じんせい,jinsei,(human) life (e.g.; conception to death),JLPT_2,noun
 親戚,しんせき,shinseki,relative(s),JLPT_3,noun
 新鮮,しんせん,shinsen,fresh,JLPT_2,adjective
@@ -4667,15 +4667,15 @@ expression,reading,romaji,meaning,tags,part_of_speech
 末,すえ,sue,the end of; powder,JLPT_3,noun
 姿,すがた,sugata,figure; shape; appearance,JLPT_2,noun
 スキー,スキー,ski,ski,JLPT_3,noun
-救う,すくう,sukuu,to rescue from; to help out of,JLPT_2,verb
+救う,すくう,sukuu,to rescue from; to help out of,JLPT_3,verb
 すくなくとも,すくなくとも,sukunakutomo,at least,JLPT_2,adverb
-優れる,すぐれる,sugureru,to surpass; to outstrip; to excel,JLPT_2,verb
+優れる,すぐれる,sugureru,to surpass; to outstrip; to excel,JLPT_3,verb
 スケート,スケート,skate,skate(s); skating,JLPT_2,noun
 スケジュール,スケジュール,schedule,schedule,JLPT_2,noun
 少しも,すこしも,sukoshimo,anything of; not one bit,JLPT_2,adverb
 過ごす,すごす,sugosu,to pass; to spend (time),JLPT_3,verb
 筋,すじ,suji,muscle; string; line,JLPT_2,noun
-進める,すすめる,susumeru,to advance; to promote; to hasten,JLPT_2,verb
+進める,すすめる,susumeru,to advance; to promote; to hasten,JLPT_3,verb
 勧める,すすめる,susumeru,to persuade; to urge; to recommend; to advise,JLPT_3,verb
 スター,スター,star,star,JLPT_2,noun
 スタイル,スタイル,style,style,JLPT_2,noun
@@ -4688,17 +4688,17 @@ expression,reading,romaji,meaning,tags,part_of_speech
 すなわち,すなわち,sunawachi,that is; namely; e.g.,JLPT_2,other
 スピーチ,スピーチ,speech,speech,JLPT_3,noun
 全て,すべて,subete,all; the whole; entirely,JLPT_2,noun
-済ませる,すませる,sumaseru,to be finished,JLPT_2,verb
+済ませる,すませる,sumaseru,to be finished,JLPT_3,verb
 角,すみ,sumi,corner,JLPT_2,noun
 墨,すみ,sumi,ink,JLPT_2,noun
 すみません (かん),すみません (かん),sumimasen(kan),sorry; excuse me,JLPT_2,noun
 澄む,すむ,sumu,to clear (e.g.; weather); to become transparent,JLPT_2,verb
 清む,すむ,sumu,to clear (e.g.; weather); to become transparent,JLPT_2,noun
 刷る,する,suru,to print,JLPT_2,verb
-為る,する,suru,to do; to attempt,JLPT_2,verb
+為る,する,suru,to do; to attempt,JLPT_3,verb
 鋭い,するどい,surudoi,pointed; sharp,JLPT_2,adjective
 すれ違う,すれちがう,surechigau,to pass by one another,JLPT_2,verb
-ずれる,ずれる,zureru,move; off the point,JLPT_2,verb
+ずれる,ずれる,zureru,move; off the point,JLPT_1,verb
 正,せい,sei,(logical) true; regular,JLPT_2,noun
 生,せい,sei,birth,JLPT_2,adjective
 性,せい,sei,sex; gender,JLPT_2,noun
@@ -4746,7 +4746,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 愛情,あいじょう,aijou,love; affection,JLPT_2,noun
 合図,あいず,aizu,sign; signal,JLPT_2,noun
 アイスクリーム,アイスクリーム,icecream,ice cream,JLPT_2,noun
-愛する,あいする,aisuru,to love,JLPT_2,verb
+愛する,あいする,aisuru,to love,JLPT_3,verb
 相手,あいて,aite,partner; addressee; the person you are talking to,JLPT_2,noun
 あいにく,あいにく,ainiku,unfortunately,JLPT_2,adverb
 遭う,あう,au,to meet; to encounter (undesirable nuance),JLPT_2,verb
@@ -4754,17 +4754,17 @@ expression,reading,romaji,meaning,tags,part_of_speech
 明かり,あかり,akari,lamplight; light (in general),JLPT_2,noun
 空き,あき,aki,vacancy; opening; space,JLPT_2,noun
 明らか,あきらか,akiraka,obvious; clear,JLPT_2,adjective
-諦める,あきらめる,akirameru,to give up; to abandon,JLPT_2,verb
-飽きる,あきる,akiru,to get tired of; to lose interest in,JLPT_2,verb
+諦める,あきらめる,akirameru,to give up; to abandon,JLPT_3,verb
+飽きる,あきる,akiru,to get tired of; to lose interest in,JLPT_3,verb
 握手,あくしゅ,akushu,handshake,JLPT_2,noun
 悪魔,あくま,akuma,devil; demon; evil spirit,JLPT_2,noun
 明ける,あける,akeru,to dawn; to become daylight,JLPT_2,verb
 揚げる,あげる,ageru,to lift; to fry,JLPT_2,verb
 挙げる,あげる,ageru,to raise; to list; to cite,JLPT_2,verb
 預かる,あずかる,azukaru,to keep (something) for (someone),JLPT_2,verb
-預ける,あずける,azukeru,to give into custody; to deposit,JLPT_2,verb
+預ける,あずける,azukeru,to give into custody; to deposit,JLPT_3,verb
 汗,あせ,ase,sweat; perspiration,JLPT_2,noun
-与える,あたえる,ataeru,to give,JLPT_2,verb
+与える,あたえる,ataeru,to give,JLPT_3,verb
 温かい,あたたかい,atatakai,warm,JLPT_2,adjective
 暖まる,あたたまる,atatamaru,to warm up,JLPT_2,verb
 温まる,あたたまる,atatamaru,to warm oneself; to get warm,JLPT_2,verb
@@ -4772,11 +4772,11 @@ expression,reading,romaji,meaning,tags,part_of_speech
 温める,あたためる,atatameru,to warm; to heat,JLPT_2,verb
 辺り,あたり,atari,vicinity; nearby,JLPT_2,noun
 当たり前,あたりまえ,atarimae,usual; common; obvious,JLPT_2,adjective
-当たる,あたる,ataru,to be hit; to be successful,JLPT_2,verb
+当たる,あたる,ataru,to be hit; to be successful,JLPT_3,verb
 あちこち,あちこち,achikochi,here and there,JLPT_2,noun
-扱う,あつかう,atsukau,to treat; to handle; to deal with,JLPT_2,verb
+扱う,あつかう,atsukau,to treat; to handle; to deal with,JLPT_3,verb
 集まり,あつまり,atsumari,gathering; meeting; collection,JLPT_2,noun
-当てる,あてる,ateru,to hit; to apply to,JLPT_2,verb
+当てる,あてる,ateru,to hit; to apply to,JLPT_3,verb
 跡,あと,ato,trace; remains; scar,JLPT_2,noun
 穴,あな,ana,hole,JLPT_2,noun
 油,あぶら,abura,oil,JLPT_2,noun
@@ -4788,7 +4788,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 新た,あらた,arata,new; fresh,JLPT_2,adjective
 あらゆる,あらゆる,arayuru,all; every,JLPT_2,adjective
 表す,あらわす,arawasu,to express; to show,JLPT_2,verb
-現す,あらわす,arawasu,to show; to appear; to reveal,JLPT_2,verb
+現す,あらわす,arawasu,to show; to appear; to reveal,JLPT_3,verb
 著す,あらわす,arawasu,to write; to publish,JLPT_2,verb
 現れ,あらわれ,araware,expression; indication; sign,JLPT_2,noun
 現れる,あらわれる,arawareru,to appear (v.i.); to become visible; to express,JLPT_3,verb
@@ -4810,8 +4810,8 @@ expression,reading,romaji,meaning,tags,part_of_speech
 胃,い,i,stomach,JLPT_3,noun
 委員,いいん,iin,committee member,JLPT_2,noun
 意外,いがい,igai,unexpected; surprising,JLPT_2,adjective
-行き,いき,iki,going,JLPT_2,verb
-行き,ゆき,yuki,going,JLPT_2,verb
+行き,いき,iki,going,JLPT_3,verb
+行き,ゆき,yuki,going,JLPT_3,verb
 息,いき,iki,breath,JLPT_2,noun
 勢い,いきおい,ikioi,force; vigor; momentum,JLPT_2,noun
 生き物,いきもの,ikimono,living thing; creature,JLPT_2,noun
@@ -4832,7 +4832,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 いたずら,いたずら,itazura,trick; practical joke,JLPT_2,noun
 いただきます,いただきます,itadakimasu,expression of gratitude before meals,JLPT_2,verb
 痛み,いたみ,itami,pain; ache; sore,JLPT_2,noun
-至る,いたる,itaru,to come; to arrive,JLPT_2,verb
+至る,いたる,itaru,to come; to arrive,JLPT_3,verb
 市,いち,ichi,market; fair,JLPT_1,noun
 位置,いち,ichi,place; position,JLPT_2,noun
 一時,いちじ,ichiji,for a time; temporarily,JLPT_2,noun
@@ -4871,7 +4871,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 医療,いりょう,iryou,medical care; medical treatment,JLPT_2,noun
 岩,いわ,iwa,rock,JLPT_2,noun
 祝い,いわい,iwai,celebration; festival,JLPT_2,noun
-祝う,いわう,iwau,to congratulate; to celebrate,JLPT_2,verb
+祝う,いわう,iwau,to congratulate; to celebrate,JLPT_3,verb
 言わば,いわば,iwaba,so to speak,JLPT_2,adverb
 いわゆる,いわゆる,iwayuru,the so-called; so-to-speak,JLPT_3,adjective
 インク,インク,ink,ink,JLPT_2,noun
@@ -4884,12 +4884,12 @@ expression,reading,romaji,meaning,tags,part_of_speech
 上,うわ,uwa,upper; outer; surface,JLPT_2,noun
 魚,うお,uo,fish,JLPT_2,noun
 うがい,うがい,ugai,gargling,JLPT_3,noun
-受け取る,うけとる,uketoru,to receive; to get; to accept,JLPT_2,verb
-動かす,うごかす,ugokasu,to move; to shift,JLPT_2,verb
+受け取る,うけとる,uketoru,to receive; to get; to accept,JLPT_3,verb
+動かす,うごかす,ugokasu,to move; to shift,JLPT_3,verb
 兎,うさぎ,usagi,rabbit; hare,JLPT_2,noun
 牛,うし,ushi,cattle; cow,JLPT_3,noun
 失う,うしなう,ushinau,to lose (something important or abstract); to part with,JLPT_3,verb
-疑う,うたがう,utagau,to doubt; to distrust,JLPT_2,verb
+疑う,うたがう,utagau,to doubt; to distrust,JLPT_3,verb
 宇宙,うちゅう,uchuu,universe; cosmos; space,JLPT_2,noun
 討つ,うつ,utsu,to attack; to avenge,JLPT_2,verb
 撃つ,うつ,utsu,to attack; to shoot,JLPT_2,verb
@@ -4899,15 +4899,15 @@ expression,reading,romaji,meaning,tags,part_of_speech
 写る,うつる,utsuru,to be photographed; to be projected,JLPT_2,verb
 映る,うつる,utsuru,to be reflected; to come out (photo),JLPT_2,verb
 うなる,うなる,unaru,to groan; to moan,JLPT_2,verb
-奪う,うばう,ubau,to rob; to deprive,JLPT_2,verb
+奪う,うばう,ubau,to rob; to deprive,JLPT_3,verb
 馬,うま,uma,horse; promoted bishop (in Japanese chess known as shogi),JLPT_3,noun
 生まれ,うまれ,umare,birth; birth-place,JLPT_2,noun
 有無,うむ,umu,yes or no; presence or absence,JLPT_2,noun
 梅,うめ,ume,plum; lowest (of a three-tier ranking system),JLPT_2,noun
 埋める,うめる,umeru,to bury; to fill up; to fill (a seat; a vacant position),JLPT_2,verb
-裏切る,うらぎる,uragiru,to betray; to turn traitor,JLPT_2,verb
+裏切る,うらぎる,uragiru,to betray; to turn traitor,JLPT_3,verb
 羨ましい,うらやましい,urayamashii,envious; enviable,JLPT_2,adjective
-売れる,うれる,ureru,to be sold,JLPT_2,verb
+売れる,うれる,ureru,to be sold,JLPT_3,verb
 噂,うわさ,uwasa,rumor; gossip,JLPT_2,noun
 運,うん,un,fortune; luck,JLPT_2,noun
 運転,うんてん,unten,operation; driving,JLPT_2,noun
@@ -4919,11 +4919,11 @@ expression,reading,romaji,meaning,tags,part_of_speech
 衛星,えいせい,eisei,satellite,JLPT_1,noun
 栄養,えいよう,eiyou,nutrition; nourishment,JLPT_2,noun
 笑顔,えがお,egao,smile (on one's face),JLPT_3,noun
-描く,えがく,egaku,to draw; to depict; to describe,JLPT_2,verb
+描く,えがく,egaku,to draw; to depict; to describe,JLPT_3,verb
 餌,えさ,esa,feed; bait,JLPT_2,noun
 エネルギー,エネルギー,energy,energy (GER: energie),JLPT_2,noun
 得る,える,eru,to get; to gain; to win; to learn,JLPT_3,verb
-得る,うる,uru,to get; to gain; to win,JLPT_2,verb
+得る,うる,uru,to get; to gain; to win,JLPT_3,verb
 円,えん,en,circle; yen,JLPT_2,noun
 延期,えんき,enki,postponement; adjournment,JLPT_2,noun
 演技,えんぎ,engi,acting; performance,JLPT_2,noun
@@ -4934,21 +4934,21 @@ expression,reading,romaji,meaning,tags,part_of_speech
 老い,おい,oi,old age; the aged,JLPT_2,noun
 追い付く,おいつく,oitsuku,to overtake; to catch up (with),JLPT_2,verb
 王,おう,ou,king,JLPT_2,noun
-追う,おう,ou,to chase; to run after,JLPT_2,verb
+追う,おう,ou,to chase; to run after,JLPT_3,verb
 応援,おうえん,ouen,aid; assistance; help,JLPT_2,noun
 王様,おうさま,ousama,king,JLPT_2,noun
 王子,おうじ,ouji,prince,JLPT_2,noun
 応じる,おうじる,oujiru,to adapt; to respond; to comply with,JLPT_3,verb
 横断,おうだん,oudan,crossing,JLPT_2,noun
-終える,おえる,oeru,to finish,JLPT_2,verb
+終える,おえる,oeru,to finish,JLPT_3,verb
 大いに,おおいに,ooini,much; considerably (same as 大変 (たいへん)); greatly,JLPT_3,adverb
-覆う,おおう,oou,to cover; to hide; to conceal,JLPT_2,verb
+覆う,おおう,oou,to cover; to hide; to conceal,JLPT_3,verb
 大家,おおや,ooya,landlord,JLPT_2,noun
 丘,おか,oka,hill; height,JLPT_2,noun
 沖,おき,oki,open sea,JLPT_2,noun
 奥,おく,oku,interior; inner part,JLPT_2,noun
-贈る,おくる,okuru,to present; to give to; to award to,JLPT_2,verb
-起こる,おこる,okoru,to occur; to happen,JLPT_2,verb
+贈る,おくる,okuru,to present; to give to; to award to,JLPT_3,verb
+起こる,おこる,okoru,to occur; to happen,JLPT_3,verb
 押える,おさえる,osaeru,to stop; to restrain; to press down,JLPT_2,verb
 幼い,おさない,osanai,very young; childish,JLPT_2,adjective
 収める,おさめる,osameru,to store to pay; to supply,JLPT_2,verb
@@ -4959,19 +4959,19 @@ expression,reading,romaji,meaning,tags,part_of_speech
 お喋り,おしゃべり,oshaberi,chattering; talk,JLPT_2,noun
 汚染,おせん,osen,pollution; contamination,JLPT_2,noun
 恐らく,おそらく,osoraku,perhaps,JLPT_2,adverb
-恐れる,おそれる,osoreru,to fear; to be afraid of,JLPT_2,verb
+恐れる,おそれる,osoreru,to fear; to be afraid of,JLPT_3,verb
 恐ろしい,おそろしい,osoroshii,terrible; dreadful,JLPT_2,adjective
 教わる,おそわる,osowaru,to be taught,JLPT_2,verb
 お互い,おたがい,otagai,mutual; reciprocal; each other,JLPT_3,noun
 穏やか,おだやか,odayaka,calm; gentle; quiet,JLPT_2,adjective
 男の人,おとこのひと,otokonohito,man,JLPT_3,noun
 大人しい,おとなしい,otonashii,obedient; docile; quiet,JLPT_2,adjective
-劣る,おとる,otoru,to fall behind; to be inferior to,JLPT_2,verb
+劣る,おとる,otoru,to fall behind; to be inferior to,JLPT_3,verb
 鬼,おに,oni,ogre; demon; 'it' (e.g.;in a game of tag),JLPT_2,noun
 帯,おび,obi,band; sash,JLPT_2,noun
 お昼,おひる,ohiru,lunch; noon,JLPT_2,noun
 オフィス,オフィス,office,office,JLPT_2,noun
-溺れる,おぼれる,oboreru,to be drowned; to indulge in,JLPT_2,verb
+溺れる,おぼれる,oboreru,to be drowned; to indulge in,JLPT_3,verb
 お前,おまえ,omae,you (sing); presence (of a high personage),JLPT_2,noun
 おめでとう,おめでとう,omedetou,Congratulations!; an auspicious occasion!,JLPT_2,other
 お目に掛かる,おめにかかる,omenikakaru,meet ~; see ~,JLPT_2,verb
@@ -4981,7 +4981,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 思わず,おもわず,omowazu,unintentional; spontaneous,JLPT_2,adverb
 泳ぎ,およぎ,oyogi,swimming,JLPT_2,noun
 およそ,およそ,oyoso,about; roughly; approximately,JLPT_2,adverb
-及ぼす,およぼす,oyobosu,to exert; to cause; to exercise,JLPT_2,verb
+及ぼす,およぼす,oyobosu,to exert; to cause; to exercise,JLPT_3,verb
 下す,おろす,orosu,to lower; to let go down,JLPT_2,verb
 降ろす,おろす,orosu,to take down; to launch; to drop,JLPT_2,verb
 卸す,おろす,orosu,to sell wholesale; grated (vegetables),JLPT_2,verb
@@ -5017,15 +5017,15 @@ expression,reading,romaji,meaning,tags,part_of_speech
 反る,かえる,kaeru,to warp; to be warped; to curve,JLPT_2,verb
 香り,かおり,kaori,aroma; fragrance,JLPT_2,noun
 画家,がか,gaka,painter,JLPT_2,noun
-抱える,かかえる,kakaeru,to hold or carry under or in the arms,JLPT_2,verb
+抱える,かかえる,kakaeru,to hold or carry under or in the arms,JLPT_3,verb
 価格,かかく,kakaku,price; value,JLPT_2,noun
 化学,かがく,kagaku,chemistry,JLPT_2,noun
-輝く,かがやく,kagayaku,to shine; to glitter; to sparkle,JLPT_2,verb
+輝く,かがやく,kagayaku,to shine; to glitter; to sparkle,JLPT_3,verb
 係,かかり,kakari,person in charge,JLPT_2,noun
-罹る,かかる,kakaru,to suffer from,JLPT_2,verb
-限る,かぎる,kagiru,to restrict; to limit; to confine,JLPT_2,verb
+罹る,かかる,kakaru,to suffer from,JLPT_3,verb
+限る,かぎる,kagiru,to restrict; to limit; to confine,JLPT_3,verb
 掻く,かく,kaku,to scratch,JLPT_2,verb
-描く,かく,kaku,to draw; to depict; to describe,JLPT_2,verb
+描く,かく,kaku,to draw; to depict; to describe,JLPT_3,verb
 嗅ぐ,かぐ,kagu,to sniff; to smell,JLPT_2,verb
 家具,かぐ,kagu,furniture,JLPT_3,noun
 学,がく,gaku,learning; knowledge,JLPT_2,noun
@@ -5034,18 +5034,18 @@ expression,reading,romaji,meaning,tags,part_of_speech
 確実,かくじつ,kakujitsu,certainty; reliability; soundness,JLPT_2,adjective
 学者,がくしゃ,gakusha,scholar,JLPT_2,noun
 学習,がくしゅう,gakushuu,study; learning,JLPT_2,noun
-隠す,かくす,kakusu,to hide; to conceal,JLPT_2,verb
+隠す,かくす,kakusu,to hide; to conceal,JLPT_3,verb
 拡大,かくだい,kakudai,magnification; enlargement,JLPT_2,noun
 確認,かくにん,kakunin,affirmation; confirmation,JLPT_2,noun
 学問,がくもん,gakumon,scholarship; study; learning,JLPT_2,noun
-隠れる,かくれる,kakureru,to hide; to be hidden,JLPT_2,verb
+隠れる,かくれる,kakureru,to hide; to be hidden,JLPT_3,verb
 影,かげ,kage,shade; shadow; other side,JLPT_2,noun
 陰,かげ,kage,shade; shadow; other side,JLPT_2,noun
-欠ける,かける,kakeru,to be lacking,JLPT_2,verb
+欠ける,かける,kakeru,to be lacking,JLPT_3,verb
 加減,かげん,kagen,adjustment; addition and subtraction,JLPT_2,noun
 過去,かこ,kako,past,JLPT_3,noun
 籠,かご,kago,basket; cage,JLPT_2,noun
-囲む,かこむ,kakomu,to surround; to encircle,JLPT_2,verb
+囲む,かこむ,kakomu,to surround; to encircle,JLPT_3,verb
 火災,かさい,kasai,conflagration; fire,JLPT_2,noun
 重なる,かさなる,kasanaru,to be piled up; lie on top of one another,JLPT_2,verb
 重ねる,かさねる,kasaneru,to pile up; to put something on another; to heap up,JLPT_2,verb
@@ -5056,8 +5056,8 @@ expression,reading,romaji,meaning,tags,part_of_speech
 賢い,かしこい,kashikoi,wise; clever; smart,JLPT_2,adjective
 歌手,かしゅ,kashu,singer,JLPT_3,noun
 数,かず,kazu,number; figure; amount,JLPT_3,noun
-稼ぐ,かせぐ,kasegu,to earn income; to labor,JLPT_2,verb
-数える,かぞえる,kazoeru,to count,JLPT_2,verb
+稼ぐ,かせぐ,kasegu,to earn income; to labor,JLPT_3,verb
+数える,かぞえる,kazoeru,to count,JLPT_3,verb
 型,かた,kata,mold; model; style,JLPT_2,noun
 肩,かた,kata,shoulder,JLPT_2,noun
 堅い,かたい,katai,hard; firm; solid,JLPT_2,adjective
@@ -5065,7 +5065,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 方々,かたがた,katagata,persons,JLPT_2,noun
 片付く,かたづく,katazuku,to put in order; to solve,JLPT_2,verb
 刀,かたな,katana,sword; saber,JLPT_2,noun
-語る,かたる,kataru,to talk; to tell; to recite,JLPT_2,verb
+語る,かたる,kataru,to talk; to tell; to recite,JLPT_3,verb
 勝ち,かち,kachi,win; victory,JLPT_2,noun
 価値,かち,kachi,value; worth; merit,JLPT_2,noun
 がっかり,がっかり,gakkari,feel disappointed; be dejected; lose heart,JLPT_2,adverb
@@ -5078,14 +5078,14 @@ expression,reading,romaji,meaning,tags,part_of_speech
 仮定,かてい,katei,assumption; supposition; hypothesis,JLPT_2,noun
 過程,かてい,katei,process,JLPT_2,noun
 課程,かてい,katei,course; curriculum,JLPT_2,noun
-悲しむ,かなしむ,kanashimu,to be sad; to mourn for; to regret,JLPT_2,verb
+悲しむ,かなしむ,kanashimu,to be sad; to mourn for; to regret,JLPT_3,verb
 必ずしも,かならずしも,kanarazushimo,(not) always; (not) necessarily,JLPT_2,adverb
 かなり,かなり,kanari,considerably; fairly; quite,JLPT_3,adverb
 金,かね,kane,gold; metal; money,JLPT_2,noun
 鐘,かね,kane,bell; chime,JLPT_2,noun
 可能,かのう,kanou,possible; practicable; feasible,JLPT_2,adjective
 株,かぶ,kabu,stock; stump (of tree),JLPT_2,noun
-被る,かぶる,kaburu,to wear; to be covered with,JLPT_2,verb
+被る,かぶる,kaburu,to wear; to be covered with,JLPT_3,verb
 我慢,がまん,gaman,patience; endurance; perseverance,JLPT_2,noun
 上,かみ,kami,first volume; superior quality; governmental,JLPT_2,noun
 神,かみ,kami,god,JLPT_2,noun
@@ -5098,7 +5098,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 空,から,kara,empty,JLPT_2,noun
 殻,から,kara,shell; husk; hull,JLPT_2,noun
 柄,がら,gara,pattern; build; character,JLPT_2,noun
-刈る,かる,karu,to cut (hair); to mow (grass); to harvest,JLPT_2,verb
+刈る,かる,karu,to cut (hair); to mow (grass); to harvest,JLPT_3,verb
 河,かわ,kawa,river; stream,JLPT_2,noun
 皮,かわ,kawa,skin; hide; leather,JLPT_2,noun
 革,かわ,kawa,leather,JLPT_2,noun
@@ -5122,10 +5122,10 @@ expression,reading,romaji,meaning,tags,part_of_speech
 患者,かんじゃ,kanja,patient,JLPT_3,noun
 勘定,かんじょう,kanjou,calculation; counting; consideration,JLPT_2,noun
 感情,かんじょう,kanjou,emotion(s); feeling(s); sentiment,JLPT_2,noun
-感じる,かんじる,kanjiru,to feel; to sense,JLPT_2,verb
+感じる,かんじる,kanjiru,to feel; to sense,JLPT_3,verb
 感心,かんしん,kanshin,admiration,JLPT_2,noun
 関心,かんしん,kanshin,concern; interest,JLPT_2,noun
-関する,かんする,kansuru,to concern; to be related,JLPT_2,verb
+関する,かんする,kansuru,to concern; to be related,JLPT_3,verb
 完成,かんせい,kansei,complete; completion; perfection,JLPT_2,noun
 完全,かんぜん,kanzen,perfection; completeness,JLPT_2,adjective
 乾燥,かんそう,kansou,dry; arid; dehydrated,JLPT_2,noun
@@ -5144,7 +5144,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 期間,きかん,kikan,period; term,JLPT_2,noun
 機関,きかん,kikan,engine; institution; organization,JLPT_2,noun
 企業,きぎょう,kigyou,industry; business; undertaking,JLPT_3,noun
-効く,きく,kiku,to be effective,JLPT_2,verb
+効く,きく,kiku,to be effective,JLPT_3,verb
 期限,きげん,kigen,deadline; term,JLPT_2,noun
 機嫌,きげん,kigen,humor; temper; mood,JLPT_2,noun
 気候,きこう,kikou,climate,JLPT_2,noun
@@ -5161,8 +5161,8 @@ expression,reading,romaji,meaning,tags,part_of_speech
 議長,ぎちょう,gichou,chairman,JLPT_2,noun
 きちんと,きちんと,kichinto,precisely; accurately,JLPT_2,adverb
 きつい,きつい,kitsui,tight; close; intense,JLPT_2,adjective
-気付く,きづく,kizuku,to notice; to recognize; to become aware of,JLPT_2,verb
-気に入る,きにいる,kiniiru,to like; to be please,JLPT_2,verb
+気付く,きづく,kizuku,to notice; to recognize; to become aware of,JLPT_3,verb
+気に入る,きにいる,kiniiru,to like; to be please,JLPT_3,verb
 記入,きにゅう,kinyuu,entry; filling in of forms,JLPT_2,noun
 記念,きねん,kinen,commemoration; memory,JLPT_2,noun
 機能,きのう,kinou,function; faculty,JLPT_2,noun
@@ -5170,7 +5170,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 寄付,きふ,kifu,contribution; donation,JLPT_2,noun
 希望,きぼう,kibou,hope; wish; aspiration,JLPT_3,noun
 基本,きほん,kihon,basic; basis,JLPT_3,noun
-決まり,きまり,kimari,settlement; conclusion; rule,JLPT_2,verb
+決まり,きまり,kimari,settlement; conclusion; rule,JLPT_3,verb
 気味,きみ,kimi,-like; -looking; -looked,JLPT_2,noun
 奇妙,きみょう,kimyou,strange; queer; curious,JLPT_2,adjective
 義務,ぎむ,gimu,duty; obligation; responsibility,JLPT_2,noun
@@ -5205,10 +5205,10 @@ expression,reading,romaji,meaning,tags,part_of_speech
 許可,きょか,kyoka,permission; approval,JLPT_3,noun
 局,きょく,kyoku,office; bureau; station(TV; radio),JLPT_2,noun
 巨大,きょだい,kyodai,huge; gigantic; enormous,JLPT_2,adjective
-嫌う,きらう,kirau,to hate; to dislike; to loathe,JLPT_2,verb
+嫌う,きらう,kirau,to hate; to dislike; to loathe,JLPT_3,verb
 霧,きり,kiri,fog; mist,JLPT_2,noun
 切れ,きれ,kire,cloth; piece; cut,JLPT_2,noun
-切れる,きれる,kireru,to cut well; to be sharp; to break (off),JLPT_2,verb
+切れる,きれる,kireru,to cut well; to be sharp; to break (off),JLPT_3,verb
 記録,きろく,kiroku,record; minutes; document,JLPT_2,noun
 議論,ぎろん,giron,argument; discussion; dispute,JLPT_2,noun
 金,きん,kin,gold; metal; money,JLPT_2,noun
@@ -5224,11 +5224,11 @@ expression,reading,romaji,meaning,tags,part_of_speech
 筋肉,きんにく,kinniku,muscle; sinews,JLPT_2,noun
 金融,きんゆう,kinyuu,finance; money and banking,JLPT_2,noun
 句,く,ku,phrase,JLPT_2,noun
-食う,くう,kuu,(male) (vulg.) to eat,JLPT_2,verb
+食う,くう,kuu,(male) (vulg.) to eat,JLPT_3,verb
 偶然,ぐうぜん,guuzen,(by) chance; unexpectedly,JLPT_3,noun
 臭い,くさい,kusai,stinky; smelly; bad-smelling,JLPT_2,adjective
 鎖,くさり,kusari,chain,JLPT_2,noun
-腐る,くさる,kusaru,to rot; to go bad,JLPT_2,verb
+腐る,くさる,kusaru,to rot; to go bad,JLPT_3,verb
 癖,くせ,kuse,a habit (often a bad habit); peculiarity,JLPT_2,noun
 管,くだ,kuda,pipe; tube,JLPT_2,noun
 具体,ぐたい,gutai,concrete; tangible; material,JLPT_2,noun
@@ -5239,7 +5239,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 区別,くべつ,kubetsu,distinction; differentiation; classification,JLPT_2,noun
 組,くみ,kumi,class; team; set,JLPT_2,noun
 組合,くみあい,kumiai,association; union,JLPT_2,noun
-組む,くむ,kumu,to put together,JLPT_2,verb
+組む,くむ,kumu,to put together,JLPT_3,verb
 汲む,くむ,kumu,to draw; to scoop; to pump,JLPT_2,verb
 酌む,くむ,kumu,to serve sake,JLPT_2,verb
 悔しい,くやしい,kuyashii,regrettable; mortifying; vexing,JLPT_2,adjective
@@ -5250,18 +5250,18 @@ expression,reading,romaji,meaning,tags,part_of_speech
 グラス,グラス,glass,glass; grass,JLPT_2,noun
 グランド,グランド,grand,gland; grand; (electrical) ground,JLPT_2,noun
 クリーム,クリーム,cream,cream,JLPT_2,noun
-繰り返す,くりかえす,kurikaesu,to repeat; to do something over again,JLPT_2,verb
+繰り返す,くりかえす,kurikaesu,to repeat; to do something over again,JLPT_3,verb
 クリスマス,クリスマス,christmas,Christmas,JLPT_3,noun
-狂う,くるう,kuruu,to go mad; to get out of order,JLPT_2,verb
+狂う,くるう,kuruu,to go mad; to get out of order,JLPT_3,verb
 グループ,グループ,group,group,JLPT_2,noun
 苦しい,くるしい,kurushii,tough; physically strenuous,JLPT_3,adjective
-苦しむ,くるしむ,kurushimu,to suffer; to groan; to be worried,JLPT_2,verb
+苦しむ,くるしむ,kurushimu,to suffer; to groan; to be worried,JLPT_3,verb
 暮れ,くれ,kure,year end;,JLPT_2,noun
 苦労,くろう,kurou,hardship; suffering,JLPT_3,noun
-加える,くわえる,kuwaeru,to append; to sum up; to add (up),JLPT_2,verb
+加える,くわえる,kuwaeru,to append; to sum up; to add (up),JLPT_3,verb
 咥える,くわえる,kuwaeru,to hold something in the mouth,JLPT_2,verb
 詳しい,くわしい,kuwashii,detailed; full; accurate,JLPT_3,adjective
-加わる,くわわる,kuwawaru,to join in; to accede to,JLPT_2,verb
+加わる,くわわる,kuwawaru,to join in; to accede to,JLPT_3,verb
 訓,くん,kun,native Japanese reading of a Chinese character,JLPT_2,noun
 軍,ぐん,gun,army; force; troops,JLPT_2,noun
 郡,ぐん,gun,country; district,JLPT_2,noun
@@ -5296,7 +5296,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 欠点,けってん,ketten,faults; defect; weakness,JLPT_2,noun
 結論,けつろん,ketsuron,conclusion,JLPT_2,noun
 煙,けむり,kemuri,smoke; fumes,JLPT_2,noun
-蹴る,ける,keru,to kick (with the feet),JLPT_3,verb
+蹴る,ける,keru,to kick (with the feet),JLPT_2,verb
 券,けん,ken,ticket; certificate,JLPT_2,noun
 県,けん,ken,prefecture,JLPT_3,noun
 見解,けんかい,kenkai,opinion; point of view,JLPT_2,noun
@@ -5355,7 +5355,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 コーチ,コーチ,coach,coach,JLPT_2,noun
 コード,コード,code,code; cord; chord,JLPT_2,noun
 氷,こおり,koori,ice; hail,JLPT_2,noun
-凍る,こおる,kooru,to freeze; to be frozen over; to congeal,JLPT_2,verb
+凍る,こおる,kooru,to freeze; to be frozen over; to congeal,JLPT_3,verb
 ゴール,ゴール,goal,goal,JLPT_2,noun
 誤解,ごかい,gokai,misunderstanding,JLPT_3,noun
 語学,ごがく,gogaku,language study,JLPT_3,noun
@@ -5379,12 +5379,12 @@ expression,reading,romaji,meaning,tags,part_of_speech
 骨折,こっせつ,kossetsu,bone fracture,JLPT_2,noun
 小包,こづつみ,kozutsumi,parcel; package,JLPT_2,noun
 琴,こと,koto,Japanese harp,JLPT_2,noun
-異なる,ことなる,kotonaru,to differ; to vary,JLPT_2,verb
+異なる,ことなる,kotonaru,to differ; to vary,JLPT_3,verb
 諺,ことわざ,kotowaza,proverb; saying,JLPT_2,noun
-断る,ことわる,kotowaru,to refuse; to decline; to dismiss,JLPT_2,verb
+断る,ことわる,kotowaru,to refuse; to decline; to dismiss,JLPT_3,verb
 粉,こな,kona,flour; powder,JLPT_2,noun
 好み,このみ,konomi,liking; taste; choice,JLPT_2,noun
-好む,このむ,konomu,to like; to prefer,JLPT_2,verb
+好む,このむ,konomu,to like; to prefer,JLPT_3,verb
 こぼす,こぼす,kobosu,to spill,JLPT_2,verb
 こぼれる,こぼれる,koboreru,to overflow; to spill,JLPT_2,verb
 塵,ごみ,gomi,garbage; litter,JLPT_2,noun
@@ -5392,7 +5392,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 ごめんなさい,ごめんなさい,gomennasai,I beg your pardon; excuse me; I'm sorry,JLPT_3,other
 小屋,こや,koya,hut; cabin; shed,JLPT_2,noun
 これら,これら,korera,these,JLPT_2,noun
-殺す,ころす,korosu,to kill,JLPT_2,verb
+殺す,ころす,korosu,to kill,JLPT_3,verb
 転ぶ,ころぶ,korobu,to fall down (on the floor); to fall over,JLPT_3,verb
 今回,こんかい,konkai,now; this time; lately,JLPT_2,noun
 今後,こんご,kongo,from now on; hereafter,JLPT_2,noun
@@ -5417,8 +5417,8 @@ expression,reading,romaji,meaning,tags,part_of_speech
 幸い,さいわい,saiwai,fortunately; luckily,JLPT_3,adverb
 サイン,サイン,sign,autograph; sign; sine,JLPT_2,noun
 境,さかい,sakai,border; boundary; mental state,JLPT_2,noun
-逆らう,さからう,sakarau,to go against; to oppose; to disobey,JLPT_2,verb
-盛り,さかり,sakari,helping; serving,JLPT_2,verb
+逆らう,さからう,sakarau,to go against; to oppose; to disobey,JLPT_3,verb
+盛り,さかり,sakari,helping; serving,JLPT_3,verb
 作業,さぎょう,sagyou,work; operation; manufacturing,JLPT_2,noun
 裂く,さく,saku,to tear; to split,JLPT_2,verb
 昨,さく,saku,last (year); yesterday,JLPT_2,other
@@ -5426,12 +5426,12 @@ expression,reading,romaji,meaning,tags,part_of_speech
 作物,さくもつ,sakumotsu,produce (e.g.; agricultural); crops,JLPT_2,noun
 桜,さくら,sakura,cherry blossom; cherry tree,JLPT_2,noun
 酒,さけ,sake,alcohol; sake,JLPT_2,noun
-叫ぶ,さけぶ,sakebu,to shout; to cry,JLPT_2,verb
+叫ぶ,さけぶ,sakebu,to shout; to cry,JLPT_3,verb
 避ける,さける,sakeru,to avoid (physical contact); to ward off; to avert,JLPT_3,verb
-支える,ささえる,sasaeru,support; hold; sustain,JLPT_2,verb
+支える,ささえる,sasaeru,support; hold; sustain,JLPT_3,verb
 刺さる,ささる,sasaru,to stick; to be stuck,JLPT_2,verb
-刺す,さす,sasu,to sting; to bite (e.g.; bug); to prick; to stab,JLPT_3,verb
-指す,さす,sasu,to point;,JLPT_2,verb
+刺す,さす,sasu,to sting; to bite (e.g.; bug); to prick; to stab,JLPT_2,verb
+指す,さす,sasu,to point;,JLPT_3,verb
 挿す,さす,sasu,to insert; to put in; to graft,JLPT_2,verb
 注す,さす,sasu,to pour (drink); to serve (drinks),JLPT_2,verb
 射す,さす,sasu,to shine; to strike,JLPT_2,verb
@@ -5447,7 +5447,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 差別,さべつ,sabetsu,discrimination; differentiation,JLPT_2,noun
 ママ,ママ,mama,Mama,JLPT_2,noun
 豆,まめ,mame,beans; peas,JLPT_2,noun
-守る,まもる,mamoru,to protect; to abide (by the rules),JLPT_2,verb
+守る,まもる,mamoru,to protect; to abide (by the rules),JLPT_3,verb
 迷う,まよう,mayou,to be puzzled; to be perplexed; to lose one's way,JLPT_2,verb
 丸,まる,maru,circle; full (month),JLPT_2,noun
 円,まる,maru,circle,JLPT_2,noun
@@ -5460,9 +5460,9 @@ expression,reading,romaji,meaning,tags,part_of_speech
 味方,みかた,mikata,ally; supporter,JLPT_2,noun
 見事,みごと,migoto,splendid; magnificent,JLPT_2,adjective
 ミス,ミス,mistake,miss (mistake; error; failure); Miss,JLPT_1,noun
-満ちる,みちる,michiru,to be full; to mature,JLPT_2,verb
+満ちる,みちる,michiru,to be full; to mature,JLPT_3,verb
 密,みつ,mitsu,thick; close,JLPT_2,noun
-認める,みとめる,mitomeru,to recognize; to notice; to approve,JLPT_3,verb
+認める,みとめる,mitomeru,to recognize; to notice; to approve,JLPT_1,verb
 見舞い,みまい,mimai,expression of sympathy; expression of concern,JLPT_2,noun
 土産,みやげ,miyage,souvenir,JLPT_2,noun
 都,みやこ,miyako,city; capital,JLPT_3,noun
@@ -5470,20 +5470,20 @@ expression,reading,romaji,meaning,tags,part_of_speech
 明後日,みょうごにち,myougonichi,day after tomorrow,JLPT_2,noun
 未来,みらい,mirai,future (life tense),JLPT_2,noun
 魅力,みりょく,miryoku,charm; fascination; appeal,JLPT_2,noun
-診る,みる,miru,to examine (a patient),JLPT_3,verb
+診る,みる,miru,to examine (a patient),JLPT_2,verb
 ミルク,ミルク,milk,milk,JLPT_2,noun
 無,む,mu,nothing; naught; zero,JLPT_2,noun
 向かい,むかい,mukai,facing; opposite; across,JLPT_2,verb
-迎え,むかえ,mukae,meeting; person sent to pick up an arrival,JLPT_2,verb
-向く,むく,muku,to face,JLPT_2,verb
+迎え,むかえ,mukae,meeting; person sent to pick up an arrival,JLPT_3,verb
+向く,むく,muku,to face,JLPT_3,verb
 剥く,むく,muku,to peel; to skin,JLPT_2,verb
-向ける,むける,mukeru,to turn towards; to point,JLPT_2,verb
+向ける,むける,mukeru,to turn towards; to point,JLPT_3,verb
 無視,むし,mushi,disregard; ignore,JLPT_2,noun
 蒸し暑い,むしあつい,mushiatsui,humid; sultry,JLPT_2,adjective
 虫歯,むしば,mushiba,cavity; tooth decay,JLPT_2,noun
 寧ろ,むしろ,mushiro,rather; better; instead,JLPT_2,adverb
 蒸す,むす,musu,to steam; to poultice; to be sultry,JLPT_2,verb
-結ぶ,むすぶ,musubu,to tie; to bind; to link,JLPT_2,verb
+結ぶ,むすぶ,musubu,to tie; to bind; to link,JLPT_3,verb
 無駄,むだ,muda,futility; uselessness,JLPT_2,adjective
 夢中,むちゅう,muchuu,crush; crazy; be hooked on,JLPT_2,adjective
 胸,むね,mune,breast; chest,JLPT_2,noun
@@ -5492,7 +5492,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 明確,めいかく,meikaku,clear; definite,JLPT_2,adjective
 名刺,めいし,meishi,(name) card; business card,JLPT_3,noun
 名詞,めいし,meishi,noun,JLPT_2,noun
-命じる,めいじる,meijiru,to order; to command; to appoint,JLPT_2,verb
+命じる,めいじる,meijiru,to order; to command; to appoint,JLPT_3,verb
 名人,めいじん,meijin,master; expert,JLPT_2,noun
 命令,めいれい,meirei,order; command; decree,JLPT_2,noun
 迷惑,めいわく,meiwaku,trouble; bother; annoyance,JLPT_2,adjective
@@ -5509,22 +5509,22 @@ expression,reading,romaji,meaning,tags,part_of_speech
 申し込む,もうしこむ,moushikomu,to apply for; to make an application,JLPT_3,verb
 申し訳,もうしわけ,moushiwake,apology; excuse,JLPT_2,noun
 毛布,もうふ,moufu,blanket,JLPT_2,noun
-燃える,もえる,moeru,to burn,JLPT_2,verb
+燃える,もえる,moeru,to burn,JLPT_3,verb
 目的,もくてき,mokuteki,purpose; goal; aim,JLPT_3,noun
 目標,もくひょう,mokuhyou,mark; objective; target,JLPT_2,noun
 文字,もじ,moji,letter (of alphabet); character,JLPT_2,noun
 文字,もんじ,monji,letter (of alphabet); character,JLPT_2,noun
 もしかすると,もしかすると,moshikasuruto,perhaps; maybe; by some chance,JLPT_2,verb
 もしも,もしも,moshimo,if,JLPT_2,adverb
-持ち上げる,もちあげる,mochiageru,to raise; to lift up; to flatter,JLPT_2,verb
-用いる,もちいる,mochiiru,to use; to make use of,JLPT_2,verb
+持ち上げる,もちあげる,mochiageru,to raise; to lift up; to flatter,JLPT_3,verb
+用いる,もちいる,mochiiru,to use; to make use of,JLPT_3,verb
 もったいない,もったいない,mottainai,wasteful; more than one deserves; unworthy of,JLPT_2,adjective
 尤も,もっとも,mottomo,quite right; plausible; natural,JLPT_2,other
 元,もと,moto,origin; original; former,JLPT_2,noun
 基,もと,moto,basis,JLPT_2,noun
 素,もと,moto,prime,JLPT_2,noun
-戻す,もどす,modosu,to restore; to put back; to return,JLPT_2,verb
-基づく,もとづく,motozuku,to be grounded on; to be based on,JLPT_2,verb
+戻す,もどす,modosu,to restore; to put back; to return,JLPT_3,verb
+基づく,もとづく,motozuku,to be grounded on; to be based on,JLPT_3,verb
 求める,もとめる,motomeru,to request; to ask for; to seek; to search for,JLPT_3,verb
 者,もの,mono,person (same as 人 (ひと)),JLPT_3,noun
 物音,ものおと,monooto,sounds,JLPT_2,noun
@@ -5537,16 +5537,16 @@ expression,reading,romaji,meaning,tags,part_of_speech
 役,やく,yaku,role; position,JLPT_2,noun
 約,やく,yaku,approximately; about; some,JLPT_3,other
 訳,やく,yaku,translation,JLPT_2,noun
-訳す,やくす,yakusu,to translate,JLPT_3,verb
+訳す,やくす,yakusu,to translate,JLPT_2,verb
 役割,やくわり,yakuwari,assigning (allotment of) parts; role; duties,JLPT_2,noun
 家賃,やちん,yachin,rent,JLPT_3,noun
 厄介,やっかい,yakkai,trouble; burden; care,JLPT_2,adjective
 宿,やど,yado,inn; lodging,JLPT_2,noun
 雇う,やとう,yatou,to employ; to hire,JLPT_3,verb
 屋根,やね,yane,roof,JLPT_2,noun
-破る,やぶる,yaburu,to tear; to violate; to defeat,JLPT_2,verb
+破る,やぶる,yaburu,to tear; to violate; to defeat,JLPT_3,verb
 破れる,やぶれる,yabureru,to get torn; to wear out,JLPT_2,verb
-辞める,やめる,yameru,to retire,JLPT_2,verb
+辞める,やめる,yameru,to retire,JLPT_3,verb
 やや,やや,yaya,a little; partially; somewhat,JLPT_2,adverb
 唯一,ゆいいつ,yuiitsu,only; sole; unique,JLPT_2,noun
 勇気,ゆうき,yuuki,courage; bravery; boldness,JLPT_2,noun
@@ -5562,13 +5562,13 @@ expression,reading,romaji,meaning,tags,part_of_speech
 有利,ゆうり,yuuri,advantageous; better,JLPT_2,adjective
 床,ゆか,yuka,floor,JLPT_2,noun
 愉快,ゆかい,yukai,pleasant; happy,JLPT_2,noun
-譲る,ゆずる,yuzuru,to turn over; to assign; to hand over,JLPT_2,verb
+譲る,ゆずる,yuzuru,to turn over; to assign; to hand over,JLPT_3,verb
 豊か,ゆたか,yutaka,abundant; wealthy; plentiful; rich,JLPT_2,adjective
 茹でる,ゆでる,yuderu,to boil,JLPT_2,verb
 許す,ゆるす,yurusu,to permit; to allow; to approve,JLPT_3,verb
 夜,よ,yo,evening; night,JLPT_2,noun
 夜明け,よあけ,yoake,dawn; daybreak,JLPT_2,noun
-酔う,よう,you,to get drunk,JLPT_2,verb
+酔う,よう,you,to get drunk,JLPT_3,verb
 容易,ようい,youi,easy; simple; plain,JLPT_2,adjective
 容器,ようき,youki,container; vessel,JLPT_2,noun
 陽気,ようき,youki,season; weather; cheerfulness,JLPT_2,adjective
@@ -5581,10 +5581,10 @@ expression,reading,romaji,meaning,tags,part_of_speech
 曜日,ようび,youbi,day of the week,JLPT_2,noun
 ヨーロッパ,ヨーロッパ,europa,Europe,JLPT_2,noun
 予期,よき,yoki,expectation; forecast,JLPT_2,noun
-横切る,よこぎる,yokogiru,to cross (e.g.; arms); to traverse,JLPT_2,verb
+横切る,よこぎる,yokogiru,to cross (e.g.; arms); to traverse,JLPT_3,verb
 汚す,よごす,yogosu,to pollute; to make dirty,JLPT_2,verb
 予算,よさん,yosan,estimate; budget,JLPT_2,noun
-止す,よす,yosu,to cease; to give up,JLPT_2,verb
+止す,よす,yosu,to cease; to give up,JLPT_3,verb
 寄せる,よせる,yoseru,to collect; to gather; to put aside,JLPT_2,verb
 予測,よそく,yosoku,prediction; estimation,JLPT_2,noun
 ヨット,ヨット,yacht,yacht,JLPT_2,noun
@@ -5593,7 +5593,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 余分,よぶん,yobun,extra; excess; surplus,JLPT_2,noun
 予報,よほう,yohou,forecast; prediction,JLPT_2,noun
 予防,よぼう,yobou,prevention; protection against,JLPT_2,noun
-読み,よみ,yomi,reading,JLPT_2,verb
+読み,よみ,yomi,reading,JLPT_3,verb
 嫁,よめ,yome,bride; daughter-in-law,JLPT_2,noun
 余裕,よゆう,yoyuu,excess; surplus,JLPT_3,noun
 より,より,yori,twist; ply,JLPT_2,adverb
@@ -5601,7 +5601,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 喜び,よろこび,yorokobi,joy; pleasure; rejoicing,JLPT_2,noun
 よろしく (かん),よろしく (かん),yoroshiku(kan),best regards; please remember me,JLPT_2,noun
 四,よん,yon,four,JLPT_2,noun
-来,らい～,rai~,next ~,JLPT_2,verb
+来,らい～,rai~,next ~,JLPT_3,verb
 ライター,ライター,writer,lighter; writer,JLPT_2,noun
 楽,らく,raku,comfort; ease,JLPT_2,adjective
 ラケット,ラケット,racket,racket,JLPT_2,noun
@@ -5631,7 +5631,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 老人,ろうじん,roujin,the aged; old person,JLPT_2,noun
 労働,ろうどう,roudou,labor; work,JLPT_2,noun
 ロケット,ロケット,rocket,locket; rocket,JLPT_2,noun
-論じる,ろんじる,ronjiru,to argue; to discuss,JLPT_2,verb
+論じる,ろんじる,ronjiru,to argue; to discuss,JLPT_3,verb
 論争,ろんそう,ronsou,controversy; dispute,JLPT_2,noun
 論文,ろんぶん,ronbun,thesis; paper,JLPT_2,noun
 輪,わ,wa,ring; hoop; circle,JLPT_2,noun
@@ -5641,13 +5641,13 @@ expression,reading,romaji,meaning,tags,part_of_speech
 分かれる,わかれる,wakareru,to branch off; to diverge from,JLPT_2,verb
 脇,わき,waki,side,JLPT_2,noun
 湧く,わく,waku,to boil; to grow hot,JLPT_2,verb
-分ける,わける,wakeru,to divide; to separate,JLPT_2,verb
+分ける,わける,wakeru,to divide; to separate,JLPT_3,verb
 わざと,わざと,wazato,on purpose,JLPT_2,adverb
 僅か,わずか,wazuka,only; merely; a little,JLPT_2,adverb
 綿,わた,wata,cotton,JLPT_2,noun
 話題,わだい,wadai,topic; subject,JLPT_2,noun
 笑い,わらい,warai,laugh; laughter; smile,JLPT_2,noun
-割る,わる,waru,to divide; to break,JLPT_2,verb
+割る,わる,waru,to divide; to break,JLPT_3,verb
 悪口,わるくち,warukuchi,abuse; insult,JLPT_2,noun
 我々,われわれ,wareware,we,JLPT_2,noun
 湾,わん,wan,bay; gulf; inlet,JLPT_2,noun
@@ -5744,7 +5744,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 絶滅,ぜつめつ,zetsumetsu,destruction; extinction,JLPT_2,noun
 節約,せつやく,setsuyaku,economizing; saving,JLPT_2,noun
 攻める,せめる,semeru,to attack; to assault,JLPT_2,verb
-責める,せめる,semeru,to condemn; to blame; to criticize,JLPT_2,verb
+責める,せめる,semeru,to condemn; to blame; to criticize,JLPT_3,verb
 善,ぜん,zen,good; virtue,JLPT_2,noun
 全,ぜん,zen,all; whole; entire,JLPT_2,noun
 全員,ぜんいん,zen'in,all members,JLPT_2,noun
@@ -5773,8 +5773,8 @@ expression,reading,romaji,meaning,tags,part_of_speech
 そこで,そこで,sokode,so (conj.); accordingly,JLPT_2,other
 組織,そしき,soshiki,organization; structure; tissue,JLPT_2,noun
 そして,そして,soshite,and then,JLPT_3,other
-注ぐ,そそぐ,sosogu,to pour (into),JLPT_2,verb
-育つ,そだつ,sodatsu,to be brought up; to grow (up),JLPT_2,verb
+注ぐ,そそぐ,sosogu,to pour (into),JLPT_3,verb
+育つ,そだつ,sodatsu,to be brought up; to grow (up),JLPT_3,verb
 そっくり,そっくり,sokkuri,the splitting image of; entirely,JLPT_2,adverb
 そっと,そっと,sotto,softly; gently,JLPT_2,adverb
 袖,そで,sode,sleeve,JLPT_2,noun
@@ -5815,7 +5815,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 対象,たいしょう,taishou,target; object (of worship; study; etc.); subject (i.e.; of taxation),JLPT_3,noun
 対照,たいしょう,taishou,contrast; antithesis; comparison,JLPT_2,noun
 大臣,だいじん,daijin,cabinet minister,JLPT_2,noun
-対する,たいする,taisuru,to face; to confront; to oppose,JLPT_2,verb
+対する,たいする,taisuru,to face; to confront; to oppose,JLPT_3,verb
 大戦,たいせん,taisen,great war; great battle,JLPT_2,noun
 態度,たいど,taido,attitude; manner,JLPT_3,noun
 大統領,だいとうりょう,daitouryou,president,JLPT_2,noun
@@ -5830,7 +5830,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 平ら,たいら,taira,flatness; level; smooth,JLPT_2,noun
 代理,だいり,dairi,representation; proxy; deputy,JLPT_2,noun
 大陸,たいりく,tairiku,continent,JLPT_3,noun
-倒す,たおす,taosu,to throw down; to beat,JLPT_2,verb
+倒す,たおす,taosu,to throw down; to beat,JLPT_3,verb
 タオル,タオル,towel,(hand) towel,JLPT_3,noun
 だが,だが,daga,but; however,JLPT_2,other
 互い,たがい,tagai,mutual; each other,JLPT_2,noun
@@ -5839,26 +5839,26 @@ expression,reading,romaji,meaning,tags,part_of_speech
 宅,たく,taku,house; home,JLPT_2,noun
 炊く,たく,taku,to boil; to cook,JLPT_2,verb
 焚く,たく,taku,to burn; to kindle; to build a fire,JLPT_2,verb
-抱く,だく,daku,to embrace; to hug,JLPT_2,verb
+抱く,だく,daku,to embrace; to hug,JLPT_3,verb
 だけど,だけど,dakedo,however,JLPT_2,other
 たしか,たしか,tashika,certain; sure; if I remember correctly,JLPT_2,adverb
-確かめる,たしかめる,tashikameru,to ascertain; to make sure,JLPT_2,verb
+確かめる,たしかめる,tashikameru,to ascertain; to make sure,JLPT_3,verb
 多少,たしょう,tashou,a little (same as 少し (すこし)),JLPT_3,adverb
-助かる,たすかる,tasukaru,to be saved; (something) helps (v.i.),JLPT_3,verb
+助かる,たすかる,tasukaru,to be saved; (something) helps (v.i.),JLPT_2,verb
 助ける,たすける,tasukeru,to help (v.t.); to save; to rescue,JLPT_3,verb
 ただ,ただ,tada,free of charge; just (~); only (~),JLPT_3,other
 只,ただ,tada,free of charge; mere; only,JLPT_2,noun
 唯,ただ,tada,mere; sole; plain,JLPT_2,adverb
 戦い,たたかい,tatakai,battle; fight,JLPT_2,noun
 戦う,たたかう,tatakau,to fight; to compete; to battle,JLPT_3,verb
-叩く,たたく,tataku,to strike; to beat,JLPT_2,verb
+叩く,たたく,tataku,to strike; to beat,JLPT_3,verb
 直ちに,ただちに,tadachini,at once; immediately,JLPT_2,adverb
 畳む,たたむ,tatamu,to fold (clothes),JLPT_2,verb
-立ち上がる,たちあがる,tachiagaru,to stand up,JLPT_2,verb
+立ち上がる,たちあがる,tachiagaru,to stand up,JLPT_3,verb
 立場,たちば,tachiba,standpoint; position; situation,JLPT_2,noun
-建つ,たつ,tatsu,to stand; to be built (v.i.); to erect; to be erected,JLPT_3,verb
+建つ,たつ,tatsu,to stand; to be built (v.i.); to erect; to be erected,JLPT_2,verb
 経つ,たつ,tatsu,(time) passes,JLPT_3,verb
-達する,たっする,tassuru,to reach; to get to,JLPT_2,verb
+達する,たっする,tassuru,to reach; to get to,JLPT_3,verb
 唯,たった,tatta,only; just,JLPT_2,adverb
 だって,だって,datte,but; because; even,JLPT_2,other
 たっぷり,たっぷり,tappuri,full; in plenty; ample,JLPT_2,adverb
@@ -5879,12 +5879,12 @@ expression,reading,romaji,meaning,tags,part_of_speech
 偶々,たまたま,tamatama,unexpectedly; accidentally; by chance,JLPT_2,noun
 たまらない,たまらない,tamaranai,intolerable; unbearable; unendurable,JLPT_2,adjective
 溜まる,たまる,tamaru,to collect; to gather; to accumulate,JLPT_2,verb
-黙る,だまる,damaru,to be silent,JLPT_2,verb
+黙る,だまる,damaru,to be silent,JLPT_3,verb
 試し,ためし,tameshi,trial; test,JLPT_2,noun
-試す,ためす,tamesu,to attempt; to test,JLPT_2,verb
+試す,ためす,tamesu,to attempt; to test,JLPT_3,verb
 溜める,ためる,tameru,to accumulate; to collect,JLPT_2,verb
 便り,たより,tayori,news; correspondence; letter,JLPT_2,noun
-頼る,たよる,tayoru,to rely on; to have recourse to; to depend on,JLPT_2,verb
+頼る,たよる,tayoru,to rely on; to have recourse to; to depend on,JLPT_3,verb
 段,だん,dan,step; stair; grade,JLPT_2,noun
 単位,たんい,tan'i,credit (for a course in school); unit; denomination,JLPT_3,noun
 単語,たんご,tango,word; vocabulary,JLPT_3,noun
@@ -5945,38 +5945,38 @@ expression,reading,romaji,meaning,tags,part_of_speech
 通学,つうがく,tsuugaku,commuting to school,JLPT_2,noun
 通勤,つうきん,tsuukin,commuting to work,JLPT_2,noun
 通行,つうこう,tsuukou,passage; passing,JLPT_2,noun
-通じる,つうじる,tsuujiru,to run to; to lead to; to communicate,JLPT_2,verb
+通じる,つうじる,tsuujiru,to run to; to lead to; to communicate,JLPT_3,verb
 通信,つうしん,tsuushin,correspondence; communications,JLPT_2,noun
 通訳,つうやく,tsuuyaku,interpretation; interpreter,JLPT_3,noun
 捕まる,つかまる,tsukamaru,to be arrested; to be caught,JLPT_3,verb
-掴む,つかむ,tsukamu,to seize; to catch; to grasp,JLPT_2,verb
+掴む,つかむ,tsukamu,to seize; to catch; to grasp,JLPT_3,verb
 疲れ,つかれ,tsukare,tiredness; fatigue,JLPT_2,noun
 付き合い,つきあい,tsukiai,socialization; friendship; association,JLPT_3,noun
 付合う,つきあう,tsukiau,to associate with; to keep company with; to get on with,JLPT_2,verb
 次々,つぎつぎ,tsugitsugi,in succession; one by one,JLPT_2,adverb
-付く,つく,tsuku,to adjoin; to be attached; to adhere,JLPT_2,verb
-就く,つく,tsuku,to settle in (place); to take (seat position); to study (under teacher),JLPT_2,verb
+付く,つく,tsuku,to adjoin; to be attached; to adhere,JLPT_4,verb
+就く,つく,tsuku,to settle in (place); to take (seat position); to study (under teacher),JLPT_3,verb
 突く,つく,tsuku,to thrust; to strike; to poke,JLPT_2,verb
 次ぐ,つぐ,tsugu,to rank next to; to come after,JLPT_2,verb
-注ぐ,つぐ,tsugu,to pour (into),JLPT_2,verb
+注ぐ,つぐ,tsugu,to pour (into),JLPT_3,verb
 付ける,つける,tsukeru,to attach; to join; to add,JLPT_2,verb
 着ける,つける,tsukeru,to put on; to wear; to draw up,JLPT_2,verb
 伝わる,つたわる,tsutawaru,to be handed down; to be transmitted,JLPT_2,verb
 土,つち,tsuchi,earth; soil,JLPT_2,noun
-続き,つづき,tsuzuki,sequel; continuation,JLPT_2,verb
+続き,つづき,tsuzuki,sequel; continuation,JLPT_3,verb
 包み,つつみ,tsutsumi,bundle; package,JLPT_2,noun
 勤め,つとめ,tsutome,work; employment,JLPT_2,noun
 務め,つとめ,tsutome,duty,JLPT_2,noun
 繋がる,つながる,tsunagaru,to be connected to; to be related to,JLPT_2,verb
-繋ぐ,つなぐ,tsunagu,to tie; to fasten; to connect,JLPT_2,verb
+繋ぐ,つなぐ,tsunagu,to tie; to fasten; to connect,JLPT_3,verb
 繋げる,つなげる,tsunageru,to connect,JLPT_2,verb
 常に,つねに,tsuneni,always (same as いつも) (written expression),JLPT_3,adverb
 翼,つばさ,tsubasa,wings,JLPT_2,noun
 つまり,つまり,tsumari,namely; in other words; in short,JLPT_3,other
 罪,つみ,tsumi,crime; fault; indiscretion,JLPT_2,noun
 積む,つむ,tsumu,to pile up; to stack,JLPT_2,verb
-詰める,つめる,tsumeru,to pack; to shorten; to work out (details),JLPT_2,verb
-積もる,つもる,tsumoru,to pile up,JLPT_2,verb
+詰める,つめる,tsumeru,to pack; to shorten; to work out (details),JLPT_3,verb
+積もる,つもる,tsumoru,to pile up,JLPT_3,verb
 梅雨,つゆ,tsuyu,rainy season,JLPT_2,noun
 辛い,つらい,tsurai,painful; heart-breaking,JLPT_2,adjective
 釣,つり,tsuri,fishing,JLPT_2,noun
@@ -5984,7 +5984,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 出,で,de,outflow; coming (going) out; graduate (of),JLPT_2,noun
 出会い,であい,deai,meeting; rendezvous; encounter,JLPT_2,noun
 出合い,であい,deai,an encounter,JLPT_2,noun
-出会う,であう,deau,to meet by chance; to come across; to happen to encounter,JLPT_2,verb
+出会う,であう,deau,to meet by chance; to come across; to happen to encounter,JLPT_3,verb
 提案,ていあん,ein,proposal; proposition; suggestion,JLPT_2,noun
 定期,ていき,teiki,fixed term,JLPT_2,noun
 抵抗,ていこう,teikou,resistance; opposition,JLPT_2,noun
@@ -5995,7 +5995,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 デート,デート,date,date (in the sense of 'social engagement' only),JLPT_3,noun
 敵,てき,teki,enemy; rival,JLPT_2,noun
 出来事,できごと,dekigoto,incident happening; event,JLPT_2,noun
-適する,てきする,tekisuru,to fit; to suit,JLPT_2,verb
+適する,てきする,tekisuru,to fit; to suit,JLPT_3,verb
 適切,てきせつ,tekisetsu,appropriate; adequate; relevance,JLPT_2,noun
 適度,てきど,tekido,moderate,JLPT_2,adjective
 適用,てきよう,tekiyou,applying,JLPT_2,noun
@@ -6035,11 +6035,11 @@ expression,reading,romaji,meaning,tags,part_of_speech
 童謡,どうよう,douyou,children's song; nursery rhyme,JLPT_2,noun
 同僚,どうりょう,douryou,colleague; co-worker,JLPT_3,noun
 道路,どうろ,douro,road,JLPT_2,noun
-通す,とおす,toosu,to let pass; to overlook; to continue,JLPT_2,verb
-通り過ぎる,とおりすぎる,toorisugiru,to pass; to pass through,JLPT_2,verb
+通す,とおす,toosu,to let pass; to overlook; to continue,JLPT_3,verb
+通り過ぎる,とおりすぎる,toorisugiru,to pass; to pass through,JLPT_3,verb
 都会,とかい,tokai,city,JLPT_2,noun
 溶く,とく,toku,to dissolve (paint),JLPT_2,verb
-解く,とく,toku,to unfasten; answer; solve,JLPT_2,verb
+解く,とく,toku,to unfasten; answer; solve,JLPT_3,verb
 退く,どく,doku,to retreat; to recede; to withdraw,JLPT_2,verb
 毒,どく,doku,poison; toxicant,JLPT_2,noun
 得意,とくい,tokui,pride; triumph; prosperity,JLPT_2,adjective
@@ -6050,7 +6050,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 独特,どくとく,dokutoku,peculiarity; uniqueness; characteristic,JLPT_2,adjective
 独立,どくりつ,dokuritsu,independence (e.g.; Ind. Day); self-support,JLPT_2,noun
 溶ける,とける,tokeru,to melt; to thaw; to dissolve,JLPT_2,verb
-解ける,とける,tokeru,to come untied; to come apart,JLPT_2,verb
+解ける,とける,tokeru,to come untied; to come apart,JLPT_3,verb
 どこか,どこか,dokoka,somewhere; anywhere,JLPT_2,noun
 ところが,ところが,tokoroga,however; while; even if,JLPT_2,other
 ところで,ところで,tokorode,by the way; even if,JLPT_3,other
@@ -6059,17 +6059,17 @@ expression,reading,romaji,meaning,tags,part_of_speech
 年月,としつき,toshitsuki,months and years,JLPT_2,noun
 図書,としょ,tosho,books,JLPT_2,noun
 年寄,としより,toshiyori,old people; the aged,JLPT_2,noun
-閉じる,とじる,tojiru,to close (e.g.; book; eyes); to shut,JLPT_2,verb
+閉じる,とじる,tojiru,to close (e.g.; book; eyes); to shut,JLPT_3,verb
 途端,とたん,totan,just (now; at the moment; etc.),JLPT_2,noun
 土地,とち,tochi,plot of land; lot; soil,JLPT_2,noun
 突然,とつぜん,totsuzen,abruptly; suddenly; unexpectedly,JLPT_2,adverb
 トップ,トップ,top,top,JLPT_2,noun
-届く,とどく,todoku,to reach,JLPT_2,verb
+届く,とどく,todoku,to reach,JLPT_3,verb
 とにかく,とにかく,tonikaku,anyhow; at any rate; anyway,JLPT_3,adverb
-飛ばす,とばす,tobasu,to skip over; to omit,JLPT_2,verb
-飛び出す,とびだす,tobidasu,to jump out; to rush out; to fly out,JLPT_2,verb
-留める,とめる,tomeru,to fasten; to turn off; to detain,JLPT_2,verb
-泊める,とめる,tomeru,to have someone stay (over night) (v.t.),JLPT_3,verb
+飛ばす,とばす,tobasu,to skip over; to omit,JLPT_3,verb
+飛び出す,とびだす,tobidasu,to jump out; to rush out; to fly out,JLPT_3,verb
+留める,とめる,tomeru,to fasten; to turn off; to detain,JLPT_1,verb
+泊める,とめる,tomeru,to have someone stay (over night) (v.t.),JLPT_2,verb
 友,とも,tomo,friend; companion; pal,JLPT_2,noun
 共に,ともに,tomoni,sharing with; participate in,JLPT_2,adverb
 虎,とら,tora,tiger,JLPT_2,noun
@@ -6077,11 +6077,11 @@ expression,reading,romaji,meaning,tags,part_of_speech
 トラック,トラック,truck,truck; (running) track,JLPT_2,noun
 ドラマ,ドラマ,drama,drama,JLPT_2,noun
 トランプ,トランプ,trump,playing cards (lit: trump),JLPT_2,noun
-取り上げる,とりあげる,toriageru,to take up; to pick up; to confiscate,JLPT_2,verb
+取り上げる,とりあげる,toriageru,to take up; to pick up; to confiscate,JLPT_3,verb
 努力,どりょく,doriku,great effort; exertion; endeavor,JLPT_3,noun
 トレーニング,トレーニング,training,training,JLPT_2,noun
 ドレス,ドレス,dress,dress,JLPT_2,noun
-取れる,とれる,toreru,to come off; to be taken off,JLPT_2,verb
+取れる,とれる,toreru,to come off; to be taken off,JLPT_3,verb
 泥,どろ,doro,mud,JLPT_2,noun
 トン,トン,ton,ton (1000 lbs.),JLPT_2,noun
 とんでもない,とんでもない,tondemonai,outrageous; No way!,JLPT_2,noun
@@ -6091,17 +6091,17 @@ expression,reading,romaji,meaning,tags,part_of_speech
 内容,ないよう,naiyou,subject; contents; detail,JLPT_2,noun
 なお,なお,nao,still; yet,JLPT_2,other
 仲,なか,naka,relation; relationship,JLPT_2,noun
-流す,ながす,nagasu,to drain; to float; to shed (e.g.; blood; tears),JLPT_2,verb
+流す,ながす,nagasu,to drain; to float; to shed (e.g.; blood; tears),JLPT_3,verb
 半ば,なかば,nakaba,middle; halfway,JLPT_2,noun
 仲間,なかま,nakama,company; fellow; colleague; associate,JLPT_2,noun
 中身,なかみ,nakami,content(s); substance,JLPT_3,noun
 中味,なかみ,nakami,contents; interior; filling,JLPT_2,noun
 眺め,ながめ,nagame,scene; view; prospect; outlook,JLPT_3,noun
-眺める,ながめる,nagameru,to view; to gaze at,JLPT_2,verb
+眺める,ながめる,nagameru,to view; to gaze at,JLPT_3,verb
 流れ,ながれ,nagare,stream; current,JLPT_2,noun
-流れる,ながれる,nagareru,to flow; to be washed away,JLPT_2,verb
+流れる,ながれる,nagareru,to flow; to be washed away,JLPT_3,verb
 亡くす,なくす,nakusu,to lose someone,JLPT_2,verb
-殴る,なぐる,naguru,to strike; to hit; to punch,JLPT_3,verb
+殴る,なぐる,naguru,to strike; to hit; to punch,JLPT_2,verb
 無し,なし,nashi,without,JLPT_2,adjective
 なぜなら,なぜなら,nazenara,because,JLPT_2,other
 謎,なぞ,nazo,riddle; puzzle; enigma,JLPT_2,noun
@@ -6110,12 +6110,12 @@ expression,reading,romaji,meaning,tags,part_of_speech
 なにも,なにも,nanimo,nothing,JLPT_2,noun
 鍋,なべ,nabe,saucepan; pot,JLPT_2,noun
 生,なま,nama,raw; unprocessed,JLPT_2,adjective
-怠ける,なまける,namakeru,to be idle; to neglect,JLPT_2,verb
+怠ける,なまける,namakeru,to be idle; to neglect,JLPT_3,verb
 波,なみ,nami,wave,JLPT_2,noun
 涙,なみだ,namida,tear,JLPT_2,noun
 悩む,なやむ,nayamu,to agonize; to be troubled,JLPT_3,verb
 鳴らす,ならす,narasu,to ring; to sound,JLPT_2,verb
-為る,なる,naru,to change; to be of use; to reach to,JLPT_2,verb
+為る,なる,naru,to change; to be of use; to reach to,JLPT_3,verb
 生る,なる,naru,to bear fruit,JLPT_2,verb
 馴れる,なれる,nareru,to become domesticated; to become tame,JLPT_2,verb
 縄,なわ,nawa,rope,JLPT_2,noun
@@ -6125,7 +6125,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 似合う,にあう,niau,to suit (a person); to match (clothing); (something) becomes (someone),JLPT_3,verb
 煮える,にえる,nieru,to boil; to cook; to be cooked,JLPT_2,verb
 苦手,にがて,nigate,poor (at); weak (in); dislike (of),JLPT_2,adjective
-握る,にぎる,nigiru,to grasp; to seize; to mold sushi,JLPT_2,verb
+握る,にぎる,nigiru,to grasp; to seize; to mold sushi,JLPT_3,verb
 日,にち,nichi,day,JLPT_2,noun
 日常,にちじょう,nichijou,ordinary; regular; everyday,JLPT_2,noun
 日光,にっこう,nikkou,sunlight,JLPT_2,noun
@@ -6137,14 +6137,14 @@ expression,reading,romaji,meaning,tags,part_of_speech
 煮る,にる,niru,to boil; to cook,JLPT_2,verb
 人気,にんき,ninki,popularity,JLPT_2,noun
 人間,にんげん,ningen,human being; person,JLPT_3,noun
-抜く,ぬく,nuku,to extract; to omit; to unplug,JLPT_2,verb
-抜ける,ぬける,nukeru,to come out; to fall out; to be omitted,JLPT_2,verb
+抜く,ぬく,nuku,to extract; to omit; to unplug,JLPT_3,verb
+抜ける,ぬける,nukeru,to come out; to fall out; to be omitted,JLPT_3,verb
 布,ぬの,nuno,cloth,JLPT_2,noun
 濡らす,ぬらす,nurasu,to wet; to soak,JLPT_2,verb
 根,ね,ne,root,JLPT_2,noun
 値,ね,ne,value; price; cost,JLPT_2,noun
-願い,ねがい,negai,desire; wish; request,JLPT_2,verb
-願う,ねがう,negau,to desire; to wish; to request,JLPT_2,verb
+願い,ねがい,negai,desire; wish; request,JLPT_3,verb
+願う,ねがう,negau,to desire; to wish; to request,JLPT_3,verb
 鼠,ねずみ,nezumi,mouse; rat,JLPT_2,noun
 熱帯,ねったい,nettai,tropics,JLPT_2,noun
 熱中,ねっちゅう,netchuu,enthusiasm; zeal; mania,JLPT_2,noun
@@ -6161,14 +6161,14 @@ expression,reading,romaji,meaning,tags,part_of_speech
 能力,のうりょく,nouriku,ability; faculty,JLPT_2,noun
 ノー,ノー,no,no,JLPT_2,other
 軒,のき,noki,eaves,JLPT_2,noun
-残す,のこす,nokosu,to leave (behind; over); to save; to reserve,JLPT_2,verb
+残す,のこす,nokosu,to leave (behind; over); to save; to reserve,JLPT_3,verb
 残り,のこり,nokori,remaining; left-over,JLPT_2,noun
 乗せる,のせる,noseru,to place on (something); to take on board,JLPT_2,verb
 載せる,のせる,noseru,to place on (something); to publish,JLPT_2,verb
 覗く,のぞく,nozoku,to peek in; to look in,JLPT_2,verb
-除く,のぞく,nozoku,to remove; to exclude; to except,JLPT_2,verb
+除く,のぞく,nozoku,to remove; to exclude; to except,JLPT_3,verb
 望み,のぞみ,nozomi,wish; desire; (a) hope,JLPT_2,noun
-望む,のぞむ,nozomu,to desire; to wish for; to view,JLPT_2,verb
+望む,のぞむ,nozomu,to desire; to wish for; to view,JLPT_3,verb
 後,のち,nochi,afterwards; since then,JLPT_2,noun
 ノック,ノック,knock,knock; fungo (baseball),JLPT_2,noun
 伸ばす,のばす,nobasu,to extend; to stretch; to reach out,JLPT_2,verb
@@ -6199,7 +6199,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 量る,はかる,hakaru,to measure; to weigh; to survey,JLPT_2,verb
 測る,はかる,hakaru,to measure; to weigh; to survey,JLPT_2,verb
 掃く,はく,haku,to sweep; to brush; to gather up,JLPT_2,verb
-吐く,はく,haku,to throw up; to vomit,JLPT_3,verb
+吐く,はく,haku,to throw up; to vomit,JLPT_1,verb
 拍手,はくしゅ,wakushu,clapping hands; applause,JLPT_2,noun
 莫大,ばくだい,bakudai,enormous; vast,JLPT_2,noun
 爆発,ばくはつ,bakuhatsu,explosion; detonation; eruption,JLPT_2,noun
@@ -6210,7 +6210,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 端,はし,hashi,end (e.g.; of street); edge; margin,JLPT_2,noun
 始まり,はじまり,hajimari,origin; beginning,JLPT_2,noun
 パス,パス,pass,path; pass (in games),JLPT_3,noun
-外す,はずす,hazusu,to unfasten; to remove,JLPT_2,verb
+外す,はずす,hazusu,to unfasten; to remove,JLPT_3,verb
 パスポート,パスポート,passport,passport,JLPT_2,noun
 外れる,はずれる,hazureru,to be disconnected; to be out (e.g.; of gear),JLPT_2,verb
 旗,はた,hata,flag,JLPT_2,noun
@@ -6223,23 +6223,23 @@ expression,reading,romaji,meaning,tags,part_of_speech
 発行,はっこう,hakkou,issue (publications),JLPT_2,noun
 発車,はっしゃ,hassha,departure of a vehicle,JLPT_2,noun
 発射,はっしゃ,hassha,firing; shooting; discharge,JLPT_2,noun
-罰する,ばっする,bassuru,to punish; to penalize,JLPT_2,verb
+罰する,ばっする,bassuru,to punish; to penalize,JLPT_3,verb
 発達,はったつ,hattatsu,development; growth,JLPT_2,noun
 ばったり,ばったり,battari,(to meet) by chance,JLPT_3,adverb
 発展,はってん,hatten,development; growth; progress,JLPT_2,noun
 発表,はっぴょう,happyou,announcement; publication; presentation,JLPT_3,noun
 発明,はつめい,hatsumei,invention,JLPT_2,noun
 派手,はで,wade,showy; flashy; gaudy,JLPT_2,adjective
-話し合う,はなしあう,hanashiau,to discuss; to talk together,JLPT_2,verb
-離す,はなす,hanasu,to part; to separate,JLPT_2,verb
-放す,はなす,hanasu,to separate; to set free,JLPT_2,verb
+話し合う,はなしあう,hanashiau,to discuss; to talk together,JLPT_3,verb
+離す,はなす,hanasu,to part; to separate,JLPT_3,verb
+放す,はなす,hanasu,to separate; to set free,JLPT_3,verb
 離れる,はなれる,hanareru,(something; someone) separates; parts from; to be apart,JLPT_3,verb
 放れる,はなれる,hanareru,to leave; to get free; to cut oneself off,JLPT_2,verb
 羽,はね,wane,wing,JLPT_2,noun
 羽根,はね,wane,feather,JLPT_2,noun
 幅,はば,haba,width; breadth,JLPT_2,noun
 母親,ははおや,hahaoya,mother,JLPT_2,noun
-省く,はぶく,habuku,to omit; to eliminate,JLPT_2,verb
+省く,はぶく,habuku,to omit; to eliminate,JLPT_3,verb
 場面,ばめん,bamen,scene; setting (e.g.; of novel),JLPT_2,noun
 流行る,はやる,hayaru,to be popular; to come into fashion,JLPT_2,verb
 腹,はら,hara,abdomen; belly; stomach,JLPT_2,noun
@@ -6269,7 +6269,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 引越し,ひっこし,hikkoshi,moving; changing residence,JLPT_2,noun
 必死,ひっし,hisshi,desperation; frantic; inevitable result,JLPT_2,adjective
 ぴったり,ぴったり,pittari,exactly; neatly; sharp,JLPT_2,adverb
-引っ張る,ひっぱる,hipparu,to pull; to stretch; to drag,JLPT_2,verb
+引っ張る,ひっぱる,hipparu,to pull; to stretch; to drag,JLPT_3,verb
 否定,ひてい,hitei,negation; denial,JLPT_2,noun
 ビデオ,ビデオ,video,video tape; VCR,JLPT_3,noun
 一言,ひとこと,hitokoto,one word,JLPT_3,noun
@@ -6292,7 +6292,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 平等,びょうどう,byoudou,equality; impartiality; evenness,JLPT_2,adjective
 評判,ひょうばん,hyouban,fame; reputation,JLPT_2,noun
 表面,ひょうめん,hyoumen,surface; outside; face,JLPT_2,noun
-広がる,ひろがる,hirogaru,to spread (out); to extend; to stretch; to reach to; to get around,JLPT_2,verb
+広がる,ひろがる,hirogaru,to spread (out); to extend; to stretch; to reach to; to get around,JLPT_3,verb
 広げる,ひろげる,hirogeru,to spread; to extend; to expand; to enlarge,JLPT_2,verb
 広める,ひろめる,hiromeru,to broaden; to propagate,JLPT_2,verb
 品,ひん,hin,goods; taste; elegance,JLPT_2,noun
@@ -6312,7 +6312,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 武器,ぶき,buki,weapon; arms,JLPT_2,noun
 拭く,ふく,fuku,to wipe; to dry,JLPT_2,verb
 服装,ふくそう,fukusou,clothes; attire,JLPT_2,noun
-含む,ふくむ,fukumu,to contain; to include,JLPT_2,verb
+含む,ふくむ,fukumu,to contain; to include,JLPT_3,verb
 含める,ふくめる,fukumeru,to include,JLPT_2,verb
 袋,ふくろ,fukuro,bag; sack,JLPT_2,noun
 不幸,ふこう,fukou,unhappiness; sorrow; misfortune,JLPT_2,adjective
@@ -6323,14 +6323,14 @@ expression,reading,romaji,meaning,tags,part_of_speech
 夫人,ふじん,fujin,wife; Mrs; madam,JLPT_2,noun
 婦人,ふじん,fujin,woman (same as 女性 (じょせい)、女の人 (おんなのひと)),JLPT_3,noun
 不正,ふせい,fusei,injustice; unfairness,JLPT_2,adjective
-防ぐ,ふせぐ,fusegu,to defend (against); to protect; to prevent,JLPT_2,verb
+防ぐ,ふせぐ,fusegu,to defend (against); to protect; to prevent,JLPT_3,verb
 不足,ふそく,fusoku,insufficiency; shortage,JLPT_2,noun
 舞台,ぶたい,butai,stage (theater),JLPT_2,noun
 双子,ふたご,futago,twins; a twin,JLPT_2,noun
 再び,ふたたび,futatabi,again; once more; a second time,JLPT_3,adverb
 普段,ふだん,fudan,in everyday situations; usually; ordinarily,JLPT_3,noun
 縁,ふち,fuchi,edge; rim,JLPT_2,noun
-打つ,ぶつ,butsu,to hit; to strike,JLPT_2,verb
+打つ,ぶつ,butsu,to hit; to strike,JLPT_4,verb
 不通,ふつう,futsuu,blockade; interruption; stoppage,JLPT_2,noun
 物価,ぶっか,bukka,(commodity/consumer) prices,JLPT_3,noun
 ぶつかる,ぶつかる,butsukaru,to strike; to collide with,JLPT_2,verb
@@ -6348,10 +6348,10 @@ expression,reading,romaji,meaning,tags,part_of_speech
 プラスチック,プラスチック,plastics,plastic,JLPT_2,noun
 プラン,プラン,plan,plan,JLPT_2,noun
 不利,ふり,furi,disadvantage; drawback,JLPT_2,adjective
-振る,ふる,furu,to wave; to shake; to sprinkle; to cast (actor),JLPT_2,verb
-震える,ふるえる,furueru,to shiver; to shake; to quake,JLPT_2,verb
+振る,ふる,furu,to wave; to shake; to sprinkle; to cast (actor),JLPT_3,verb
+震える,ふるえる,furueru,to shiver; to shake; to quake,JLPT_3,verb
 ブレーキ,ブレーキ,brake,a brake,JLPT_2,noun
-触れる,ふれる,fureru,to touch; to feel; to violate,JLPT_2,verb
+触れる,ふれる,fureru,to touch; to feel; to violate,JLPT_3,verb
 プロ,プロ,pro,professional,JLPT_2,noun
 分,ぶん,bun,dividing; part; segment,JLPT_2,noun
 文,ぶん,bun,sentence,JLPT_2,noun
@@ -6363,7 +6363,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 平均,へいきん,heikin,equilibrium; balance; average,JLPT_3,noun
 平和,へいわ,heiwa,peace,JLPT_2,adjective
 別に,べつに,betsuni,(not) particularly; nothing,JLPT_2,adverb
-減らす,へらす,herasu,to decrease; to diminish,JLPT_2,verb
+減らす,へらす,herasu,to decrease; to diminish,JLPT_3,verb
 減る,へる,heru,to decrease (in size or number); to diminish,JLPT_2,verb
 ベルト,ベルト,belt,Belt for western clothes,JLPT_2,noun
 変化,へんか,henka,change; variation; shift,JLPT_2,noun
@@ -6383,7 +6383,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 方法,ほうほう,houhou,method; means; technique,JLPT_3,noun
 方々,ほうぼう,houbou,here and there; everywhere,JLPT_2,noun
 訪問,ほうもん,houmon,call; visit,JLPT_2,noun
-吠える,ほえる,hoeru,to bark; to howl,JLPT_2,verb
+吠える,ほえる,hoeru,to bark; to howl,JLPT_3,verb
 ボーイ,ボーイ,boy,porter; boy,JLPT_3,noun
 ボート,ボート,boat,rowing boat,JLPT_2,noun
 ホーム,ホーム,home,platform; home,JLPT_2,noun
@@ -6400,7 +6400,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 頬,ほほ,hoho,cheek (of face),JLPT_2,noun
 頬,ほお,hoo,cheek (of face),JLPT_2,noun
 ほぼ,ほぼ,hobo,almost; roughly,JLPT_2,adverb
-微笑む,ほほえむ,hohoemu,to smile,JLPT_2,verb
+微笑む,ほほえむ,hohoemu,to smile,JLPT_3,verb
 堀,ほり,hori,moat; canal,JLPT_2,noun
 濠,ほり,hori,moat,JLPT_2,noun
 本当,ほんと,honto,truth; reality,JLPT_2,noun
@@ -6413,7 +6413,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 マイク,マイク,microphon,mic,JLPT_2,noun
 迷子,まいご,maigo,lost (stray) child,JLPT_2,noun
 マイナス,マイナス,minus,minus,JLPT_2,noun
-任せる,まかせる,makaseru,to entrust to another; to leave to,JLPT_2,verb
+任せる,まかせる,makaseru,to entrust to another; to leave to,JLPT_3,verb
 巻く,まく,maku,to wind; to coil; to roll,JLPT_2,verb
 蒔く,まく,maku,to sow (seeds),JLPT_2,verb
 撒く,まく,maku,to scatter; to sprinkle; to sow,JLPT_2,verb
@@ -6426,7 +6426,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 交ざる,まざる,mazaru,to be mixed; to mingle with,JLPT_2,verb
 混じる,まじる,majiru,to be mixed; to mingle with,JLPT_2,verb
 交じる,まじる,majiru,to be mixed; to mingle with,JLPT_2,verb
-増す,ます,masu,to increase; to gain,JLPT_2,verb
+増す,ます,masu,to increase; to gain,JLPT_3,verb
 貧しい,まずしい,mazushii,poor; needy,JLPT_2,adjective
 マスター,マスター,master,bar owner; master (e.g.; arts; science),JLPT_2,noun
 ますます,ますます,masumasu,increasingly (same as もっと); more and more,JLPT_3,adverb
@@ -6480,7 +6480,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 真理,しんり,shinri,truth,JLPT_1,noun
 水洗,すいせん,suisen,flushing,JLPT_1,noun
 ストレス,ストレス,stress,stress,JLPT_1,noun
-擦る,する,suru,to rub; to chafe,JLPT_1,verb
+擦る,する,suru,to rub; to chafe,JLPT_2,verb
 正規,せいき,seiki,regular; legitimate,JLPT_1,noun
 精巧,せいこう,seikou,elaborate; delicate; exquisite,JLPT_1,noun
 精算,せいさん,seisan,exact calculation; adjustment,JLPT_1,noun
@@ -6956,7 +6956,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 邪魔,じゃま,jama,hindrance; intrusion,JLPT_4,adjective
 国際,こくさい,kokusai,international,JLPT_4,noun
 隅,すみ,sumi,corner,JLPT_4,noun
-伺う,うかがう,ukagau,humble form of 行く (いく); 聞く (きく) and 来る (くる),JLPT_4,verb
+伺う,うかがう,ukagau,humble form of 行く (いく); 聞く (きく) and 来る (くる),JLPT_3,verb
 再来週,さらいしゅう,saraishuu,the week after next,JLPT_4,noun
 夢,ゆめ,yume,a dream,JLPT_4,noun
 喉,のど,nodo,throat,JLPT_4,noun
@@ -6974,7 +6974,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 ～やすい,～やすい,~yasui,easy to do ~,JLPT_4,adjective
 押し入れ,おしいれ,oshiire,closet,JLPT_4,noun
 電灯,でんとう,dentou,electric light,JLPT_4,noun
-叱る,しかる,shikaru,to scold,JLPT_4,verb
+叱る,しかる,shikaru,to scold,JLPT_3,verb
 サンダル,サンダル,sandal,sandal,JLPT_4,noun
 びっくりする,びっくりする,bikkurisuru,to be surprised,JLPT_4,verb
 うまい,うまい,umai,delicious; skillful; fortunate,JLPT_4,adjective
@@ -6985,7 +6985,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 レジ,レジ,register,register,JLPT_4,noun
 しばらく,しばらく,shibaraku,little while,JLPT_4,adverb
 特に,とくに,tokuni,particularly,JLPT_4,adverb
-空く,あく,aku,to open; to become empty (vacant),JLPT_4,verb
+空く,あく,aku,to open; to become empty (vacant),JLPT_3,verb
 計画,けいかくする,keikakusuru,plan; project; schedule,JLPT_4,noun
 通り,とおり,toori,~ Street; ~ Avenue,JLPT_4,noun
 下着,したぎ,shitagi,underwear,JLPT_4,noun
@@ -7090,11 +7090,11 @@ expression,reading,romaji,meaning,tags,part_of_speech
 席,せき,seki,a seat,JLPT_4,noun
 ～様,～さま,~sama,Mr.; Mrs.; Ms.,JLPT_4,noun
 ご存じ,ごぞんじ,gozonji,knowing; acquaintance,JLPT_4,noun
-下る,さがる,sagaru,to descend; to drop; to fall,JLPT_4,verb
+下る,さがる,sagaru,to descend; to drop; to fall,JLPT_2,verb
 字,じ,ji,letter; character,JLPT_4,noun
 アジア,アジア,asia,Asia,JLPT_4,noun
 褒める,ほめる,homeru,to praise; to say nice things,JLPT_4,verb
-空く,すく,suku,to be empty (in reference to people); to be less crowded,JLPT_4,verb
+空く,すく,suku,to be empty (in reference to people); to be less crowded,JLPT_3,verb
 あ,あ,a,Ah,JLPT_4,other
 最も,もっとも,mottomo,most,JLPT_4,adverb
 合う,あう,au,to fit; to match,JLPT_4,verb
@@ -7133,7 +7133,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 焼ける,やける,yakeru,to burn; to be roasted,JLPT_4,verb
 君,きみ,kimi,you (informal for men),JLPT_4,noun
 冷える,ひえる,hieru,to grow cold; to cool down,JLPT_4,verb
-点く,つく,tsuku,to be started; to be switched on,JLPT_4,verb
+点く,つく,tsuku,to be started; to be switched on,JLPT_2,verb
 この間,このあいだ,konoaida,the other day; recently,JLPT_4,noun
 かっこう,格好,kakkou,appearance; manner; shape; form; posture,JLPT_4,noun
 かまう,,,to mind; to care about; to be concerned about,JLPT_4,verb
@@ -7179,7 +7179,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 コンピュータ; コンピューター,コンピュータ; コンピューター,computer;computer,computer,JLPT_4,noun
 植える,うえる,ueru,to plant,JLPT_4,verb
 両方,りょうほう,ryouhou,both sides; both parties,JLPT_4,noun
-汚れる,よごれる,yogoreru,to become dirty,JLPT_4,verb
+汚れる,よごれる,yogoreru,to become dirty,JLPT_1,verb
 水泳,すいえい,suiei,swimming,JLPT_4,noun
 経験,けいけんする,keikensuru,experience,JLPT_4,noun
 勝つ,かつ,katsu,to win,JLPT_4,verb
@@ -7254,16 +7254,16 @@ expression,reading,romaji,meaning,tags,part_of_speech
 たまに,たまに,tamani,occasionally,JLPT_4,adverb
 社会,しゃかい,shakai,society,JLPT_4,noun
 ああ,ああ,aa,Ah!; Oh!,JLPT_4,other
-会う,あう,au,to meet; to see,JLPT_3,verb
+会う,あう,au,to meet; to see,JLPT_2,verb
 青,あお,ao,blue,JLPT_5,noun
 青い,あおい,aoi,blue,JLPT_5,adjective
 赤,あか,aka,red,JLPT_5,noun
 赤い,あかい,akai,red,JLPT_5,adjective
 明るい,あかるい,akarui,bright (in reference to personality or weather); cheerful,JLPT_5,adjective
 秋,あき,aki,fall (season),JLPT_3,noun
-開く,あく,aku,to open; to become open,JLPT_3,verb
+開く,あく,aku,to open; to become open,JLPT_4,verb
 開ける,あける,akeru,to open (v.t.),JLPT_3,verb
-上げる,あげる,ageru,to raise; to lift,JLPT_3,verb
+上げる,あげる,ageru,to raise; to lift,JLPT_4,verb
 朝,あさ,asa,morning,JLPT_5,noun
 朝御飯,あさごはん,asagohan,breakfast,JLPT_5,noun
 明後日,あさって,asatte,day after tomorrow,JLPT_5,noun
@@ -7334,9 +7334,9 @@ expression,reading,romaji,meaning,tags,part_of_speech
 歌,うた,uta,a song,JLPT_5,noun
 歌う,うたう,utau,to sing,JLPT_5,verb
 うち,うち,uchi,home; house; my place,JLPT_3,noun
-生まれる,うまれる,umareru,to be born,JLPT_3,verb
+生まれる,うまれる,umareru,to be born,JLPT_5,verb
 海,うみ,umi,sea; beach,JLPT_5,noun
-売る,うる,uru,to sell (v.t.),JLPT_3,verb
+売る,うる,uru,to sell (v.t.),JLPT_5,verb
 うるさい,うるさい,urusai,noisy; annoying,JLPT_3,adjective
 上着,うわぎ,uwagi,coat; jacket,JLPT_5,noun
 絵,え,e,a painting; a picture; a drawing,JLPT_3,noun
@@ -7357,8 +7357,8 @@ expression,reading,romaji,meaning,tags,part_of_speech
 お母さん,おかあさん,okaasan,mother (formal),JLPT_5,noun
 お菓子,おかし,okashi,confections; sweets; snack,JLPT_5,noun
 お金,おかね,okane,money,JLPT_5,noun
-起きる,おきる,okiru,to get up (e.g.; from sleeping); to happen,JLPT_3,verb
-置く,おく,oku,to put; to lay; to place,JLPT_3,verb
+起きる,おきる,okiru,to get up (e.g.; from sleeping); to happen,JLPT_5,verb
+置く,おく,oku,to put; to lay; to place,JLPT_5,verb
 奥さん,おくさん,okusan,(someone else's) wife (hon.),JLPT_5,noun
 お酒,おさけ,osake,sake; alcohol,JLPT_5,noun
 お皿,おさら,osara,plate; dish,JLPT_5,noun
@@ -7389,7 +7389,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 重い,おもい,omoi,heavy; serious,JLPT_3,adjective
 面白い,おもしろい,omoshiroi,interesting; amusing,JLPT_5,adjective
 泳ぐ,およぐ,oyogu,to swim,JLPT_5,verb
-降りる,おりる,oriru,to get off,JLPT_3,verb
+降りる,おりる,oriru,to get off,JLPT_4,verb
 終る,おわる,owaru,to finish; to close,JLPT_5,verb
 音楽,おんがく,ongaku,Music,JLPT_5,noun
 女,おんな,onna,woman; female,JLPT_5,noun
@@ -7401,16 +7401,16 @@ expression,reading,romaji,meaning,tags,part_of_speech
 会社,かいしゃ,kaisha,company; corporation,JLPT_5,noun
 階段,かいだん,kaidan,stairs,JLPT_5,noun
 買い物,かいもの,kaimono,shopping,JLPT_5,noun
-買う,かう,kau,to buy,JLPT_3,verb
-返す,かえす,kaesu,to return something,JLPT_3,verb
-帰る,かえる,kaeru,to go back; to go home; to return,JLPT_3,verb
+買う,かう,kau,to buy,JLPT_5,verb
+返す,かえす,kaesu,to return something,JLPT_5,verb
+帰る,かえる,kaeru,to go back; to go home; to return,JLPT_5,verb
 顔,かお,kao,face (body part),JLPT_3,noun
 かかる,かかる,kakaru,it takes (amount of time; money) (v.i.),JLPT_3,verb
 鍵,かぎ,kagi,a lock; a key,JLPT_3,noun
-書く,かく,kaku,to write,JLPT_3,verb
+書く,かく,kaku,to write,JLPT_5,verb
 学生,がくせい,gakusei,student,JLPT_5,noun
 ～か月,～かげつ,~kagetsu,(number of) months,JLPT_5,noun
-掛ける,かける,kakeru,to put on (e.g.; glasses); to hang (e.g.; on a wall),JLPT_3,verb
+掛ける,かける,kakeru,to put on (e.g.; glasses); to hang (e.g.; on a wall),JLPT_4,verb
 かける,かける,kakeru,to dial/call (e.g.; phone); to sit down,JLPT_3,verb
 傘,かさ,kasa,umbrella; parasol,JLPT_5,noun
 貸す,かす,kasu,to lend,JLPT_5,verb
@@ -7445,7 +7445,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 黄色,きいろ,kiiro,yellow,JLPT_5,noun
 黄色い,きいろい,kiiroi,yellow,JLPT_5,adjective
 消える,きえる,kieru,to vanish; to disappear,JLPT_5,verb
-聞く,きく,kiku,to hear; to listen; to ask,JLPT_3,verb
+聞く,きく,kiku,to hear; to listen; to ask,JLPT_5,verb
 北,きた,kita,north,JLPT_5,noun
 ギター,ギター,guitar,guitar,JLPT_5,noun
 汚い,きたない,kitanai,dirty; unclean; filthy,JLPT_5,adjective
@@ -7531,9 +7531,9 @@ expression,reading,romaji,meaning,tags,part_of_speech
 財布,さいふ,saifu,wallet,JLPT_5,noun
 魚,さかな,sakana,fish,JLPT_5,noun
 先,さき,saki,future; recent; previous,JLPT_5,noun
-咲く,さく,saku,to bloom,JLPT_3,verb
+咲く,さく,saku,to bloom,JLPT_5,verb
 作文,さくぶん,sakubun,essay; composition,JLPT_5,noun
-差す,さす,sasu,to raise (an umbrella); to raise (stretch out) hands,JLPT_3,verb
+差す,さす,sasu,to raise (an umbrella); to raise (stretch out) hands,JLPT_5,verb
 ～冊,～さつ,~satsu,counter for books,JLPT_5,noun
 雑誌,ざっし,zasshi,magazine; journal,JLPT_5,noun
 砂糖,さとう,satou,sugar,JLPT_5,noun
@@ -7560,8 +7560,8 @@ expression,reading,romaji,meaning,tags,part_of_speech
 字引,じびき,jibiki,dictionary,JLPT_5,noun
 自分,じぶん,jibun,myself; oneself,JLPT_5,noun
 閉まる,しまる,shimaru,to close; to be closed,JLPT_5,verb
-閉める,しめる,shimeru,to close; to shut,JLPT_3,verb
-締める,しめる,shimeru,to tie; to fasten; to tighten,JLPT_3,verb
+閉める,しめる,shimeru,to close; to shut,JLPT_5,verb
+締める,しめる,shimeru,to tie; to fasten; to tighten,JLPT_5,verb
 じゃ; じゃあ,じゃ; じゃあ,ja;jaa,well; well then,JLPT_3,noun
 写真,しゃしん,shashin,a picture; a photograph,JLPT_5,noun
 シャツ,シャツ,shirt,shirt,JLPT_5,noun
@@ -7581,7 +7581,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 ～人,～じん,~jin,counter for people,JLPT_5,noun
 新聞,しんぶん,shinbun,newspaper,JLPT_5,noun
 水曜日,すいようび,suiyoubi,Wednesday,JLPT_5,noun
-吸う,すう,suu,to breathe in; to suck,JLPT_3,verb
+吸う,すう,suu,to breathe in; to suck,JLPT_5,verb
 スカート,スカート,skirt,skirt,JLPT_5,noun
 好き,すき,suki,liking; fondness; love,JLPT_5,adjective
 ～すぎ,～すぎ,~sugi,past; to exceed; ~ too much,JLPT_5,noun
@@ -7594,7 +7594,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 スプーン,スプーン,spoon,spoon,JLPT_5,noun
 スポーツ,スポーツ,sport,sport(s),JLPT_5,noun
 ズボン,ズボン,jupon,trousers,JLPT_5,noun
-住む,すむ,sumu,to reside; to live in,JLPT_3,verb
+住む,すむ,sumu,to reside; to live in,JLPT_5,verb
 する,する,suru,to do; to try; to wear small items (e.g.; necktie; watch; etc.),JLPT_3,verb
 座る,すわる,suwaru,to sit,JLPT_5,verb
 背,せい,sei,(one's) height; stature,JLPT_3,noun
@@ -7637,7 +7637,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 タクシー,タクシー,taxi,taxi,JLPT_5,noun
 出す,だす,dasu,to take (something) out; to hand in (something),JLPT_5,verb
 ～たち,～たち,~tachi,plural suffix,JLPT_5,noun
-立つ,たつ,tatsu,to stand up,JLPT_3,verb
+立つ,たつ,tatsu,to stand up,JLPT_2,verb
 たて,たて,tate,length; height,JLPT_3,noun
 建物,たてもの,tatemono,building,JLPT_5,noun
 楽しい,たのしい,tanoshii,enjoyable; fun,JLPT_5,adjective
@@ -7668,7 +7668,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 使う,つかう,tsukau,to use,JLPT_5,verb
 疲れる,つかれる,tsukareru,to get (become) tired; to become fatigued,JLPT_5,verb
 次,つぎ,tsugi,next,JLPT_5,noun
-着く,つく,tsuku,to arrive at; to reach,JLPT_3,verb
+着く,つく,tsuku,to arrive at; to reach,JLPT_5,verb
 机,つくえ,tsukue,desk,JLPT_5,noun
 作る,つくる,tsukuru,to make; to create,JLPT_5,verb
 つける,つける,tsukeru,to turn on (e.g.; a light); to take,JLPT_3,verb
@@ -7734,7 +7734,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 中,なか,naka,inside; middle; among,JLPT_3,noun
 長い,ながい,nagai,long; lengthy,JLPT_2,adjective
 鳴く,なく,naku,to make sound (animal),JLPT_5,verb
-無くす,なくす,nakusu,to lose something,JLPT_3,verb
+無くす,なくす,nakusu,to lose something,JLPT_2,verb
 なぜ,なぜ,naze,why (same as どうして),JLPT_5,adverb
 夏,なつ,natsu,summer,JLPT_5,noun
 夏休み,なつやすみ,natsuyasumi,summer vacation,JLPT_5,noun
@@ -7768,13 +7768,13 @@ expression,reading,romaji,meaning,tags,part_of_speech
 登る,のぼる,noboru,to climb,JLPT_3,verb
 飲み物,のみもの,nomimono,drink; beverage,JLPT_5,noun
 飲む,のむ,nomu,to drink,JLPT_5,verb
-乗る,のる,noru,to get on; to ride in; to board,JLPT_3,verb
+乗る,のる,noru,to get on; to ride in; to board,JLPT_5,verb
 歯,は,wa,tooth,JLPT_5,noun
 パーティー,パーティー,party,a party,JLPT_5,noun
 はい,はい,hai,yes,JLPT_3,other
 ～杯,～はい,~hai,counter for cupfuls,JLPT_5,noun
 灰皿,はいざら,haizara,ashtray,JLPT_5,noun
-入る,はいる,hairu,to enter; to contain; to hold,JLPT_5,verb
+入る,はいる,hairu,to enter; to contain; to hold,JLPT_1,verb
 葉書,はがき,hagaki,postcard,JLPT_5,noun
 はく,はく,haku,to put on (items below your waist),JLPT_3,noun
 箱,はこ,hako,box,JLPT_5,noun
@@ -7793,7 +7793,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 花,はな,hana,flower,JLPT_5,noun
 鼻,はな,hana,nose,JLPT_5,noun
 話,はなし,hanashi,talk (chat); story,JLPT_5,noun
-話す,はなす,hanasu,to speak,JLPT_3,verb
+話す,はなす,hanasu,to speak,JLPT_5,verb
 母,はは,haha,(my) mother,JLPT_5,noun
 早い,はやい,hayai,early,JLPT_5,adjective
 速い,はやい,hayai,fast; quick,JLPT_5,adjective
@@ -7811,8 +7811,8 @@ expression,reading,romaji,meaning,tags,part_of_speech
 半分,はんぶん,hanbun,half,JLPT_5,noun
 東,ひがし,higashi,east,JLPT_5,noun
 ～匹,～ひき,~hiki,counter for small animals,JLPT_5,noun
-引く,ひく,hiku,to pull; to draw; subtract,JLPT_2,verb
-弾く,ひく,hiku,to play (a string instrument or piano),JLPT_3,verb
+引く,ひく,hiku,to pull; to draw; subtract,JLPT_5,verb
+弾く,ひく,hiku,to play (a string instrument or piano),JLPT_1,verb
 低い,ひくい,hikui,short; low,JLPT_5,adjective
 飛行機,ひこうき,hikouki,airplane,JLPT_5,noun
 左,ひだり,hidari,left hand side,JLPT_5,noun
@@ -7832,7 +7832,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 封筒,ふうとう,fuutou,envelope,JLPT_5,noun
 プール,プール,pool,swimming pool,JLPT_5,noun
 フォーク,フォーク,fork,fork,JLPT_5,noun
-吹く,ふく,fuku,to blow (wind; etc.),JLPT_3,verb
+吹く,ふく,fuku,to blow (wind; etc.),JLPT_5,verb
 服,ふく,fuku,clothes,JLPT_3,noun
 二つ,ふたつ,futatsu,two things,JLPT_5,noun
 豚肉,ぶたにく,butaniku,pork,JLPT_5,noun
@@ -7840,7 +7840,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 二日,ふつか,futsuka,two days; second day of the month,JLPT_5,noun
 太い,ふとい,futoi,fat; thick,JLPT_5,adjective
 冬,ふゆ,fuyu,winter,JLPT_5,noun
-降る,ふる,furu,to precipitate; to fall (e.g.; rain; snow; etc.),JLPT_3,verb
+降る,ふる,furu,to precipitate; to fall (e.g.; rain; snow; etc.),JLPT_5,verb
 古い,ふるい,furui,old (in reference to objects; not people); aged; ancient,JLPT_5,adjective
 ～分,～ふん,~fun,~ minutes,JLPT_5,noun
 文章,ぶんしょう,bunshou,sentence; text,JLPT_5,noun
@@ -7880,7 +7880,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 また,また,mata,and; furthermore,JLPT_3,other
 まだ,まだ,mada,yet; still; besides,JLPT_3,adverb
 町,まち,machi,town; city,JLPT_3,noun
-待つ,まつ,matsu,to wait,JLPT_3,verb
+待つ,まつ,matsu,to wait,JLPT_5,verb
 まっすぐ,まっすぐ,massugu,straight (ahead); direct,JLPT_3,adverb
 マッチ,マッチ,matchi,match,JLPT_5,noun
 窓,まど,mado,window,JLPT_5,noun
@@ -7900,7 +7900,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 皆さん,みなさん,minasan,all of you; everyone,JLPT_5,noun
 南,みなみ,minami,South,JLPT_5,noun
 耳,みみ,mimi,ear,JLPT_5,noun
-見る,みる,miru,to see; to look,JLPT_3,verb
+見る,みる,miru,to see; to look,JLPT_5,verb
 みんな,みんな,minna,all; everyone; everybody,JLPT_3,noun
 六日,むいか,muika,six days; sixth day of month,JLPT_5,noun
 向こう,むこう,mukou,beyond; over there,JLPT_5,noun
@@ -7941,7 +7941,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 横,よこ,yoko,beside; side; width,JLPT_5,noun
 四日,よっか,yokka,four days; fourth day of the month,JLPT_5,noun
 四つ,よっつ,yottsu,four things,JLPT_2,noun
-呼ぶ,よぶ,yobu,to call (one's name); to invite,JLPT_3,verb
+呼ぶ,よぶ,yobu,to call (one's name); to invite,JLPT_5,verb
 読む,よむ,yomu,to read,JLPT_5,verb
 夜,よる,yoru,evening; night,JLPT_3,noun
 弱い,よわい,yowai,weak,JLPT_5,adjective
