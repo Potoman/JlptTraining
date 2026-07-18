@@ -6893,7 +6893,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 申す,もうす,mousu,-- extra-modest (humble) expression for 言う (いう) --,JLPT_4,verb
 試験,しけん,shiken,an exam,JLPT_4,noun
 真面目,まじめ,majime,diligent; serious,JLPT_4,noun
-ごらんになる,,,-- honorific expression for みる --,JLPT_4,verb
+ご覧になる,ごらんになる,goranninaru,-- honorific expression for みる --,JLPT_4,verb
 店員,てんいん,tenin,clerk; shop-employee,JLPT_4,noun
 泊まる,とまる,tomaru,to stay (over night) (v.i.),JLPT_4,verb
 よろしい,よろしい,yoroshii,(hon.) good; OK; all right,JLPT_4,adjective
@@ -7136,7 +7136,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 点く,つく,tsuku,to be started; to be switched on,JLPT_2,verb
 この間,このあいだ,konoaida,the other day; recently,JLPT_4,noun
 かっこう,格好,kakkou,appearance; manner; shape; form; posture,JLPT_4,noun
-かまう,,,to mind; to care about; to be concerned about,JLPT_4,verb
+構う,かまう,kamau,to mind; to care about; to be concerned about,JLPT_4,verb
 続ける,つづける,tsuzukeru,to continue; to keep up,JLPT_4,verb
 落す,おとす,otosu,to drop; to lose,JLPT_4,verb
 明日,あす,asu,tomorrow,JLPT_4,noun
@@ -7148,7 +7148,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 いじめる,いじめる,ijimeru,to bully; to torment,JLPT_4,verb
 回る、回す,まわる、まわす,mawaru;mawasu,to go around; to revolve,JLPT_4,verb
 ～君,～くん,~kun,Mr. (junior) ~; master ~,JLPT_4,noun
-おっしゃる,おっしゃる,ossharu,-- honorific expression for いう --,JLPT_4,verb
+おっしゃる,おっしゃる,ossharu,-- honorific expression for いう --,JLPT_4,noun
 眠い,ねむい,nemui,sleepy; drowsy,JLPT_4,adjective
 濡れる,ぬれる,nureru,to get wet,JLPT_4,verb
 倒れる,たおれる,taoreru,to collapse; to break down,JLPT_4,verb
@@ -7172,7 +7172,7 @@ expression,reading,romaji,meaning,tags,part_of_speech
 けれど; けれども,けれど; けれども,keredo;keredomo,but; although,JLPT_4,noun
 舟,ふね,fune,ship; boat,JLPT_4,noun
 動く,うごく,ugoku,to move,JLPT_4,verb
-～(に) ついて,～(に) ついて,~(ni)tsuite,about; concerning,JLPT_4,verb
+～(に) ついて,～(に) ついて,~(ni)tsuite,about; concerning,JLPT_4,noun
 コンサート,コンサート,concert,concert,JLPT_4,noun
 虫,むし,mushi,insect,JLPT_4,noun
 優しい,やさしい,yasashii,kind (person); gentle (person); easy (problem),JLPT_4,adjective
