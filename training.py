@@ -223,7 +223,8 @@ class Question:
         solutions = re.sub(r'\s*\(.*?\)\s*', '', getattr(self.item, self.field[0])).split(";")
         solutions = solutions + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";")
         forbids = self.forbid_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";")
-        return check_field(response, solutions, forbids)
+        should_be_exact = self.field[0] == "romaji"
+        return check_field(response, solutions, forbids, should_be_exact)
 
 
 class Session:
@@ -440,7 +441,8 @@ except:
     print("Err")
 
 
-def check_field(response: str, solutions: list[str], forbids: list[str]) -> (bool, float | None):
+def check_field(response: str, solutions: list[str], forbids: list[str], should_be_exact: bool) -> (bool, float | None):
+    ration_response_limit = 1.0 if should_be_exact else 0.6
     ratio_resonse = 0.0
     ratio_forbid_resonse = 0.0
     for solution in solutions:
@@ -449,7 +451,7 @@ def check_field(response: str, solutions: list[str], forbids: list[str]) -> (boo
     for forbid in forbids:
         tmp_ratio_resonse = SequenceMatcher(None, forbid, response).ratio()
         ratio_forbid_resonse = tmp_ratio_resonse if tmp_ratio_resonse > ratio_forbid_resonse else ratio_forbid_resonse
-    return (False if ratio_forbid_resonse > 0.85 else ratio_resonse > 0.6,
+    return (False if ratio_forbid_resonse > 0.85 else ratio_resonse >= ration_response_limit,
             0.0 if ratio_forbid_resonse > 0.85 else ratio_resonse)
 
 
