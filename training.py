@@ -52,7 +52,7 @@ class Kanji:
 
 
 class Word:
-    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, part_of_speech):
+    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, part_of_speech, most_200_verb="x"):
         self.index = index
         self.word = word
         self.kana = kana
@@ -60,6 +60,7 @@ class Word:
         self.meaning = meaning
         self.jlpt_level = int(jlpt_level.replace("JLPT_", ""))
         self.part_of_speech = part_of_speech
+        self.most_200_verb = most_200_verb == "o"
         self.overlay_meaning = ""
         self.forbid_meaning = ""
         self.burn_meaning = False
@@ -325,6 +326,28 @@ class Session:
         self.last_question = question
 
 
+class SessionTopVerbs(Session):
+    def __init__(self, jlpt_levels: list[int] | None):
+        self.last_question = None
+        self.questions_word = []
+        self.questions_kanji = []
+        for word in words[:]:
+            if not word.most_200_verb:
+                continue
+            if word.part_of_speech not in ("noun", "verb"):
+                continue
+            if jlpt_levels is not None and word.jlpt() not in jlpt_levels:
+                continue
+            try:
+                self.questions_word.append(Question(word))
+            except:
+                pass # This item is burned.
+        random.shuffle(self.questions_word)
+        self.questions_word_length_initial = len(self.questions_word)
+        self.questions_kanji_length_initial = 0
+        self.questions_length_initial = self.questions_word_length_initial
+
+
 def load_kanji() -> dict[str, Kanji]:
     kanjis = {}
     file_path = Path("kanji.json")
@@ -345,9 +368,9 @@ with open('all_hiragana_with_pos.csv', newline='', encoding='utf-8') as csvfile:
     next(reader)  # Ignore la première ligne (en-tête)
     index = 0
     for row in reader:
-        # row = [kanji, kana, romaji, meaning, jlpt_level]
+        # row = [expression, reading, romaji, meaning, tags, part_of_speech, most_200_verb]
         index = index + 1
-        if len(row) != 6:
+        if len(row) != 7:
             raise Exception("Malformed line : " + str(row))
         word = Word(index - 1, *row)
         words.append(word)
@@ -480,6 +503,15 @@ POS_CHOICES = {
 
 
 def main():
+    mode = input("What do you want to learn : Vocabulary (v), Top used verbs (t) ?")
+
+    if mode == "t":
+        jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
+        jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
+        session = SessionTopVerbs(jlpt_levels)
+        session.ask()
+        return
+
     r = input("What test : Kanji (k), Word (w), Both (b) ?")
     part_of_speech = None
     if r in ["w", "b"]:
