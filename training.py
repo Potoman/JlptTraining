@@ -53,7 +53,7 @@ class Kanji:
 
 
 class Word:
-    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, part_of_speech, most_200_verb="x"):
+    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, part_of_speech, most_200_verb, transitivity):
         self.index = index
         self.word = word
         self.kana = kana
@@ -66,6 +66,7 @@ class Word:
         self.forbid_meaning = ""
         self.burn_meaning = False
         self.burn_romaji = False
+        self.is_transitive = transitivity == "transitive"
 
     @staticmethod
     def fields() -> list[tuple[str, list[str]]]:
@@ -187,11 +188,24 @@ class Question:
 
     def error(self, ratio: float):
         response = '; '.join((getattr(self.item, self.field[0]) + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
+        if self.field[0] == 'meaning':
+            if isinstance(self.item, Word):
+                if self.item.part_of_speech == "verb":
+                    response = f"{response} ({'transitive' if self.item.is_transitive else 'intransitive'})"
         forbid = '; '.join(self.forbid_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";"))
         forbid = " (forbid = " + Fore.RED + forbid + Fore.BLACK + ")" if forbid != "" else ""
         other_field = []
         for field in self.field[2]:
-            other_field.append(getattr(self.item, field))
+            if field == 'meaning':
+                if isinstance(self.item, Word):
+                    if self.item.part_of_speech == "verb":
+                        other_field.append(f"{getattr(self.item, field)} ({'transitive' if self.item.is_transitive else 'intransitive'})")
+                    else:
+                        other_field.append(getattr(self.item, field))
+                else:
+                    other_field.append(getattr(self.item, field))
+            else:
+                other_field.append(getattr(self.item, field))
         print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + response + forbid + "; " + Fore.BLACK + ", ".join(other_field))
 
     def save_result(self, flag: bool, ) -> None:
@@ -402,7 +416,7 @@ with open('all_hiragana_with_pos.csv', newline='', encoding='utf-8') as csvfile:
     for row in reader:
         # row = [expression, reading, romaji, meaning, tags, part_of_speech, most_200_verb]
         index = index + 1
-        if len(row) != 7:
+        if len(row) != 8:
             raise Exception("Malformed line : " + str(row))
         word = Word(index - 1, *row)
         words.append(word)
