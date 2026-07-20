@@ -288,16 +288,18 @@ class Session(ABC):
                 question = self.questions_word.pop()
             else:
                 question = self.questions_kanji.pop()
-            self.ask_question(count, question)
+            if not self.ask_question(count, question):
+                break
             count = count + 1
 
-    def ask_question(self, index: int, question: Question):
+    def ask_question(self, index: int, question: Question) -> bool:
         parser = argparse.ArgumentParser()
         parser.add_argument('-f', type=str, nargs="+", help="Forbid a description of sentence from a solution.")
         parser.add_argument('-a', type=str, nargs="+", help="Add a description of sentence for a solution.")
         parser.add_argument('-b', action='store_true', help="Burn the last question.")
         parser.add_argument('-u', action='store_true', help="Unburn the last question.")
         parser.add_argument('-r', action='store_true', help="Reset the last question.")
+        parser.add_argument('-s', action='store_true', help="Stop the session.")
         flag = False
         help = False
         while True:
@@ -329,6 +331,8 @@ class Session(ABC):
             elif args.r:
                 flag = True
                 self.last_question.reset()
+            elif args.s:
+                return False
             elif response == "":
                 # Print help
                 if help:
@@ -350,6 +354,7 @@ class Session(ABC):
                 question.help()
         print("")
         self.last_question = question
+        return True
 
 
 class SessionVocabulary(Session):
