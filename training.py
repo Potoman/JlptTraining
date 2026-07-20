@@ -70,6 +70,9 @@ class Word:
 
     @staticmethod
     def fields() -> list[tuple[str, list[str]]]:
+        # First is what we have to guess;
+        # Second is what is shown as help;
+        # Third is additional information print on error.
         return [('meaning', ['word', 'kana'], []),
                 ('romaji', ['word'], ['meaning'])]
 
