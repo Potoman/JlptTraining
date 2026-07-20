@@ -189,7 +189,7 @@ class Question:
             response = '; '.join((response + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
         print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + response)
 
-    def error(self, ratio: float):
+    def error(self, ratio: float | None):
         response = '; '.join((getattr(self.item, self.field[0]) + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
         if self.field[0] == 'meaning':
             if isinstance(self.item, Word):
@@ -256,6 +256,9 @@ class Session(ABC):
         self.questions_word_length_initial = len(self.questions_word)
         self.questions_kanji_length_initial = len(self.questions_kanji)
         self.questions_length_initial = self.questions_word_length_initial + self.questions_kanji_length_initial
+        self.good_answer = 0
+        self.bad_answer = 0
+        self.score = 0.0
 
     @abstractmethod
     def _build_questions(self) -> None:
@@ -291,6 +294,12 @@ class Session(ABC):
             if not self.ask_question(count, question):
                 break
             count = count + 1
+        # we print the stat :
+        total_answer = self.good_answer + self.bad_answer
+        print(f"Good answer : {self.good_answer} / {total_answer}.")
+        print(f"Bad answer : {self.bad_answer} / {total_answer}.")
+        if total_answer > 0:
+            print(f"Average score : {self.score / total_answer}.")
 
     def ask_question(self, index: int, question: Question) -> bool:
         parser = argparse.ArgumentParser()
@@ -348,10 +357,13 @@ class Session(ABC):
         if is_ok:
             question.save_result(is_ok)
             question.success(ratio)
+            self.good_answer = self.good_answer + 1
         else:
             question.error(ratio)
             if not help:
                 question.help()
+            self.bad_answer = self.bad_answer + 1
+        self.score = self.score + 0.0 if ratio is None else ratio
         print("")
         self.last_question = question
         return True
