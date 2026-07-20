@@ -1,17 +1,20 @@
 """
-Generate a PDF listing words from all_hiragana_with_pos.csv, filtered by
-part_of_speech and JLPT level, laid out as a bordered table.
+Generate a PDF listing words from a training Session, laid out as a
+bordered table.
+
+Word selection reuses training.Session.build_session(), the same
+interactive setup (vocabulary/top-verbs, test type, part of speech, JLPT
+level) used to start a training session, so the PDF always lists the same
+words a training Session would quiz on (burned words excluded).
 
 Usage:
     python generate_jlpt_pdf.py
-    (then answer the word type and JLPT level prompts, e.g. "verb" and "JLPT_4")
+    (then answer the same prompts as when starting a training session)
 
 Requires: pip install reportlab
 """
 
-import csv
 import os
-import re
 import sys
 
 from reportlab.lib import colors
@@ -22,7 +25,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Table, TableStyle
 
-CSV_PATH = "all_hiragana_with_pos.csv"
+from training import Session, SessionTopVerbs, SessionVocabulary, Word
 
 JAPANESE_FONT = "NotoSansJP"
 JAPANESE_FONT_PATH = r"C:\Windows\Fonts\NotoSansJP-VF.ttf"
@@ -32,28 +35,30 @@ def register_japanese_font():
     pdfmetrics.registerFont(TTFont(JAPANESE_FONT, JAPANESE_FONT_PATH))
 
 
-def normalize_jlpt(value):
-    """Turn '4', 'N4', 'n4', 'JLPT_4' into 'JLPT_4'."""
-    match = re.search(r"(\d)", value)
-    if not match:
-        raise ValueError(f"Could not parse a JLPT level out of '{value}'")
-    return f"JLPT_{match.group(1)}"
+def collect_words(session: Session) -> list[Word]:
+    """Words a training Session would ask about, restored to CSV order
+    (Session.__init__ shuffles questions_word in place for quizzing)."""
+    return sorted((question.item for question in session.questions_word), key=lambda word: word.index)
+
+
+def describe_session(session: Session) -> str:
+    if isinstance(session, SessionVocabulary):
+        word_type = session.part_of_speech or "all"
+    elif isinstance(session, SessionTopVerbs):
+        word_type = "top_verbs"
+    else:
+        word_type = "words"
+    jlpt_label = "all" if session.jlpt_levels is None else "_".join(str(level) for level in session.jlpt_levels)
+    return f"{word_type}_JLPT_{jlpt_label}"
 
 
 def main():
-    word_type = input("Word type (e.g. verb, adjective, noun, adverb, other): ").strip()
-    jlpt_input = input("JLPT level (e.g. JLPT_4, 4, N4): ").strip()
-    csv_tag = normalize_jlpt(jlpt_input)
+    session = Session.build_session()
 
-    with open(CSV_PATH, encoding="utf-8") as f:
-        rows = [
-            row
-            for row in csv.DictReader(f)
-            if row["part_of_speech"] == word_type and row["tags"] == csv_tag
-        ]
+    words = collect_words(session)
 
-    if not rows:
-        print(f"No rows found for part_of_speech='{word_type}' and tags='{csv_tag}'.")
+    if not words:
+        print("No words found for this session (burned words excluded, or a kanji-only test was selected).")
         return
 
     register_japanese_font()
@@ -69,12 +74,12 @@ def main():
         Paragraph("Meaning", header_style),
     ]]
 
-    for row in rows:
+    for word in words:
         data.append([
-            Paragraph(row["expression"], jp_style),
-            Paragraph(row["reading"], jp_style),
-            Paragraph(row["romaji"], en_style),
-            Paragraph(row["meaning"], en_style),
+            Paragraph(word.word, jp_style),
+            Paragraph(word.kana, jp_style),
+            Paragraph(word.romaji, en_style),
+            Paragraph(word.meaning, en_style),
         ])
 
     col_widths = [32 * mm, 32 * mm, 32 * mm, 90 * mm]
@@ -90,16 +95,17 @@ def main():
         ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
     ]))
 
-    output_path = os.path.abspath(f"{word_type}_{csv_tag}.pdf")
+    label = describe_session(session)
+    output_path = os.path.abspath(f"{label}.pdf")
 
     doc = SimpleDocTemplate(
         output_path,
         pagesize=A4,
-        title=f"{word_type} - {csv_tag}",
+        title=label,
     )
     doc.build([table])
 
-    print(f"Generated {output_path} with {len(rows)} word(s).")
+    print(f"Generated {output_path} with {len(words)} word(s).")
 
 
 if __name__ == "__main__":
