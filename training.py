@@ -66,7 +66,7 @@ class Word:
         self.forbid_meaning = ""
         self.burn_meaning = False
         self.burn_romaji = False
-        self.is_transitive = transitivity == "transitive"
+        self.transitivity: str | None = None if transitivity == "" else transitivity
 
     @staticmethod
     def fields() -> list[tuple[str, list[str]]]:
@@ -187,29 +187,34 @@ class Question:
         response = getattr(self.item, self.field[0])
         if self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])] != "":
             response = '; '.join((response + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
+        if self.field[0] == 'meaning':
+            if isinstance(self.item, Word):
+                if self.item.transitivity != None:
+                    response = f"{response} ({self.item.transitivity})"
         print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + response)
 
     def error(self, ratio: float | None):
         response = '; '.join((getattr(self.item, self.field[0]) + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
         if self.field[0] == 'meaning':
             if isinstance(self.item, Word):
-                if self.item.part_of_speech == "verb":
-                    response = f"{response} ({'transitive' if self.item.is_transitive else 'intransitive'})"
+                if self.item.transitivity != None:
+                    response = f"{response} ({self.item.transitivity})"
         forbid = '; '.join(self.forbid_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";"))
         forbid = " (forbid = " + Fore.RED + forbid + Fore.BLACK + ")" if forbid != "" else ""
         other_field = []
         for field in self.field[2]:
+            value = getattr(self.item, field)
             if field == 'meaning':
                 if isinstance(self.item, Word):
-                    if self.item.part_of_speech == "verb":
-                        other_field.append(f"{getattr(self.item, field)} ({'transitive' if self.item.is_transitive else 'intransitive'})")
-                    else:
-                        other_field.append(getattr(self.item, field))
-                else:
-                    other_field.append(getattr(self.item, field))
-            else:
-                other_field.append(getattr(self.item, field))
-        print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + response + forbid + "; " + Fore.BLACK + ", ".join(other_field))
+                    if self.item.transitivity != None:
+                        value = f"{value} ({self.item.transitivity})"
+            other_field.append(value)
+        if other_field:
+            other_field = ", ".join(other_field)
+            other_field = "; " + Fore.BLACK + other_field
+        else:
+            other_field = ""
+        print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + response + forbid + other_field)
 
     def save_result(self, flag: bool, ) -> None:
         if not flag:
