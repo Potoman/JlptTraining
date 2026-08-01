@@ -311,7 +311,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 冬眠,とうみん,toumin,hibernation; winter sleep,JLPT_1,noun,,
 同盟,どうめい,doumei,alliance; union; league,JLPT_1,noun,,
 どうやら,どうやら,douyara,it seems like; somehow or other,JLPT_1,adverb,,
-動力,どうりょく,douriku,power; motive power; dynamic force,JLPT_1,noun,,
+動力,どうりょく,douryoku,power; motive power; dynamic force,JLPT_1,noun,,
 登録,とうろく,touroku,registration; register; record,JLPT_1,noun,top_used_verbs,transitive
 討論,とうろん,touron,discussion; debate,JLPT_1,noun,,
 遠ざかる,とおざかる,toozakaru,to go far off,JLPT_1,verb,,intransitive
@@ -541,7 +541,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 配分,はいぶん,haibun,distribution; allotment,JLPT_1,noun,,
 敗北,はいぼく,haiboku,defeat (as a verb it means 'to be defeated'),JLPT_1,noun,,
 倍率,ばいりつ,bairitsu,diameter; magnification,JLPT_1,noun,,
-配慮,はいりょ,hairi,consideration; concern; forethought,JLPT_1,noun,,
+配慮,はいりょ,hairyo,consideration; concern; forethought,JLPT_1,noun,interview,
 配列,はいれつ,hairetsu,arrangement; array (programming),JLPT_1,noun,,
 破壊,はかい,wakai,destruction,JLPT_1,noun,,
 いたわる,いたわる,itawaru,to sympathize with; to console; to care for,JLPT_1,verb,,transitive
@@ -647,7 +647,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 獲物,えもの,emono,game; spoils; trophy,JLPT_1,noun,,
 襟,えり,eri,neck; collar,JLPT_1,noun,,
 エレガント,エレガント,elegant,elegant,JLPT_1,adjective,,
-円滑,えんかつ,enkatsu,harmony; smoothness,JLPT_1,adjective,,
+円滑,えんかつ,enkatsu,harmony; smoothness,JLPT_1,adjective,interview,
 縁側,えんがわ,engawa,veranda; porch; balcony; open corridor,JLPT_1,noun,,
 沿岸,えんがん,engan,coast; shore,JLPT_1,noun,,
 婉曲,えんきょく,enkyoku,euphemistic; indirect; insinuating,JLPT_1,adjective,,
@@ -776,8 +776,8 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 街頭,がいとう,gaitou,in the street,JLPT_1,noun,,
 ガイドブック,ガイドブック,guidebook,guidebook,JLPT_1,noun,,
 介入,かいにゅう,kainyuu,intervention,JLPT_1,noun,,
-概念,がいねん,gainen,general idea; concept; notion,JLPT_1,noun,,
-開発,かいはつ,kaihatsu,development; exploitation,JLPT_1,noun,top_used_verbs,
+概念,がいねん,gainen,general idea; concept; notion,JLPT_1,noun,interview,
+開発,かいはつ,kaihatsu,development; exploitation,JLPT_1,noun,top_used_verbs;interview,
 海抜,かいばつ,kaibatsu,height above sea level,JLPT_1,noun,,
 介抱,かいほう,kaihou,nursing; looking after,JLPT_1,noun,,
 解剖,かいぼう,kaibou,dissection; autopsy,JLPT_1,noun,,
@@ -1141,7 +1141,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 同級,どうきゅう,doukyuu,the same grade; same class,JLPT_1,noun,,
 同居,どうきょ,doukyo,living together,JLPT_1,noun,,
 登校,とうこう,toukou,attendance (at school),JLPT_1,noun,,
-統合,とうごう,tougou,integration; unification; synthesis,JLPT_1,noun,,
+統合,とうごう,tougou,integration; unification; synthesis,JLPT_1,noun,interview,
 動向,どうこう,doukou,trend; tendency; movement; attitude,JLPT_1,noun,,
 投資,とうし,toushi,investment,JLPT_1,noun,,
 同情,どうじょう,doujou,sympathy; compassion; sympathize,JLPT_1,noun,,
@@ -1224,7 +1224,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 圧倒,あっとう,attou,overwhelm; overpower,JLPT_1,noun,,
 圧迫,あっぱく,appaku,pressure; coercion; oppression,JLPT_1,noun,,
 あつらえる,あつらえる,atsuraeru,to give an order; to place an order,JLPT_1,verb,,transitive
-圧力,あつりょく,atsuriku,stress; pressure,JLPT_1,noun,,
+圧力,あつりょく,atsuryoku,stress; pressure,JLPT_1,noun,,
 当て,あて,ate,expectations; depend,JLPT_1,adverb,,
 ～宛,～あて,~ate,for…(e.g.; In a letter),JLPT_1,noun,,
 当て字,あてじ,ateji,phonetic-equivalent character; substitute character,JLPT_1,noun,,
@@ -1271,14 +1271,14 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 言い訳,いいわけ,iiwake,excuse; explanation,JLPT_1,noun,,
 イェス,イェス,esu,yes; Jesus,JLPT_1,noun,,
 家出,いえで,iede,running away from home,JLPT_1,noun,,
-生かす,いかす,ikasu,to keep something alive; to make use of,JLPT_1,verb,,transitive
+生かす,いかす,ikasu,to keep something alive; to make use of,JLPT_1,verb,interview,transitive
 いかに,いかに,ikani,how; in what way,JLPT_1,adverb,,
 いかにも,いかにも,ikanimo,truly (same as 実に (じつに)),JLPT_1,adverb,,
 異議,いぎ,igi,objection; dissent; protest,JLPT_1,noun,,
 生き甲斐,いきがい,ikigai,something one lives for; very important,JLPT_1,noun,,
 行き違い,いきちがい,ikichigai,misunderstanding; disagreement,JLPT_1,noun,,
 意気込む,いきごむ,ikigomu,to be enthusiastic about,JLPT_1,verb,,intransitive
-育成,いくせい,ikusei,rearing; training; cultivation,JLPT_1,noun,,
+育成,いくせい,ikusei,rearing; training; cultivation,JLPT_1,noun;suru verb,interview,transitive
 幾多,いくた,ikuta,many; numerous,JLPT_1,noun,,
 (花を〜) 生ける; 活ける,(はなを～) いける,(hanawo~)ikeru,to arrange (flowers),JLPT_1,verb,,transitive
 異見,いけん,iken,different opinion; objection,JLPT_1,noun,,
@@ -1401,7 +1401,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 診療,しんりょう,shinryou,medical examination and treatment,JLPT_1,noun,,
 粋,すい,sui,essence,JLPT_1,noun,,
 水源,すいげん,suigen,source of river,JLPT_1,noun,,
-推進,すいしん,suishin,propulsion; driving force,JLPT_1,noun,,
+推進,すいしん,suishin,propulsion; driving force,JLPT_1,noun;suru verb,interview,
 吹奏,すいそう,suisou,playing wind instruments,JLPT_1,noun,,
 推測,すいそく,suisoku,guess; conjecture,JLPT_1,noun,,
 水田,すいでん,suiden,(water-filled) paddy field,JLPT_1,noun,,
@@ -1526,7 +1526,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 専用,せんよう,senyou,exclusive use; personal use,JLPT_1,noun,,
 占領,せんりょう,senryou,occupation; possession; have a room to oneself,JLPT_1,noun,,
 善良,ぜんりょう,zenryou,goodness; excellence; virtue,JLPT_1,noun,,
-戦力,せんりょく,senriku,war potential,JLPT_1,noun,,
+戦力,せんりょく,senryoku,war potential,JLPT_1,noun,,
 前例,ぜんれい,zenrei,precedent,JLPT_1,noun,,
 相応,そうおう,souou,suitability; fitness,JLPT_1,noun,,
 総会,そうかい,soukai,general meeting,JLPT_1,noun,,
@@ -1691,7 +1691,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 蛋白質,たんぱくしつ,tanpakushitsu,protein,JLPT_1,noun,,
 ダンプ,ダンプ,dump,dump truck,JLPT_1,noun,,
 断面,だんめん,danmen,cross section,JLPT_1,noun,,
-弾力,だんりょく,danriku,elasticity; flexibility,JLPT_1,noun,,
+弾力,だんりょく,danryoku,elasticity; flexibility,JLPT_1,noun,,
 治安,ちあん,chian,public order; security,JLPT_1,noun,,
 チームワーク,チームワーク,teamwork,teamwork,JLPT_1,noun,,
 チェンジ,チェンジ,change,change,JLPT_1,noun,,
@@ -1805,7 +1805,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 釣り鐘,つりがね,tsurigane,temple bell (for striking),JLPT_1,noun,,
 吊り革,つりかわ,tsurikawa,strap,JLPT_1,noun,,
 手当,てあて,teate,allowance; compensation; treatment,JLPT_1,noun,,
-定義,ていぎ,teigi,definition,JLPT_1,noun,,
+定義,ていぎ,teigi,definition,JLPT_1,noun,interview,
 提供,ていきょう,teikyou,offer; program sponsoring,JLPT_1,noun,top_used_verbs,
 提携,ていけい,teikei,cooperation; tie-up; joint business,JLPT_1,noun,,
 体裁,ていさい,teisai,decency; style; form; appearance,JLPT_1,noun,,
@@ -1868,7 +1868,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 老衰,ろうすい,rousui,senility; senile decay,JLPT_1,noun,,
 朗読,ろうどく,roudoku,reading aloud; recitation,JLPT_1,noun,,
 浪費,ろうひ,rouhi,waste; extravagance,JLPT_1,noun,,
-労力,ろうりょく,rouriku,labor; effort; trouble,JLPT_1,noun,,
+労力,ろうりょく,rouryoku,labor; effort; trouble,JLPT_1,noun,,
 ロープウエイ,ロープウエイ,ropeway,ropeway; aerial tram,JLPT_1,noun,,
 ロープ,ロープ,rope,rope,JLPT_1,noun,,
 ろくな,ろくな,rokuna,satisfactory; decent,JLPT_1,adjective,,
@@ -1996,7 +1996,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 収支,しゅうし,shuushi,income and expenditure,JLPT_1,noun,,
 終始,しゅうし,shuushi,from beginning to end; consistent(ly),JLPT_1,adverb,,
 修士,しゅうし,shuushi,Masters degree program,JLPT_1,noun,,
-従事,じゅうじ,juuji,engaging; pursuing; following,JLPT_1,noun,,
+従事,じゅうじ,juuji,engaging; pursuing; following,JLPT_1,noun;suru verb,interview,intransitive
 終日,しゅうじつ,shuujitsu,all day,JLPT_1,noun,,
 充実,じゅうじつ,juujitsu,fullness; perfection,JLPT_1,noun,,
 収集,しゅうしゅう,shuushuu,gathering up; collection,JLPT_1,noun,,
@@ -2111,8 +2111,8 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 振り返る,ふりかえる,furikaeru,to turn head; to turn around; to look back,JLPT_1,verb,,both
 振り出し,ふりだし,furidashi,outset; starting point; drawing or issuing (draft),JLPT_1,noun,,
 不良,ふりょう,furyou,badness; delinquent; failure,JLPT_1,adjective,,
-浮力,ふりょく,furiku,buoyancy,JLPT_1,noun,,
-武力,ぶりょく,buriku,armed might; military power; the sword; force,JLPT_1,noun,,
+浮力,ふりょく,furyoku,buoyancy,JLPT_1,noun,,
+武力,ぶりょく,buryoku,armed might; military power; the sword; force,JLPT_1,noun,,
 ブル,ブル,bull,bull,JLPT_1,noun,,
 震わせる,ふるわせる,furuwaseru,to be shaking; to be trembling,JLPT_1,verb,,transitive
 無礼,ぶれい,burei,impolite; rude,JLPT_1,noun,,
@@ -2169,7 +2169,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 ボイコット,ボイコット,boycott,boycott,JLPT_1,noun,,
 ポイント,ポイント,point,point,JLPT_1,noun,,
 法案,ほうあん,houan,bill (law),JLPT_1,noun,,
-防衛,ぼうえい,bouei,defense; protection; self-defense,JLPT_1,noun,,
+防衛,ぼうえい,bouei,defense; protection; self-defense,JLPT_1,noun,interview,
 防火,ぼうか,bouka,fire prevention; fire fighting; fire proof,JLPT_1,noun,,
 崩壊,ほうかい,houkai,collapse; decay (physics); crumbling,JLPT_1,noun,,
 妨害,ぼうがい,bougai,disturbance; obstruction; interference,JLPT_1,noun,,
@@ -2239,7 +2239,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 ぼやく,ぼやく,boyaku,to grumble; to complain,JLPT_1,verb,,intransitive
 ぼやける,ぼやける,boyakeru,to become dim; to become blurred,JLPT_1,verb,,intransitive
 保養,ほよう,hoyou,health preservation; recuperation; recreation,JLPT_1,noun,,
-捕虜,ほりょ,hori,prisoner of war,JLPT_1,noun,,
+捕虜,ほりょ,horyo,prisoner of war,JLPT_1,noun,,
 ボルト,ボルト,bolt,volt; bolt,JLPT_1,noun,,
 滅びる,ほろびる,horobiru,to be ruined; to perish; to be destroyed,JLPT_1,verb,,intransitive
 滅ぼす,ほろぼす,horobosu,to destroy; to overthrow; to ruin,JLPT_1,verb,,transitive
@@ -2485,7 +2485,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 有望,ゆうぼう,yuubou,good prospects; full of hope; promising,JLPT_1,adjective,,
 遊牧,ゆうぼく,yuuboku,nomadism,JLPT_1,noun,,
 夕焼け,ゆうやけ,yuuyake,sunset,JLPT_1,noun,,
-有力,ゆうりょく,yuuriku,influence; prominence; potent,JLPT_1,adjective,,
+有力,ゆうりょく,yuuryoku,influence; prominence; potent,JLPT_1,adjective,,
 幽霊,ゆうれい,yuurei,ghost; specter; phantom,JLPT_1,noun,,
 誘惑,ゆうわく,yuuwaku,temptation; allurement; lure,JLPT_1,noun,,
 故,ゆえ,yue,reason; cause; circumstances,JLPT_1,other,,
@@ -2576,8 +2576,8 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 領地,りょうち,ryouchi,territory,JLPT_1,noun,,
 領土,りょうど,ryoudo,territory; possession,JLPT_1,noun,,
 両立,りょうりつ,ryouritsu,compatibility; coexistence; standing together,JLPT_1,noun,,
-旅客,りょかく,rikaku,passenger,JLPT_1,noun,,
-旅券,りょけん,riken,passport,JLPT_1,noun,,
+旅客,りょかく,ryokaku,passenger,JLPT_1,noun,,
+旅券,りょけん,ryoken,passport,JLPT_1,noun,,
 履歴,りれき,rireki,personal history; background; log,JLPT_1,noun,,
 理論,りろん,riron,theory,JLPT_1,noun,,
 林業,りんぎょう,ringyou,forestry,JLPT_1,noun,,
@@ -2902,7 +2902,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 全般,ぜんぱん,zenpao,(the) whole; general,JLPT_2,noun,,
 扇風機,せんぷうき,senpuuki,electric fan,JLPT_2,noun,,
 洗面,せんめん,senmen,wash up (one's face); have a wash,JLPT_2,noun,,
-全力,ぜんりょく,zenriku,all one's power; whole energy,JLPT_2,noun,,
+全力,ぜんりょく,zenryoku,all one's power; whole energy,JLPT_2,noun,,
 線路,せんろ,senro,line; track; roadbed,JLPT_2,noun,,
 ～沿い,～そい,~soi,along,JLPT_2,noun,,
 総～,そう～,sou~,gross; general; entire,JLPT_2,noun,,
@@ -2929,7 +2929,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 速達,そくたつ,sokutatsu,express; special delivery,JLPT_2,noun,,
 測定,そくてい,sokutei,measurement,JLPT_2,noun,top_used_verbs,
 測量,そくりょう,sokuryou,measurement; surveying,JLPT_2,noun,,
-速力,そくりょく,sokuriku,speed,JLPT_2,noun,,
+速力,そくりょく,sokuryoku,speed,JLPT_2,noun,,
 素質,そしつ,soshitsu,talent; capability,JLPT_2,noun,,
 祖先,そせん,sosen,ancestor(s),JLPT_2,noun,,
 そそっかしい,そそっかしい,sosokkashii,careless; thoughtless,JLPT_2,adjective,,
@@ -3084,7 +3084,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 概論,がいろん,gairon,introduction; general remark,JLPT_2,noun,,
 却って,かえって,kaette,on the contrary; rather,JLPT_2,adverb,,
 家屋,かおく,kaoku,house; building,JLPT_2,noun,,
-係わる,かかわる,kakawaru,to concern oneself in; to be involved in,JLPT_2,verb,,intransitive
+係わる,かかわる,kakawaru,to concern oneself in; to be involved in,JLPT_2,verb,interview,intransitive
 書留,かきとめ,kakitome,registered mail,JLPT_2,noun,,
 書取,かきとり,kakitori,dictation,JLPT_2,noun,,
 垣根,かきね,kakine,hedge,JLPT_2,noun,,
@@ -3100,7 +3100,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 学年,がくねん,gakunen,year in school; grade in school,JLPT_2,noun,,
 格別,かくべつ,kakubetsu,exceptional,JLPT_2,noun,,
 確率,かくりつ,kakuritsu,probability,JLPT_2,noun,,
-学力,がくりょく,gakuriku,scholarship; knowledge,JLPT_2,noun,,
+学力,がくりょく,gakuryoku,scholarship; knowledge,JLPT_2,noun,,
 掛け算,かけざん,kakezan,multiplication,JLPT_2,noun,,
 可決,かけつ,kaketsu,approval; adoption (e.g.; motion; bill); passage,JLPT_2,noun,,
 火口,かこう,kakou,crater (of a volcano),JLPT_2,noun,,
@@ -3133,7 +3133,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 括弧,かっこ,kakko,parenthesis; brackets,JLPT_2,noun,,
 活字,かつじ,katsuji,printing type,JLPT_2,noun,,
 勝手に,かってに,katteni,arbitrarily;,JLPT_2,adjective,,
-活力,かつりょく,katsuriku,vitality; energy,JLPT_2,noun,,
+活力,かつりょく,katsuryoku,vitality; energy,JLPT_2,noun,,
 仮名,かな,kana,kana,JLPT_2,noun,,
 仮名遣い,かなづかい,kanazukai,kana orthography; syllabary spelling,JLPT_2,noun,,
 加熱,かねつ,kanetsu,heating,JLPT_2,noun,,
@@ -3348,7 +3348,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 交通機関,こうつうきかん,koutsuukikan,transportation facilities,JLPT_2,noun,,
 校庭,こうてい,koutei,school yard,JLPT_2,noun,,
 肯定,こうてい,koutei,positive; affirmation,JLPT_2,noun,,
-高度,こうど,koudo,altitude; height; advanced,JLPT_2,adjective,,
+高度,こうど,koudo,altitude;height;advanced;sophisticated,JLPT_2,adjective;noun,interview,
 高等,こうとう,koutou,high class; high grade,JLPT_2,adjective,,
 合同,ごうどう,goudou,combination; incorporation,JLPT_2,noun,,
 高等学校,こうとうがっこう,koutougakkou,senior high school,JLPT_2,noun,,
@@ -3360,7 +3360,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 合理,ごうり,gouri,rational,JLPT_2,noun,,
 交流,こうりゅう,kouryuu,exchange; alternating current,JLPT_2,noun,,
 合流,ごうりゅう,gouryuu,confluence; merge; join,JLPT_2,noun,,
-効力,こうりょく,kouriku,effect; efficacy,JLPT_2,noun,,
+効力,こうりょく,kouryoku,effect; efficacy,JLPT_2,noun,,
 コース,コース,course,course,JLPT_2,noun,,
 コーラス,コーラス,chorus,chorus,JLPT_2,noun,,
 焦がす,こがす,kogasu,to burn; to scorch,JLPT_2,verb,,transitive
@@ -3502,7 +3502,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 湿気,しっき,shikki,moisture; humidity; dampness,JLPT_2,noun,,
 しつこい,しつこい,shitsukoi,insistent; obstinate,JLPT_2,adjective,,
 実習,じっしゅう,jisshuu,practice; training,JLPT_2,noun,,
-実績,じっせき,jisseki,achievements; actual results,JLPT_2,noun,,
+実績,じっせき,jisseki,achievements; actual results,JLPT_2,noun,interview,
 執筆,しっぴつ,shippitsu,writing,JLPT_2,noun,,
 実物,じつぶつ,jitsubutsu,an actual thing,JLPT_2,noun,,
 しっぽ,しっぽ,shippo,tail (animal),JLPT_2,noun,,
@@ -3569,7 +3569,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 漁師,りょうし,ryoushi,fisherman,JLPT_2,noun,,
 領事,りょうじ,ryouji,consul,JLPT_2,noun,,
 領収,りょうしゅう,ryoushuu,receipt; voucher,JLPT_2,noun,,
-～力,～りょく,~riku,power of ~,JLPT_2,noun,,
+～力,～りょく,~ryoku,power of ~,JLPT_2,noun,,
 臨時,りんじ,rinji,temporary; special; extraordinary,JLPT_2,noun,,
 留守番,るすばん,rusuban,care-taking; caretaker; house-watching,JLPT_2,noun,,
 零点,れいてん,reiten,zero; no marks,JLPT_2,noun,,
@@ -3682,7 +3682,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 炒る,いる,iru,to parch; to roast,JLPT_2,verb,,transitive
 入れ物,いれもの,iremono,container; case,JLPT_2,noun,,
 インキ,インキ,ink,ink,JLPT_2,noun,,
-引力,いんりょく,inriku,gravity,JLPT_2,noun,,
+引力,いんりょく,inryoku,gravity,JLPT_2,noun,,
 ウーマン,ウーマン,woman,woman,JLPT_2,noun,,
 ウール,ウール,wool,wool,JLPT_2,noun,,
 ウエートレス,ウエートレス,waitress,waitress,JLPT_2,noun,,
@@ -3745,7 +3745,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 電波,でんぱ,denpa,electro-magnetic wave,JLPT_2,noun,,
 テンポ,テンポ,tempo,tempo,JLPT_2,noun,,
 電流,でんりゅう,denryuu,electric current,JLPT_2,noun,,
-電力,でんりょく,denriku,electric power,JLPT_2,noun,,
+電力,でんりょく,denryoku,electric power,JLPT_2,noun,,
 問い合わせ,といあわせ,toiawase,inquiry,JLPT_2,noun,,
 ～頭,～とう,~tou,counter for animals,JLPT_2,noun,,
 ～等,～とう,~tou,level; place,JLPT_2,noun,,
@@ -3797,7 +3797,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 留まる,とまる,tomaru,to be fixed; to abide; to stay (in the one place),JLPT_2,verb,,intransitive
 ともかく,ともかく,tomokaku,anyhow; at any rate; anyway,JLPT_2,adverb,,
 捕える,とらえる,toraeru,to seize; to capture; to arrest,JLPT_2,verb,,transitive
-取り入れる,とりいれる,toriireru,to harvest; to take in; to adopt,JLPT_2,verb,,transitive
+取り入れる,とりいれる,toriireru,to harvest; to take in; to adopt,JLPT_2,verb,interview,transitive
 取り消す,とりけす,torikesu,to cancel,JLPT_2,verb,,transitive
 取り出す,とりだす,toridasu,to take out; to pick out,JLPT_2,verb,,transitive
 採る,とる,toru,to adopt (measure; proposal); to pick (fruit),JLPT_2,verb,,transitive
@@ -4454,7 +4454,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 覚める,さめる,sameru,to wake; to wake up,JLPT_3,verb,,intransitive
 左右,さゆう,sayuu,left and right; influence,JLPT_2,noun,,
 皿,さら,sara,plate; dish,JLPT_3,noun,,
-更に,さらに,sarani,furthermore; moreover,JLPT_2,adverb,,
+更に,さらに,sarani,furthermore; moreover,JLPT_3,adverb,interview,
 去る,さる,saru,to leave; to go away,JLPT_3,verb,,both
 猿,さる,saru,monkey,JLPT_3,noun,,
 騒ぎ,さわぎ,sawagi,uproar; disturbance,JLPT_2,noun,,
@@ -4508,7 +4508,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 実に,じつに,jitsuni,indeed; truly; surely,JLPT_2,adverb,,
 実は,じつは,jitsuwa,actually; in fact,JLPT_3,other,,
 失望,しつぼう,shitsubou,disappointment; despair,JLPT_2,noun,,
-実力,じつりょく,jitsuriku,ability; force,JLPT_2,noun,,
+実力,じつりょく,jitsuryoku,ability; force,JLPT_2,noun,,
 支店,してん,shiten,branch store (office),JLPT_3,noun,,
 指導,しどう,shidou,leadership; guidance; coaching,JLPT_2,noun,top_used_verbs,
 自動,じどう,jidou,automatic; self-motion,JLPT_2,noun,,
@@ -4675,7 +4675,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 少しも,すこしも,sukoshimo,anything of; not one bit,JLPT_2,adverb,,
 過ごす,すごす,sugosu,to pass; to spend time,JLPT_3,verb,top_used_verbs,transitive
 筋,すじ,suji,muscle; string; line,JLPT_2,noun,,
-進める,すすめる,susumeru,to advance; to promote; to hasten,JLPT_3,verb,top_used_verbs,transitive
+進める,すすめる,susumeru,to advance; to promote; to hasten,JLPT_3,verb,top_used_verbs;interview,transitive
 勧める,すすめる,susumeru,to persuade; to urge; to recommend; to advise,JLPT_3,verb,,transitive
 スター,スター,star,star,JLPT_2,noun,,
 スタイル,スタイル,style,style,JLPT_2,noun,,
@@ -4738,7 +4738,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 世間,せけん,seken,world; society,JLPT_2,noun,,
 説,せつ,setsu,theory,JLPT_2,noun,,
 積極的,せっきょくてき,sekkyokuteki,positive; active; proactive,JLPT_2,noun,,
-設計,せっけい,sekkei,plan; design,JLPT_2,noun,top_used_verbs,transitive
+設計,せっけい,sekkei,plan; design,JLPT_2,noun,top_used_verbs;interview,transitive
 絶対,ぜったい,zettai,definitely; without fail; absoluteness,JLPT_3,noun,,
 セット,セット,set,set,JLPT_2,noun,,
 愛,あい,ai,love,JLPT_2,noun,,
@@ -4868,7 +4868,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 依頼,いらい,irai,request; dependence,JLPT_3,noun,top_used_verbs,transitive
 いらいら,いらいら,iraira,getting nervous; irritation,JLPT_2,adverb,,
 いらっしゃい,いらっしゃい,irasshai,welcome,JLPT_2,noun,,
-医療,いりょう,iryou,medical care; medical treatment,JLPT_2,noun,,
+医療,いりょう,iryou,medical care; medical treatment,JLPT_2,noun,interview,
 岩,いわ,iwa,rock,JLPT_2,noun,,
 祝い,いわい,iwai,celebration; festival,JLPT_2,noun,,
 祝う,いわう,iwau,to congratulate; to celebrate,JLPT_3,verb,,transitive
@@ -5165,7 +5165,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 気に入る,きにいる,kiniiru,to like; to be please,JLPT_3,verb,,intransitive
 記入,きにゅう,kinyuu,entry; filling in of forms,JLPT_2,noun,,
 記念,きねん,kinen,commemoration; memory,JLPT_2,noun,,
-機能,きのう,kinou,function; faculty,JLPT_2,noun,,
+機能,きのう,kinou,function; faculty,JLPT_2,noun,interview,
 気の毒,きのどく,kinodoku,pitiful; a pity,JLPT_2,noun,,
 寄付,きふ,kifu,contribution; donation,JLPT_2,noun,,
 希望,きぼう,kibou,hope; wish; aspiration,JLPT_3,noun,,
@@ -5330,11 +5330,11 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 豪華,ごうか,gouka,luxurious; gorgeous; extravagance,JLPT_2,noun,,
 合格,ごうかく,goukaku,success; passing (e.g.; exam),JLPT_2,noun,,
 交換,こうかん,koukan,exchange; swap,JLPT_2,noun,top_used_verbs,
-航空,こうくう,koukuu,aviation; flying,JLPT_2,noun,,
+航空,こうくう,koukuu,aviation; flying,JLPT_2,noun,interview,
 光景,こうけい,koukei,scene; spectacle,JLPT_2,noun,,
 合計,ごうけい,goukei,sum total; total amount,JLPT_2,noun,,
 攻撃,こうげき,kougeki,attack; strike; offensive,JLPT_2,noun,,
-貢献,こうけん,kouken,contribution; services,JLPT_2,noun,top_used_verbs,
+貢献,こうけん,kouken,contribution; services,JLPT_2,noun;suru verb,top_used_verbs;interview,intransitive
 広告,こうこく,koukoku,advertisement,JLPT_3,noun,top_used_verbs,transitive
 交際,こうさい,kousai,friendship; association; acquaintance,JLPT_2,noun,,
 校舎,こうしゃ,kousha,school building,JLPT_2,noun,,
@@ -5349,7 +5349,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 幸福,こうふく,koufuku,happiness; blessedness,JLPT_2,adjective,,
 公平,こうへい,kouhei,fairness; impartial; justice,JLPT_2,adjective,,
 候補,こうほ,kouho,candidacy,JLPT_2,noun,,
-考慮,こうりょ,kouri,consideration; taking into account,JLPT_2,noun,,
+考慮,こうりょ,kouryo,consideration; taking into account,JLPT_2,noun,,
 越える,こえる,koeru,to exceed; to cross over; to cross,JLPT_2,verb,,transitive
 超える,こえる,koeru,to exceed; to cross over; to cross,JLPT_2,verb,,transitive
 コーチ,コーチ,coach,coach,JLPT_2,noun,,
@@ -5517,7 +5517,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 もしかすると,もしかすると,moshikasuruto,perhaps; maybe; by some chance,JLPT_2,verb,,unspecified
 もしも,もしも,moshimo,if,JLPT_2,adverb,,
 持ち上げる,もちあげる,mochiageru,to raise; to lift up; to flatter,JLPT_3,verb,,transitive
-用いる,もちいる,mochiiru,to use; to make use of,JLPT_3,verb,,transitive
+用いる,もちいる,mochiiru,to use; to make use of,JLPT_3,verb,interview,transitive
 もったいない,もったいない,mottainai,wasteful; more than one deserves; unworthy of,JLPT_2,adjective,,
 尤も,もっとも,mottomo,quite right; plausible; natural,JLPT_2,other,,
 元,もと,moto,origin; original; former,JLPT_2,noun,,
@@ -5525,7 +5525,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 素,もと,moto,prime,JLPT_2,noun,,
 戻す,もどす,modosu,to restore; to put back; to return,JLPT_3,verb,,both
 基づく,もとづく,motozuku,to be grounded on; to be based on,JLPT_3,verb,,intransitive
-求める,もとめる,motomeru,to request; to ask for; to seek; to search for,JLPT_3,verb,,transitive
+求める,もとめる,motomeru,to request; to ask for; to seek; to search for,JLPT_3,verb,interview,transitive
 者,もの,mono,person (same as 人 (ひと)),JLPT_3,noun,,
 物音,ものおと,monooto,sounds,JLPT_2,noun,,
 物語,ものがたり,monogatari,tale; story; legend,JLPT_2,noun,,
@@ -6078,7 +6078,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 ドラマ,ドラマ,drama,drama,JLPT_2,noun,,
 トランプ,トランプ,trump,playing cards (lit: trump),JLPT_2,noun,,
 取り上げる,とりあげる,toriageru,to take up; to pick up; to confiscate,JLPT_3,verb,,transitive
-努力,どりょく,doriku,great effort; exertion; endeavor,JLPT_3,noun,top_used_verbs,intransitive
+努力,どりょく,doryoku,great effort; exertion; endeavor,JLPT_3,noun,top_used_verbs,intransitive
 トレーニング,トレーニング,training,training,JLPT_2,noun,,
 ドレス,ドレス,dress,dress,JLPT_2,noun,,
 取れる,とれる,toreru,to come off; to be taken off,JLPT_3,verb,,both
@@ -6158,7 +6158,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 農家,のうか,nouka,farmer; farm family,JLPT_2,noun,,
 農業,のうぎょう,nougyou,agriculture,JLPT_3,noun,,
 農民,のうみん,noumin,farmers; peasants,JLPT_2,noun,,
-能力,のうりょく,nouriku,ability; faculty,JLPT_2,noun,,
+能力,のうりょく,nouryoku,ability; faculty,JLPT_2,noun,,
 ノー,ノー,no,no,JLPT_2,other,,
 軒,のき,noki,eaves,JLPT_2,noun,,
 残す,のこす,nokosu,to leave (behind; over); to save; to reserve,JLPT_3,verb,,transitive
@@ -6358,7 +6358,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 雰囲気,ふんいき,fun'iki,atmosphere (e.g.; musical); mood; ambiance,JLPT_3,noun,,
 分析,ぶんせき,bunseki,analysis,JLPT_2,noun,top_used_verbs,
 文明,ぶんめい,bunmei,civilization,JLPT_2,noun,,
-分野,ぶんや,bunya,field; sphere,JLPT_2,noun,,
+分野,ぶんや,bunya,field; sphere,JLPT_2,noun,interview,
 塀,へい,hei,wall; fence,JLPT_2,noun,,
 平均,へいきん,heikin,equilibrium; balance; average,JLPT_3,noun,,
 平和,へいわ,heiwa,peace,JLPT_2,adjective,,
@@ -6649,7 +6649,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 今度,こんど,kondo,now; this time; near future; one of these days; next time,JLPT_4,noun,,
 機会,きかい,kikai,chance; opportunity,JLPT_4,noun,,
 建てる,たてる,tateru,to build,JLPT_4,verb,,transitive
-複雑,ふくざつ,fukuzatsu,complexity; complication,JLPT_4,noun,,
+複雑,ふくざつ,fukuzatsu,complexity (something complex); complication,JLPT_4,noun,interview,
 彼,かれ,kare,he; boyfriend,JLPT_4,noun,,
 いらっしゃる,いらっしゃる,irassharu,-- honorific expression for いく; くる; and いる --,JLPT_4,verb,,intransitive
 布団,ふとん,futon,futon,JLPT_4,noun,,
@@ -6877,7 +6877,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 案内,あんない,annai,information; guidance,JLPT_4,noun;suru verb,top_used_verbs,transitive
 通う,かよう,kayou,to go back and forth; to commute,JLPT_4,verb,,intransitive
 連れる,つれる,tsureru,to lead; to take (a person),JLPT_4,verb,,transitive
-技術,ぎじゅつ,gijutsu,technique; technology; skill,JLPT_4,noun,,
+技術,ぎじゅつ,gijutsu,technique;technology;engineering; skill,JLPT_4,noun,interview,
 小鳥,ことり,kotori,small bird,JLPT_4,noun,,
 下宿,げしゅく,geshuku,lodging; boarding house,JLPT_4,noun,,
 ジャム,ジャム,jam,jam,JLPT_4,noun,,
@@ -7016,7 +7016,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 輸入,ゆにゅう,yunyuu,import,JLPT_4,noun,,
 返事,へんじ,henji,reply; answer,JLPT_4,noun,,
 都,と,to,metropolitan,JLPT_4,noun,,
-産業,さんぎょう,sangyou,industry,JLPT_4,noun,,
+産業,さんぎょう,sangyou,industry,JLPT_4,noun,interview,
 伝える,つたえる,tsutaeru,to convey (a message); to tell; to report,JLPT_4,verb,top_used_verbs,transitive
 お金持ち,かねもち; おかねもち,kanemochi;okanemochi,rich person,JLPT_4,noun,,
 説明,せつめい,setsumei,explanation,JLPT_4,noun,top_used_verbs,transitive
@@ -7181,7 +7181,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 両方,りょうほう,ryouhou,both sides; both parties,JLPT_4,noun,,
 汚れる,よごれる,yogoreru,to become dirty,JLPT_1,verb,,intransitive
 水泳,すいえい,suiei,swimming,JLPT_4,noun,,
-経験,けいけんする,keikensuru,experience,JLPT_4,noun,,
+経験,けいけん,keiken,experience,JLPT_4,noun;suru verb,interview,
 勝つ,かつ,katsu,to win,JLPT_4,verb,,intransitive
 砂,すな,suna,sand,JLPT_4,noun,,
 警察,けいさつ,keisatsu,police; police station,JLPT_4,noun,,
@@ -7210,7 +7210,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 乗り換える,のりかえる,norikaeru,to transfer (trains); to change (bus; train; etc.),JLPT_4,verb,,transitive
 別れる,わかれる,wakareru,to part from; to separate,JLPT_4,verb,,intransitive
 ～町,～ちょう,~chou,the town of ~,JLPT_4,noun,,
-安全,あんぜん,anzen,safety; security,JLPT_4,adjective,,
+安全,あんぜん,anzen,safety; security,JLPT_4,adjective,interview,
 看護婦,かんごふ,kangofu,(female) nurse,JLPT_4,noun,,
 見物,けんぶつ,kenbutsu,sightseeing,JLPT_4,noun,,
 相談,そうだん,soudan,consultation,JLPT_4,noun;suru verb,top_used_verbs,transitive
@@ -7877,7 +7877,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 ～前,～まえ,~mae,in front of ~,JLPT_5,noun,,
 曲る,まがる,magaru,to turn; to bend,JLPT_3,verb,,intransitive
 まずい,まずい,mazui,terrible (in reference to food); unappetizing; unpleasant (taste),JLPT_5,adjective,,
-また,また,mata,and; furthermore,JLPT_3,other,,
+また,また,mata,and; furthermore;additionally,JLPT_3,other,interview,
 まだ,まだ,mada,yet; still; besides,JLPT_3,adverb,,
 町,まち,machi,town; city,JLPT_3,noun,,
 待つ,まつ,matsu,to wait,JLPT_5,verb,top_used_verbs,both
@@ -7971,3 +7971,21 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 渡す,わたす,watasu,to hand (something) over (v.t.); to get across,JLPT_5,verb,top_used_verbs,transitive
 渡る,わたる,wataru,to cross over; to go across,JLPT_5,verb,top_used_verbs,intransitive
 悪い,わるい,warui,bad; sinful; inferior,JLPT_5,adjective,,
+航空宇宙,こうくううちゅう,koukuuuchuu,aerospatial,JLPT_2,noun,interview,
+組み込み,くみこみ,kumikomi,embedded,JLPT_3,noun,interview,
+及び,および,oyobi,and;as well as,JLPT_1,conjunction,interview,
+として,として,toshite,as,JLPT_5,conjunction,interview,
+機器,きき,kiki,device;equipment;machinery,JLPT_1,noun,interview,
+深く,ふかく,fukaku,deeply;intimately;heartly;sincerely;profoundly,JLPT_1,adverb,interview,
+分割,ぶんかつ,bunkatsu,partition;division;separation,JLPT_3,noun;suru verb,interview,transitive
+層,そう,sou,layer,JLPT_2,noun,interview,
+層の設計,そうのせっけい,sounosekkei,development by layer,JLPT_2,noun,interview,
+低,てい,tei,low (level; value; price),JLPT_5,prefix,interview,
+画像処理,がぞうしょり,gazoushori,image processing,JLPT_1,noun,interview,
+最適化,さいてきか,saitekika,optimization,JLPT_1,noun;suru verb,interview,transitive
+貴社,きしゃ,kisha,company (your; honorific),JLPT_1,noun,interview,
+求人,きゅうじん,kyuujin,recruiting;job offer,JLPT_5,noun;suru verb,interview,both
+車載,しゃさい,shasai,in-vehicle;on-board,JLPT_1,noun,interview,
+次世代,じせだい,jisedai,next generation,JLPT_3,noun,interview,
+制御,せいぎょ,seigyo,control (of a machine),JLPT_3,noun;suru verb,interview,transitive
+即戦力,そくせんりょく,sokusenryoku,ready fire-power;immediate asset,JLPT_2,noun,interview,

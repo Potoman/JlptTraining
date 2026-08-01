@@ -271,12 +271,17 @@ class Session(ABC):
 
     @staticmethod
     def build_session() -> "Session":
-        mode = input("What do you want to learn : Vocabulary (v), Top used verbs (t) ?")
+        mode = input("What do you want to learn : Vocabulary (v), Top used verbs (t) or Interview (i) ?")
+
+        if mode == "i":
+            jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
+            jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
+            return SessionTags(jlpt_levels, "interview")
 
         if mode == "t":
             jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
             jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
-            return SessionTopVerbs(jlpt_levels)
+            return SessionTags(jlpt_levels, "top_used_verbs")
 
         r = input("What test : Kanji (k), Word (w), Both (b) ?")
         kind = None
@@ -400,14 +405,15 @@ class SessionVocabulary(Session):
                         pass # This item is burned.
 
 
-class SessionTopVerbs(Session):
-    def __init__(self, jlpt_levels: list[int] | None):
+class SessionTags(Session):
+    def __init__(self, jlpt_levels: list[int] | None, tag: str):
         self.jlpt_levels = jlpt_levels
+        self.tag = tag
         super().__init__()
 
     def _build_questions(self) -> None:
         for word in words[:]:
-            if 'top_used_verbs' not in word.tags:
+            if self.tag not in word.tags:
                 continue
             if self.jlpt_levels is not None and word.jlpt() not in self.jlpt_levels:
                 continue
