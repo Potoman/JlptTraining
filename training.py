@@ -53,7 +53,7 @@ class Kanji:
 
 
 class Word:
-    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, kinds, most_200_verb, transitivity):
+    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, kinds, tags, transitivity):
         self.index = index
         self.word = word
         self.kana = kana
@@ -61,7 +61,7 @@ class Word:
         self.meaning = meaning
         self.jlpt_level = int(jlpt_level.replace("JLPT_", ""))
         self.kinds: list[str] = kinds.split(';')
-        self.most_200_verb = most_200_verb == "o"
+        self.tags: list[str] = tags.split(';')
         self.overlay_meaning = ""
         self.forbid_meaning = ""
         self.burn_meaning = False
@@ -407,7 +407,7 @@ class SessionTopVerbs(Session):
 
     def _build_questions(self) -> None:
         for word in words[:]:
-            if not word.most_200_verb:
+            if 'top_used_verbs' not in word.tags:
                 continue
             if self.jlpt_levels is not None and word.jlpt() not in self.jlpt_levels:
                 continue
@@ -437,7 +437,7 @@ with open('all_hiragana_with_pos.csv', newline='', encoding='utf-8') as csvfile:
     next(reader)  # Ignore la première ligne (en-tête)
     index = 0
     for row in reader:
-        # row = [expression, reading, romaji, meaning, tags, kinds, most_200_verb]
+        # row = [expression, reading, romaji, meaning, tags, kinds, tags]
         index = index + 1
         if len(row) != 8:
             raise Exception("Malformed line : " + str(row))
