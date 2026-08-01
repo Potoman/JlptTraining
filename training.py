@@ -53,14 +53,14 @@ class Kanji:
 
 
 class Word:
-    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, part_of_speech, most_200_verb, transitivity):
+    def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, kinds, most_200_verb, transitivity):
         self.index = index
         self.word = word
         self.kana = kana
         self.romaji = romaji
         self.meaning = meaning
         self.jlpt_level = int(jlpt_level.replace("JLPT_", ""))
-        self.part_of_speech = part_of_speech
+        self.kinds: list[str] = kinds.split(';')
         self.most_200_verb = most_200_verb == "o"
         self.overlay_meaning = ""
         self.forbid_meaning = ""
@@ -279,13 +279,13 @@ class Session(ABC):
             return SessionTopVerbs(jlpt_levels)
 
         r = input("What test : Kanji (k), Word (w), Both (b) ?")
-        part_of_speech = None
+        kind = None
         if r in ["w", "b"]:
             pos = input("What kind of word : All (all), Adjective (adj), Noun (noun), Adverb (adv), Verb (verb) ?")
-            part_of_speech = POS_CHOICES.get(pos)
+            kind = POS_CHOICES.get(pos)
         jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
         jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
-        return SessionVocabulary(jlpt_levels, r, part_of_speech)
+        return SessionVocabulary(jlpt_levels, r, kind)
 
     def ask(self):
         count = 1
@@ -375,17 +375,17 @@ class Session(ABC):
 
 
 class SessionVocabulary(Session):
-    def __init__(self, jlpt_levels: list[int] | None, test: str, part_of_speech: str = None):
+    def __init__(self, jlpt_levels: list[int] | None, test: str, kind: str = None):
         self.jlpt_levels = jlpt_levels
         self.test = test
-        self.part_of_speech = part_of_speech
+        self.kind = kind
         super().__init__()
 
     def _build_questions(self) -> None:
         if self.test in ["w", "b"]:
             for word in words[:]:
                 if self.jlpt_levels is None or word.jlpt() in self.jlpt_levels:
-                    if self.part_of_speech is not None and word.part_of_speech != self.part_of_speech:
+                    if self.kind is not None and self.kind not in word.kinds:
                         continue
                     try:
                         self.questions_word.append(Question(word))
@@ -408,8 +408,6 @@ class SessionTopVerbs(Session):
     def _build_questions(self) -> None:
         for word in words[:]:
             if not word.most_200_verb:
-                continue
-            if word.part_of_speech not in ("noun", "verb"):
                 continue
             if self.jlpt_levels is not None and word.jlpt() not in self.jlpt_levels:
                 continue
@@ -439,7 +437,7 @@ with open('all_hiragana_with_pos.csv', newline='', encoding='utf-8') as csvfile:
     next(reader)  # Ignore la première ligne (en-tête)
     index = 0
     for row in reader:
-        # row = [expression, reading, romaji, meaning, tags, part_of_speech, most_200_verb]
+        # row = [expression, reading, romaji, meaning, tags, kinds, most_200_verb]
         index = index + 1
         if len(row) != 8:
             raise Exception("Malformed line : " + str(row))

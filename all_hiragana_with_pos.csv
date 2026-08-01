@@ -1,4 +1,4 @@
-expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
+expression,reading,romaji,meaning,tags,kinds,most_200_verb,transitivity
 現像,げんぞう,genzou,developing (film),JLPT_1,noun,x,
 原則,げんそく,gensoku,principle; general rule,JLPT_1,noun,x,
 見地,けんち,kenchi,point of view,JLPT_1,noun,x,
@@ -6614,14 +6614,14 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 怒る,おこる,okoru,to get angry; to scold angrily,JLPT_4,verb,o,both
 床屋,とこや,tokoya,barber's (shop),JLPT_4,noun,x,
 オートバイ,オートバイ,autobicycle,motorcycle (lit: auto-bi(ke)),JLPT_4,noun,x,
-運動,うんどうする,undousuru,exercise,JLPT_4,noun,x,
+運動,うんどう,undou,exercise,JLPT_4,noun;suru verb,x,
 止む,やむ,yamu,to cease; to stop,JLPT_4,verb,x,intransitive
 もし,もし,moshi,if,JLPT_4,adverb,x,
 表,おもて,omote,surface; front; outside,JLPT_4,noun,x,
 大学生,だいがくせい,daigakusei,college student; university student,JLPT_4,noun,x,
 運転手,うんてんしゅ,untenshu,driver (by occupation),JLPT_4,noun,x,
 予習,よしゅう,yoshuu,preparation of lessons (for class),JLPT_4,noun,x,
-心配,しんぱいする,shinpaisuru,worry; concern,JLPT_4,noun,x,
+心配,しんぱい,shinpai,worry; concern,JLPT_4,noun;suru verb,x,
 別,べつ,betsu,distinction; different,JLPT_4,noun,x,
 非常に,ひじょうに,hijouni,extremely; very,JLPT_4,adjective,x,
 お宅,おたく,otaku,(someone else's) house; home -- polite word for 家 (いえ) --,JLPT_4,noun,x,
@@ -6705,7 +6705,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 時代,じだい,jidai,age; period; epoch; era,JLPT_4,noun,x,
 申し上げる,もうしあげる,moushiageru,(humble)to say; to tell,JLPT_4,verb,x,transitive
 ～式,～しき,~shiki,~ ceremony; ~ style,JLPT_4,noun,x,
-出席,しゅっせきする,shussekisuru,attendance,JLPT_4,noun,o,intransitive
+出席,しゅっせき,shusseki,attendance,JLPT_4,noun;suru verb,o,intransitive
 ～家,～か,~ka,person who is specialized in ~,JLPT_4,noun,x,
 迎える,むかえる,mukaeru,to welcome; to meet; to greet,JLPT_4,verb,x,transitive
 触る,さわる,sawaru,to touch; to feel,JLPT_4,verb,o,both
@@ -6742,7 +6742,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 けんかする,けんかする,kenkasuru,quarrel,JLPT_4,verb,x,intransitive
 頑張る,がんばる,ganbaru,to try one's best; to try hard; to persist,JLPT_4,verb,o,intransitive
 投げる,なげる,nageru,to pitch; to cast away,JLPT_4,verb,o,transitive
-故障,こしょうする,koshousuru,breakdown,JLPT_4,noun,x,
+故障,こしょう,koshou,breakdown,JLPT_4,noun;suru verb,x,
 力,ちから,chikara,strength; power,JLPT_4,noun,x,
 受ける,うける,ukeru,to take (an examination; interview; etc.); to receive,JLPT_4,verb,x,both
 気分,きぶん,kibun,feeling; mood,JLPT_4,noun,x,
@@ -6755,7 +6755,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 行う,おこなう,okonau,to carry out; to conduct (typically used in written language),JLPT_4,verb,x,transitive
 ぶどう,ぶどう,budou,grapes,JLPT_4,noun,x,
 無くなる,なくなる,nakunaru,to disappear; to get lost,JLPT_4,verb,x,intransitive
-準備,じゅんびする,junbisuru,prepare,JLPT_4,noun,o,transitive
+準備,じゅんび,junbi,prepare,JLPT_4,noun;suru verb,o,transitive
 世界,せかい,sekai,world,JLPT_4,noun,x,
 住所,じゅうしょ,juusho,address; place of residence,JLPT_4,noun,x,
 再来月,さらいげつ,saraigetsu,the month after next,JLPT_4,noun,x,
@@ -6861,7 +6861,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 用意,ようい,youi,preparation,JLPT_4,noun,x,
 探す,さがす,sagasu,to search; to seek; to look for,JLPT_4,verb,o,transitive
 形,かたち,katachi,shape,JLPT_4,noun,x,
-運転,うんてんする,untensuru,driving,JLPT_4,noun,x,
+運転,うんてん,unten,driving,JLPT_4,noun;suru verb,x,
 すっかり,すっかり,sukkari,all; completely,JLPT_4,adverb,x,
 アナウンサー,アナウンサー,announcer,announcer,JLPT_4,noun,x,
 お土産,おみやげ,omiyage,souvenir,JLPT_4,noun,x,
@@ -6874,7 +6874,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 味噌,みそ,miso,miso; bean paste,JLPT_4,noun,x,
 お祝い,おいわい,oiwai,congratulation; celebration,JLPT_4,noun,x,
 乗り物,のりもの,norimono,vehicle,JLPT_4,noun,x,
-案内,あんないする,annaisuru,information; guidance,JLPT_4,noun,o,transitive
+案内,あんない,annai,information; guidance,JLPT_4,noun;suru verb,o,transitive
 通う,かよう,kayou,to go back and forth; to commute,JLPT_4,verb,x,intransitive
 連れる,つれる,tsureru,to lead; to take (a person),JLPT_4,verb,x,transitive
 技術,ぎじゅつ,gijutsu,technique; technology; skill,JLPT_4,noun,x,
@@ -6917,7 +6917,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 引っ越す,ひっこす,hikkosu,to move to a new place of residence,JLPT_4,verb,o,intransitive
 冷房,れいぼう,reibou,cooling; air conditioning,JLPT_4,noun,x,
 都合,つごう,tsugou,circumstances; convenience,JLPT_4,noun,x,
-遠慮,えんりょする,enryosuru,restraint; reserve; hesitate,JLPT_4,noun,x,
+遠慮,えんりょ,enryo,restraint; reserve; hesitate,JLPT_4,noun;suru verb,x,
 亡くなる,なくなる,nakunaru,to pass away,JLPT_4,verb,x,intransitive
 科学,かがく,kagaku,science,JLPT_4,noun,x,
 はっきり,はっきり,hakkiri,clearly; distinctly,JLPT_4,adverb,x,
@@ -6927,7 +6927,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 港,みなと,minato,harbor; port,JLPT_4,noun,x,
 予約,よやく,yoyaku,reservation,JLPT_4,noun,o,transitive
 凄い,すごい,sugoi,terrific; great,JLPT_4,adjective,x,
-入学,にゅうがくする,nyuugakusuru,entry to school or university,JLPT_4,noun,x,
+入学,にゅうがく,nyuugaku,entry to school or university,JLPT_4,noun;suru verb,x,
 片付ける,かたづける,katazukeru,to (clean) tidy up (v.t.); to put away,JLPT_4,verb,x,transitive
 写す,うつす,utsusu,to copy (v.t.); to photograph,JLPT_4,verb,x,transitive
 パソコン,パソコン,personalcomputer,(personal) computer,JLPT_4,noun,x,
@@ -6940,7 +6940,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 アメリカ,アメリカ,america,America; U.S.A.,JLPT_4,noun,x,
 男性,だんせい,dansei,man; male,JLPT_4,noun,x,
 理由,りゆう,riyuu,reason,JLPT_4,noun,x,
-生産,せいさんする,seisansuru,production; to produce,JLPT_4,noun,x,
+生産,せいさん,seisan,production; to produce,JLPT_4,noun;suru verb,x,
 着物,きもの,kimono,kimono; Japanese traditional dress,JLPT_4,noun,x,
 おもちゃ,おもちゃ,omocha,a toy,JLPT_4,noun,x,
 暮れる,くれる,kureru,to get dark; to come to an end,JLPT_4,verb,x,intransitive
@@ -6986,7 +6986,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 しばらく,しばらく,shibaraku,little while,JLPT_4,adverb,x,
 特に,とくに,tokuni,particularly,JLPT_4,adverb,x,
 空く,あく,aku,to open; to become empty (vacant),JLPT_3,verb,x,both
-計画,けいかくする,keikakusuru,plan; project; schedule,JLPT_4,noun,o,transitive
+計画,けいかく,keikaku,plan; project; schedule,JLPT_4,noun;suru verb,o,transitive
 通り,とおり,toori,~ Street; ~ Avenue,JLPT_4,noun,x,
 下着,したぎ,shitagi,underwear,JLPT_4,noun,x,
 経済,けいざい,keizai,economics; finance; economy,JLPT_4,noun,x,
@@ -7002,7 +7002,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 市,し,shi,city,JLPT_4,noun,x,
 引き出し,ひきだし,hikidashi,drawer,JLPT_4,noun,x,
 遊び,あそび,asobi,play,JLPT_4,noun,x,
-支度,したくする,shitakusuru,preparation,JLPT_4,noun,x,
+支度,したく,shitaku,preparation,JLPT_4,noun;suru verb,x,
 ～始める,～はじめる,~hajimeru,to start doing ~,JLPT_4,verb,x,transitive
 見える,みえる,mieru,to be visible; -- polite verb meaning 来る (くる) --,JLPT_4,verb,x,intransitive
 十分,じゅうぶん,juubun,enough,JLPT_4,noun,x,
@@ -7213,7 +7213,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 安全,あんぜん,anzen,safety; security,JLPT_4,adjective,x,
 看護婦,かんごふ,kangofu,(female) nurse,JLPT_4,noun,x,
 見物,けんぶつ,kenbutsu,sightseeing,JLPT_4,noun,x,
-相談,そうだんする,soudansuru,consultation,JLPT_4,noun,o,transitive
+相談,そうだん,soudan,consultation,JLPT_4,noun;suru verb,o,transitive
 ガソリンスタンド,ガソリンスタンド,gasolinestand,gas station; service station,JLPT_4,noun,x,
 テニス,テニス,tennis,tennis,JLPT_4,noun,x,
 眠る,ねむる,nemuru,to sleep,JLPT_4,verb,x,intransitive
@@ -7228,7 +7228,7 @@ expression,reading,romaji,meaning,tags,part_of_speech,most_200_verb,transitivity
 湖,みずうみ,mizuumi,lake,JLPT_4,noun,x,
 集まる,あつまる,atsumaru,to gather (v.i.); to collect,JLPT_4,verb,o,intransitive
 ～にくい,～にくい,~nikui,difficult to do ~,JLPT_4,adjective,x,
-生活,せいかつする,seikatsusuru,living; life; to live,JLPT_4,noun,x,
+生活,せいかつ,seikatsu,living; life; to live,JLPT_4,noun;suru verb,x,
 糸,いと,ito,thread,JLPT_4,noun,x,
 関係,かんけい,kankei,relation(ship); connection,JLPT_4,noun,x,
 ピアノ,ピアノ,piano,piano,JLPT_4,noun,x,
