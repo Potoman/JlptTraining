@@ -373,7 +373,7 @@ class Session(ABC):
             if not help:
                 question.help()
             self.bad_answer = self.bad_answer + 1
-        self.score = self.score + 0.0 if ratio is None else ratio
+        self.score = self.score + (0.0 if ratio is None else ratio)
         print("")
         self.last_question = question
         return True
