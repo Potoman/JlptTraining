@@ -5503,7 +5503,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 面,めん,men,face; mug; surface; side or facet; corner; page,JLPT_2,noun,,
 綿,めん,men,cotton,JLPT_2,noun,,
 免許,めんきょ,menkyo,license; permit; certificate,JLPT_3,noun,,
-面接,めんせつ,mensetsu (v.i.),interview,JLPT_3,noun,top_used_verbs,intransitive
+面接,めんせつ,mensetsu (v.i.),interview,JLPT_3,noun,top_used_verbs;interview,intransitive
 面倒,めんどう,mendou,trouble; attention,JLPT_2,adjective,,
 メンバー,メンバー,member,member,JLPT_2,noun,,
 申し込む,もうしこむ,moushikomu,to apply for; to make an application,JLPT_3,verb,top_used_verbs,transitive
@@ -5887,7 +5887,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 頼る,たよる,tayoru,to rely on; to have recourse to; to depend on,JLPT_3,verb,top_used_verbs,both
 段,だん,dan,step; stair; grade,JLPT_2,noun,,
 単位,たんい,tan'i,credit (for a course in school); unit; denomination,JLPT_3,noun,,
-単語,たんご,tango,word; vocabulary,JLPT_3,noun,,
+単語,たんご,tango,word; vocabulary,JLPT_3,noun,interview,
 男子,だんし,danshi,young man,JLPT_2,noun,,
 単純,たんじゅん,tanjun,simplicity,JLPT_2,noun,,
 誕生,たんじょう,tanjou,birth,JLPT_2,noun,,
@@ -6358,7 +6358,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 雰囲気,ふんいき,fun'iki,atmosphere (e.g.; musical); mood; ambiance,JLPT_3,noun,,
 分析,ぶんせき,bunseki,analysis,JLPT_2,noun,top_used_verbs,
 文明,ぶんめい,bunmei,civilization,JLPT_2,noun,,
-分野,ぶんや,bunya,field; sphere,JLPT_2,noun,interview,
+分野,ぶんや,bunya,field; sphere; division; branch,JLPT_2,noun,interview,
 塀,へい,hei,wall; fence,JLPT_2,noun,,
 平均,へいきん,heikin,equilibrium; balance; average,JLPT_3,noun,,
 平和,へいわ,heiwa,peace,JLPT_2,adjective,,
@@ -7191,7 +7191,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 参る,まいる,mairu,humble expression for 行く and 来る,JLPT_4,verb,,both
 全然,ぜんぜん,zenzen,not at all; wholly; entirely,JLPT_4,adverb,,
 特別,とくべつ,tokubetsu,special,JLPT_4,adjective,,
-復習,ふくしゅう,fukushuu,review (of lessons); revision,JLPT_4,noun,,
+復習,ふくしゅう,fukushuu,review (of lessons); revision,JLPT_4,noun;suru verb,interview,transitive
 間に合う,まにあう,maniau,to be in time for,JLPT_4,verb,top_used_verbs,intransitive
 役に立つ,やくにたつ,yakunitatsu,to be helpful; to be useful,JLPT_4,verb,,intransitive
 もうすぐ,もうすぐ,mousugu,very soon; in a few moments; days,JLPT_4,adverb,,
