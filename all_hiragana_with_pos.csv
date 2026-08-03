@@ -1141,7 +1141,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 同級,どうきゅう,doukyuu,the same grade; same class,JLPT_1,noun,,
 同居,どうきょ,doukyo,living together,JLPT_1,noun,,
 登校,とうこう,toukou,attendance (at school),JLPT_1,noun,,
-統合,とうごう,tougou,integration; unification; synthesis,JLPT_1,noun,interview,
+統合,とうごう,tougou,integration; unification; synthesis,JLPT_1,noun;suru verb,interview,transitive
 動向,どうこう,doukou,trend; tendency; movement; attitude,JLPT_1,noun,,
 投資,とうし,toushi,investment,JLPT_1,noun,,
 同情,どうじょう,doujou,sympathy; compassion; sympathize,JLPT_1,noun,,
@@ -1401,7 +1401,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 診療,しんりょう,shinryou,medical examination and treatment,JLPT_1,noun,,
 粋,すい,sui,essence,JLPT_1,noun,,
 水源,すいげん,suigen,source of river,JLPT_1,noun,,
-推進,すいしん,suishin,propulsion; driving force,JLPT_1,noun;suru verb,interview,
+推進,すいしん,suishin,propulsion; driving force,JLPT_1,noun;suru verb,interview,transitive
 吹奏,すいそう,suisou,playing wind instruments,JLPT_1,noun,,
 推測,すいそく,suisoku,guess; conjecture,JLPT_1,noun,,
 水田,すいでん,suiden,(water-filled) paddy field,JLPT_1,noun,,
@@ -3797,7 +3797,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 留まる,とまる,tomaru,to be fixed; to abide; to stay (in the one place),JLPT_2,verb,,intransitive
 ともかく,ともかく,tomokaku,anyhow; at any rate; anyway,JLPT_2,adverb,,
 捕える,とらえる,toraeru,to seize; to capture; to arrest,JLPT_2,verb,,transitive
-取り入れる,とりいれる,toriireru,to harvest; to take in; to adopt,JLPT_2,verb,interview,transitive
+取り入れる,とりいれる,toriireru,to take in; to gather in; to adopt; to accept; to harvest,JLPT_2,verb,interview,transitive
 取り消す,とりけす,torikesu,to cancel,JLPT_2,verb,,transitive
 取り出す,とりだす,toridasu,to take out; to pick out,JLPT_2,verb,,transitive
 採る,とる,toru,to adopt (measure; proposal); to pick (fruit),JLPT_2,verb,,transitive
@@ -4675,7 +4675,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 少しも,すこしも,sukoshimo,anything of; not one bit,JLPT_2,adverb,,
 過ごす,すごす,sugosu,to pass; to spend time,JLPT_3,verb,top_used_verbs,transitive
 筋,すじ,suji,muscle; string; line,JLPT_2,noun,,
-進める,すすめる,susumeru,to advance; to promote; to hasten,JLPT_3,verb,top_used_verbs;interview,transitive
+進める,すすめる,susumeru,to move forward;to advance; to promote; to hasten,JLPT_3,verb,top_used_verbs;interview,transitive
 勧める,すすめる,susumeru,to persuade; to urge; to recommend; to advise,JLPT_3,verb,,transitive
 スター,スター,star,star,JLPT_2,noun,,
 スタイル,スタイル,style,style,JLPT_2,noun,,
@@ -5165,7 +5165,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 気に入る,きにいる,kiniiru,to like; to be please,JLPT_3,verb,,intransitive
 記入,きにゅう,kinyuu,entry; filling in of forms,JLPT_2,noun,,
 記念,きねん,kinen,commemoration; memory,JLPT_2,noun,,
-機能,きのう,kinou,function; faculty,JLPT_2,noun,interview,
+機能,きのう,kinou,function; faculty; feature,JLPT_2,noun,interview,
 気の毒,きのどく,kinodoku,pitiful; a pity,JLPT_2,noun,,
 寄付,きふ,kifu,contribution; donation,JLPT_2,noun,,
 希望,きぼう,kibou,hope; wish; aspiration,JLPT_3,noun,,
