@@ -25,7 +25,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Table, TableStyle
 
-from training import Session, SessionTopVerbs, SessionVocabulary, Word
+from training import Session, SessionTags, SessionVocabulary, Word
 
 JAPANESE_FONT = "NotoSansJP"
 JAPANESE_FONT_PATH = r"C:\Windows\Fonts\NotoSansJP-VF.ttf"
@@ -44,8 +44,8 @@ def collect_words(session: Session) -> list[Word]:
 def describe_session(session: Session) -> str:
     if isinstance(session, SessionVocabulary):
         word_type = session.part_of_speech or "all"
-    elif isinstance(session, SessionTopVerbs):
-        word_type = "top_verbs"
+    elif isinstance(session, SessionTags):
+        word_type = session.tag
     else:
         word_type = "words"
     jlpt_label = "all" if session.jlpt_levels is None else "_".join(str(level) for level in session.jlpt_levels)
