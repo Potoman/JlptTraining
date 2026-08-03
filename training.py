@@ -274,8 +274,8 @@ class Session(ABC):
         mode = input("What do you want to learn : Vocabulary (v), Top used verbs (t) or Interview (i) ?")
 
         if mode == "i":
-            jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
-            jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
+            jlpt_input = input("What JLPT level to review : All (a|all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
+            jlpt_levels = None if (jlpt_input.strip().lower() == "all" or jlpt_input.strip().lower() == "a") else [int(level) for level in jlpt_input.split()]
             return SessionTags(jlpt_levels, "interview")
 
         if mode == "t":
