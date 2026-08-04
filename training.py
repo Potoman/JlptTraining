@@ -1,5 +1,6 @@
 import csv
 from abc import ABC, abstractmethod
+from collections import deque
 from colorama import init, Back, Fore
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -266,6 +267,8 @@ class Session(ABC):
         self.questions_word_length_initial = len(self.questions_word)
         self.questions_kanji_length_initial = len(self.questions_kanji)
         self.questions_length_initial = self.questions_word_length_initial + self.questions_kanji_length_initial
+        self._pending_questions_word = 0
+        self._pending_questions_kanji = 0
         self.good_answer = 0
         self.bad_answer = 0
         self.score = 0.0
@@ -326,18 +329,47 @@ class Session(ABC):
         jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
         return SessionVocabulary(jlpt_levels, r, kind, word_field)
 
-    def ask(self):
-        count = 1
-        while self.questions_word or self.questions_kanji:
+    def ask(self, subgroup_size: int = 4):
+        if subgroup_size < 1:
+            raise ValueError("subgroup_size must be greater than zero")
+
+        next_question_number = 1
+        subgroup = deque()
+
+        def append_next_question() -> bool:
+            nonlocal next_question_number
+            if not self.questions_word and not self.questions_kanji:
+                return False
+
             index = random.randint(0, len(self.questions_word) + len(self.questions_kanji) - 1)
-            question = None
             if index < len(self.questions_word):
-                question = self.questions_word.pop()
+                subgroup.append((self.questions_word.pop(), False, next_question_number))
+                self._pending_questions_word += 1
             else:
-                question = self.questions_kanji.pop()
-            if not self.ask_question(count, question):
+                subgroup.append((self.questions_kanji.pop(), False, next_question_number))
+                self._pending_questions_kanji += 1
+            next_question_number += 1
+            return True
+
+        while len(subgroup) < subgroup_size and append_next_question():
+            pass
+
+        while subgroup:
+            question, is_retry, question_number = subgroup.popleft()
+            if not is_retry:
+                if isinstance(question.item, Word):
+                    self._pending_questions_word -= 1
+                else:
+                    self._pending_questions_kanji -= 1
+
+            should_continue, is_correct = self.ask_question(question_number, question)
+            if not should_continue:
                 break
-            count = count + 1
+            if is_correct:
+                append_next_question()
+            else:
+                subgroup.append((question, True, question_number))
+
         # we print the stat :
         total_answer = self.good_answer + self.bad_answer
         print(f"Good answer : {self.good_answer} / {total_answer}.")
@@ -345,7 +377,7 @@ class Session(ABC):
         if total_answer > 0:
             print(f"Average score : {self.score / total_answer}.")
 
-    def ask_question(self, index: int, question: Question) -> bool:
+    def ask_question(self, index: int, question: Question) -> tuple[bool, bool]:
         parser = argparse.ArgumentParser()
         parser.add_argument('-f', type=str, nargs="+", help="Forbid a description of sentence from a solution.")
         parser.add_argument('-a', type=str, nargs="+", help="Add a description of sentence for a solution.")
@@ -357,7 +389,9 @@ class Session(ABC):
         help = False
         while True:
             if not help:
-                question.ask(f"[{str(index)}/{self.questions_length_initial} (k:{str(len(self.questions_kanji))}/{str(self.questions_kanji_length_initial)}, w:{str(len(self.questions_word))}/{str(self.questions_word_length_initial)}) JLPT:{question.jlpt()}]")
+                remaining_kanji = len(self.questions_kanji) + self._pending_questions_kanji
+                remaining_word = len(self.questions_word) + self._pending_questions_word
+                question.ask(f"[{str(index)}/{self.questions_length_initial} (k:{str(remaining_kanji)}/{str(self.questions_kanji_length_initial)}, w:{str(remaining_word)}/{str(self.questions_word_length_initial)}) JLPT:{question.jlpt()}]")
             if help:
                 question.help()
             flag = False
@@ -385,7 +419,7 @@ class Session(ABC):
                 flag = True
                 self.last_question.reset()
             elif args.s:
-                return False
+                return False, False
             elif response == "":
                 # Print help
                 if help:
@@ -410,7 +444,7 @@ class Session(ABC):
         self.score = self.score + (0.0 if ratio is None else ratio)
         print("")
         self.last_question = question
-        return True
+        return True, is_ok
 
 
 class SessionVocabulary(Session):
