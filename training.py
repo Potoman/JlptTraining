@@ -39,7 +39,7 @@ class Kanji:
         self.burn_meanings = False
 
     @staticmethod
-    def fields() -> list[tuple[str, list[str]]]:
+    def fields() -> list[tuple[str, list[str], list[str]]]:
         return [('meanings', ['kanji'], [])]
 
     def help(self):
@@ -69,12 +69,13 @@ class Word:
         self.transitivity: str | None = None if transitivity == "" else transitivity
 
     @staticmethod
-    def fields() -> list[tuple[str, list[str]]]:
+    def fields() -> list[tuple[str, list[str], list[str]]]:
         # First is what we have to guess;
         # Second is what is shown as help;
         # Third is additional information print on error.
         return [('meaning', ['word', 'kana'], []),
-                ('romaji', ['word'], ['meaning'])]
+                ('romaji', ['word'], ['meaning']),
+                ('romaji', ['meaning'], ['word'])]
 
     def help(self):
         for kanji in list_kanji(self.word):
@@ -97,7 +98,7 @@ class Word:
 
 
 class Question:
-    def __init__(self, item: Kanji | Word):
+    def __init__(self, item: Kanji | Word, selected_field: tuple[str, list[str], list[str]] | None):
         self.item = item
         self.field = None
         self._burn = {}
@@ -106,15 +107,19 @@ class Question:
         if isinstance(item, Word):
             self._burn['meaning__word_kana'] = item.burn_meaning
             self._burn['romaji__word'] = item.burn_romaji
+            self._burn['romaji__meaning'] = item.burn_romaji
             self.overlay_meaning['meaning__word_kana'] = item.overlay_meaning
             self.overlay_meaning['romaji__word'] = ""
+            self.overlay_meaning['romaji__meaning'] = ""
             self.forbid_meaning['meaning__word_kana'] = item.forbid_meaning
             self.forbid_meaning['romaji__word'] = ""
+            self.forbid_meaning['romaji__meaning'] = ""
         if isinstance(item, Kanji):
             self._burn['meanings__kanji'] = item.burn_meanings
             self.overlay_meaning['meanings__kanji'] = ""
             self.forbid_meaning['meanings__kanji'] = ""
-        for field in item.fields():
+        fields = [selected_field] if selected_field is not None else item.fields()
+        for field in fields:
             field_name = field[0]
             if self._burn[field_name + "__" + "_".join(field[1])]:
                 continue
@@ -123,9 +128,9 @@ class Question:
                 return
         raise Exception("No field unburn for item : " + str(self.item))
 
-    def is_questionnable(self, item: Kanji | Word, field: str) -> bool:
+    def is_questionnable(self, item: Kanji | Word, field_name: str) -> bool:
         if isinstance(item, Word):
-            if field == 'meaning':
+            if field_name == 'meaning':
                 if self._burn['meaning__word_kana']:
                     if len(list_kanji(item.word)) == 0:
                         # No Kanji in this word. No reason to ask romaji.
@@ -133,12 +138,12 @@ class Question:
             if is_katakana_present(item.word):
                 # No ask romaji for katakana word.
                 return False
-            if field == 'romaji' and not is_kanji_present(item.word):
+            if field_name == 'romaji' and not is_kanji_present(item.word):
                 # No ask romaji for kana word.
                 return False
             return True
         else:
-            if field == 'meanings':
+            if field_name == 'meanings':
                 if self._burn['meanings__kanji']:
                     return False
             return True
@@ -270,27 +275,56 @@ class Session(ABC):
         """Populate self.questions_word and self.questions_kanji."""
 
     @staticmethod
+    def choose_word_field() -> tuple[str, list[str], list[str]]:
+        exercise_choices = {}
+        exercise_descriptions = []
+        for index, field in enumerate(Word.fields(), start=1):
+            answer_field, shown_fields, help_fields = field
+            choice = str(index)
+            exercise_choices[choice] = field
+
+            description = f"{choice} - From {' and '.join(shown_fields)} to {answer_field}"
+            if help_fields:
+                description += f" (help: {' and '.join(help_fields)})"
+            exercise_descriptions.append(description)
+
+        while True:
+            exercise = input(
+                "Which kind of exercise?\n"
+                + "\n".join(exercise_descriptions)
+                + "\nYour choice: "
+            ).strip()
+            if exercise in exercise_choices:
+                return exercise_choices[exercise]
+            print(f"Please choose {', '.join(exercise_choices)}.")
+
+    @staticmethod
     def build_session() -> "Session":
         mode = input("What do you want to learn : Vocabulary (v), Top used verbs (t) or Interview (i) ?")
 
         if mode == "i":
             jlpt_input = input("What JLPT level to review : All (a|all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
             jlpt_levels = None if (jlpt_input.strip().lower() == "all" or jlpt_input.strip().lower() == "a") else [int(level) for level in jlpt_input.split()]
-            return SessionTags(jlpt_levels, "interview")
+            return SessionTags(jlpt_levels, "interview", Session.choose_word_field())
 
         if mode == "t":
             jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
             jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
-            return SessionTags(jlpt_levels, "top_used_verbs")
+            return SessionTags(jlpt_levels, "top_used_verbs", Session.choose_word_field())
 
         r = input("What test : Kanji (k), Word (w), Both (b) ?")
         kind = None
         if r in ["w", "b"]:
             pos = input("What kind of word : All (all), Adjective (adj), Noun (noun), Adverb (adv), Verb (verb) ?")
             kind = POS_CHOICES.get(pos)
+
+        word_field = None
+        if r in ["w", "b"]:
+            word_field = Session.choose_word_field()
+
         jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
         jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
-        return SessionVocabulary(jlpt_levels, r, kind)
+        return SessionVocabulary(jlpt_levels, r, kind, word_field)
 
     def ask(self):
         count = 1
@@ -380,10 +414,12 @@ class Session(ABC):
 
 
 class SessionVocabulary(Session):
-    def __init__(self, jlpt_levels: list[int] | None, test: str, kind: str = None):
+    def __init__(self, jlpt_levels: list[int] | None, test: str, kind: str = None,
+                 word_field=None):
         self.jlpt_levels = jlpt_levels
         self.test = test
         self.kind = kind
+        self.word_field = word_field
         super().__init__()
 
     def _build_questions(self) -> None:
@@ -393,7 +429,7 @@ class SessionVocabulary(Session):
                     if self.kind is not None and self.kind not in word.kinds:
                         continue
                     try:
-                        self.questions_word.append(Question(word))
+                        self.questions_word.append(Question(word, self.word_field))
                     except:
                         pass # This item is burned.
         if self.test in ["k", "b"]:
@@ -406,9 +442,10 @@ class SessionVocabulary(Session):
 
 
 class SessionTags(Session):
-    def __init__(self, jlpt_levels: list[int] | None, tag: str):
+    def __init__(self, jlpt_levels: list[int] | None, tag: str, word_field: tuple[str, list[str], list[str]]):
         self.jlpt_levels = jlpt_levels
         self.tag = tag
+        self.word_field = word_field
         super().__init__()
 
     def _build_questions(self) -> None:
@@ -418,7 +455,7 @@ class SessionTags(Session):
             if self.jlpt_levels is not None and word.jlpt() not in self.jlpt_levels:
                 continue
             try:
-                self.questions_word.append(Question(word))
+                self.questions_word.append(Question(word, self.word_field))
             except:
                 pass # This item is burned.
 
