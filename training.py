@@ -278,6 +278,7 @@ class Session(ABC):
         self.good_answer = 0
         self.bad_answer = 0
         self.score = 0.0
+        self.failed_questions = {}
 
     @abstractmethod
     def _build_questions(self) -> None:
@@ -382,6 +383,33 @@ class Session(ABC):
         print(f"Bad answer : {self.bad_answer} / {total_answer}.")
         if total_answer > 0:
             print(f"Average score : {self.score / total_answer}.")
+        self.print_failed_questions()
+
+    def print_failed_questions(self) -> None:
+        if not self.failed_questions:
+            return
+
+        print("\nFailed questions (worst first):")
+        failed_questions = sorted(
+            self.failed_questions.items(),
+            key=lambda entry: (-len(entry[1]["attempts"]), entry[1]["question_number"]),
+        )
+        for position, (question, failure) in enumerate(failed_questions, start=1):
+            attempts = failure["attempts"]
+            shown_values = ", ".join(
+                getattr(question.item, field) for field in question.field[1]
+            )
+            expected_answer = getattr(question.item, question.field[0])
+            attempt_label = "attempt" if len(attempts) == 1 else "attempts"
+
+            print(
+                f"{position}. Question {failure['question_number']}: {shown_values} -> "
+                f"{question.field[0]} ({len(attempts)} failed {attempt_label})"
+            )
+            for attempt_number, (response, ratio) in enumerate(attempts, start=1):
+                displayed_response = response if response else "<empty>"
+                print(f"   Try {attempt_number}: {displayed_response} (score: {ratio})")
+            print(f"   Try {len(attempts) + 1}: {expected_answer} (correct)")
 
     def ask_question(self, index: int, question: Question) -> tuple[bool, bool]:
         parser = argparse.ArgumentParser()
@@ -448,6 +476,11 @@ class Session(ABC):
             if not help and not isinstance(question.item, Word):
                 question.help()
             self.bad_answer = self.bad_answer + 1
+            failure = self.failed_questions.setdefault(
+                question,
+                {"question_number": index, "attempts": []},
+            )
+            failure["attempts"].append((response, ratio))
         self.score = self.score + (0.0 if ratio is None else ratio)
         print("")
         self.last_question = question
