@@ -444,7 +444,7 @@ class Session(ABC):
             self.good_answer = self.good_answer + 1
         else:
             question.error(ratio)
-            if not help:
+            if not help and not isinstance(question.item, Word):
                 question.help()
             self.bad_answer = self.bad_answer + 1
         self.score = self.score + (0.0 if ratio is None else ratio)
