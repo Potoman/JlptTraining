@@ -1996,7 +1996,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 収支,しゅうし,shuushi,income and expenditure,JLPT_1,noun,,
 終始,しゅうし,shuushi,from beginning to end; consistent(ly),JLPT_1,adverb,,
 修士,しゅうし,shuushi,Masters degree program,JLPT_1,noun,,
-従事,じゅうじ,juuji,engaging; pursuing; following,JLPT_1,noun;suru verb,interview,intransitive
+従事,じゅうじ,juuji,engaging; pursuing; following; work in,JLPT_1,noun;suru verb,interview,intransitive
 終日,しゅうじつ,shuujitsu,all day,JLPT_1,noun,,
 充実,じゅうじつ,juujitsu,fullness; perfection,JLPT_1,noun,,
 収集,しゅうしゅう,shuushuu,gathering up; collection,JLPT_1,noun,,
@@ -5517,7 +5517,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 もしかすると,もしかすると,moshikasuruto,perhaps; maybe; by some chance,JLPT_2,verb,,unspecified
 もしも,もしも,moshimo,if,JLPT_2,adverb,,
 持ち上げる,もちあげる,mochiageru,to raise; to lift up; to flatter,JLPT_3,verb,,transitive
-用いる,もちいる,mochiiru,to use; to make use of,JLPT_3,verb,interview,transitive
+用いる,もちいる,mochiiru,to use; to make use of; to utilize,JLPT_3,verb,interview,transitive
 もったいない,もったいない,mottainai,wasteful; more than one deserves; unworthy of,JLPT_2,adjective,,
 尤も,もっとも,mottomo,quite right; plausible; natural,JLPT_2,other,,
 元,もと,moto,origin; original; former,JLPT_2,noun,,
