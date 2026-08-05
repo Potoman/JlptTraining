@@ -401,7 +401,8 @@ class Session(ABC):
             if help:
                 question.help()
             flag = False
-            response = input()
+            response = input(f"{Fore.BLUE}")
+            print(Fore.RESET, end="")
             args, unknown = parser.parse_known_args(response.split())
             if args.f is not None:
                 flag = True
