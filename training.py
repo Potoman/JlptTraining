@@ -189,38 +189,44 @@ class Question:
         _add_entry_file(index, meaning, "overlay_response_" + self.field[0] + ".txt")
         print(f"Add new meaning '{meaning}' to the word '{words[index].word},{words[index].kana}'")
 
+    def print_word_details(self):
+        if not isinstance(self.item, Word):
+            return
+
+        overlay_meanings = "; ".join(
+            meaning.strip() for meaning in self.item.overlay_meaning.split(";") if meaning.strip()
+        )
+        forbidden_meanings = "; ".join(
+            meaning.strip() for meaning in self.item.forbid_meaning.split(";") if meaning.strip()
+        )
+        kinds = ", ".join(kind for kind in self.item.kinds if kind) or "not specified"
+        transitivity = self.item.transitivity or "not applicable"
+
+        print(Fore.RESET + f"\tWord: {self.item.word}")
+        print(f"\tKana: {self.item.kana}")
+        print(f"\tRomaji: {self.item.romaji}")
+        print(f"\tMeaning: {self.item.meaning}")
+        if overlay_meanings:
+            print(f"\tAdditional meanings: {overlay_meanings}")
+        if forbidden_meanings:
+            print(Fore.RED + f"\tForbidden meanings: {forbidden_meanings}" + Fore.RESET)
+        print(f"\tTypes: {kinds}")
+        print(f"\tTransitivity: {transitivity}")
+        contained_kanji = list_kanji(self.item.word)
+        if contained_kanji:
+            print("\tKanji:")
+            for kanji in contained_kanji:
+                print(f"\t  {kanji.kanji}: {kanji.meanings}")
+
     def success(self, ratio: float):
         response = getattr(self.item, self.field[0])
-        if self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])] != "":
-            response = '; '.join((response + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
-        if self.field[0] == 'meaning':
-            if isinstance(self.item, Word):
-                if self.item.transitivity != None:
-                    response = f"{response} ({self.item.transitivity})"
-        print(Fore.GREEN + "Good (" + str(ratio) + ") : " + Fore.BLACK + response)
+        print(Fore.GREEN + "OK (" + str(ratio) + ")" + Fore.RESET + " : " + response)
+        self.print_word_details()
 
     def error(self, ratio: float | None):
-        response = '; '.join((getattr(self.item, self.field[0]) + ";" + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])]).split(";"))
-        if self.field[0] == 'meaning':
-            if isinstance(self.item, Word):
-                if self.item.transitivity != None:
-                    response = f"{response} ({self.item.transitivity})"
-        forbid = '; '.join(self.forbid_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";"))
-        forbid = " (forbid = " + Fore.RED + forbid + Fore.BLACK + ")" if forbid != "" else ""
-        other_field = []
-        for field in self.field[2]:
-            value = getattr(self.item, field)
-            if field == 'meaning':
-                if isinstance(self.item, Word):
-                    if self.item.transitivity != None:
-                        value = f"{value} ({self.item.transitivity})"
-            other_field.append(value)
-        if other_field:
-            other_field = ", ".join(other_field)
-            other_field = "; " + Fore.BLACK + other_field
-        else:
-            other_field = ""
-        print(Fore.RED + "Nop (" + str(ratio) + ") : " + Fore.BLACK + response + forbid + other_field)
+        response = getattr(self.item, self.field[0])
+        print(Fore.RED + "KO (" + str(ratio) + ")" + Fore.RESET + " : " + response)
+        self.print_word_details()
 
     def save_result(self, flag: bool, ) -> None:
         if not flag:
