@@ -980,7 +980,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 きまりわるい,きまりわるい,kimariwarui,feeling awkward; being ashamed,JLPT_1,adjective,,
 記名,きめい,kimei,signature; register,JLPT_1,noun,,
 規約,きやく,kiyaku,agreement; rules; code,JLPT_1,noun,,
-脚色,きゃくしょく,kyakushoku,dramatization (e.g.; film,JLPT_1,noun,,
+脚色,きゃくしょく,kyakushoku,dramatization (e.g.); film,JLPT_1,noun,,
 逆転,ぎゃくてん,gyakuten,(sudden) change; reversal; turn-around,JLPT_1,noun,,
 脚本,きゃくほん,kyakuhon,scenario,JLPT_1,noun,,
 華奢,きゃしゃ,kyasha,delicate; slender,JLPT_1,noun,,
@@ -1490,7 +1490,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 セックス,セックス,sex,sex,JLPT_1,noun,,
 切実,せつじつ,setsujitsu,compelling; serious; severe; acute,JLPT_1,adjective,,
 接触,せっしょく,sesshoku,touch; contact,JLPT_1,noun,,
-接続詞,せつぞくし,setsuzokushi,conjunction,JLPT_1,noun,,
+接続詞,せつぞくし,setsuzokushi,connection;conjunction;link,JLPT_1,noun;suru verb,,both
 設置,せっち,secchi,establishment; institution,JLPT_1,noun,,
 折衷,せっちゅう,setchuu,compromise; cross; blending; eclecticism,JLPT_1,noun,,
 設定,せってい,settei,establishment; creation,JLPT_1,noun,top_used_verbs,
@@ -6515,7 +6515,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 治療,ちりょう,chiryou,medical treatment,JLPT_1,noun,,
 対,つい,tsui,pair; couple; set,JLPT_1,noun,,
 接ぐ,つぐ,tsugu,to join; to piece together; to set (bones); to graft (trees),JLPT_1,verb,,transitive
-継ぐ,つぐ,tsugu,to succeed (someone in a business or inheritance,JLPT_1,verb,,transitive
+継ぐ,つぐ,tsugu,to succeed (someone in a business or inheritance),JLPT_1,verb,,transitive
 摘む,つむ,tsumu,to pluck; to pick; to trim,JLPT_1,verb,,transitive
 露,つゆ,tsuyu,dew,JLPT_1,noun,,
 強まる,つよまる,tsuyomaru,to get strong; to gain strength,JLPT_1,verb,,intransitive
@@ -6527,7 +6527,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 伝言,でんごん,dengon,verbal message,JLPT_1,noun,,
 と,と,to,and,JLPT_1,other,,
 問う,とう,tou,to ask; to question,JLPT_1,verb,,transitive
-棟,とう,tou,ridge (of roof,JLPT_1,noun,,
+棟,とう,tou,ridge (of roof),JLPT_1,noun,,
 倒産,とうさん,tousan,(corporate) bankruptcy; insolvency,JLPT_1,noun,,
 同士,どうし,doushi,one another; companion; comrade,JLPT_1,noun,,
 同志,どうし,doushi,same mind; comrade; kindred soul,JLPT_1,noun,,
