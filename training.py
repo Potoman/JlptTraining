@@ -268,6 +268,7 @@ class Session(ABC):
         self.questions_word = []
         self.questions_kanji = []
         self._build_questions()
+        self._choose_questions_word_block()
         random.shuffle(self.questions_word)
         random.shuffle(self.questions_kanji)
         self.questions_word_length_initial = len(self.questions_word)
@@ -283,6 +284,29 @@ class Session(ABC):
     @abstractmethod
     def _build_questions(self) -> None:
         """Populate self.questions_word and self.questions_kanji."""
+
+    def _choose_questions_word_block(self, block_size: int = 15) -> None:
+        if len(self.questions_word) <= block_size:
+            return
+
+        block_count = (len(self.questions_word) + block_size - 1) // block_size
+        while True:
+            choice = input(
+                f"{len(self.questions_word)} word questions found "
+                f"({block_count} blocks of up to {block_size}). "
+                f"Choose a block (1-{block_count}): "
+            ).strip()
+            try:
+                block_number = int(choice)
+            except ValueError:
+                block_number = 0
+
+            if 1 <= block_number <= block_count:
+                start = (block_number - 1) * block_size
+                self.questions_word = self.questions_word[start:start + block_size]
+                return
+
+            print(f"Please choose a number from 1 to {block_count}.")
 
     @staticmethod
     def choose_word_field() -> tuple[str, list[str], list[str]]:
