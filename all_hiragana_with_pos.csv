@@ -304,7 +304,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 尊ぶ,とうとぶ,toutobu,to value; to prize; to esteem,JLPT_1,verb,,transitive
 どうにか,どうにか,dounika,in some way or other; one way or another,JLPT_1,adverb,,
 投入,とうにゅう,tounyuu,throw; investment; making (an electrical circuit),JLPT_1,noun,,
-導入,どうにゅう,dounyuu,introduction; bringing in; leading in,JLPT_1,noun,top_used_verbs;interview,transitive
+導入,どうにゅう,dounyuu,introduction; bringing in; leading in,JLPT_1,noun;suru verb,top_used_verbs;interview,transitive
 当人,とうにん,tounin,the one concerned; the said person,JLPT_1,noun,,
 同封,どうふう,doufuu,enclosure (e.g.; in a letter),JLPT_1,noun,,
 逃亡,とうぼう,toubou,escape,JLPT_1,noun,,
@@ -1638,7 +1638,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 足し算,たしざん,tashizan,addition,JLPT_1,noun,,
 多数決,たすうけつ,tasuuketsu,majority rule,JLPT_1,noun,,
 助け,たすけ,tasuke,assistance,JLPT_1,noun,,
-携わる,たずさわる,tazusawaru,to engage; to involve,JLPT_1,verb,interview,intransitive
+携わる,たずさわる,tazusawaru,to engage in; to be involved,JLPT_1,verb,interview,intransitive
 漂う,ただよう,tadayou,to drift about; to float; to hang in air,JLPT_1,verb,,intransitive
 立ち去る,たちさる,tachisaru,to leave; to depart,JLPT_1,verb,,intransitive
 立ち寄る,たちよる,tachiyoru,to stop by; to drop in for a short visit,JLPT_1,verb,,intransitive
@@ -3741,7 +3741,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 応対,おうたい,outai,receiving; dealing with,JLPT_2,noun,top_used_verbs,
 往復,おうふく,oufuku,(col) round trip; coming and going; return ticket,JLPT_2,noun,,
 欧米,おうべい,oubei,Europe and America; the West,JLPT_2,noun,,
-応用,おうよう,ouyou,application; put to practical use,JLPT_2,noun,interview,
+応用,おうよう,ouyou,application; put to practical use,JLPT_2,noun;suru verb,interview,transitive
 電波,でんぱ,denpa,electro-magnetic wave,JLPT_2,noun,,
 テンポ,テンポ,tempo,tempo,JLPT_2,noun,,
 電流,でんりゅう,denryuu,electric current,JLPT_2,noun,,
@@ -5033,7 +5033,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 覚悟,かくご,kakugo,resolution; resignation; readiness,JLPT_2,noun,,
 確実,かくじつ,kakujitsu,certainty; reliability; soundness,JLPT_2,adjective,,
 学者,がくしゃ,gakusha,scholar,JLPT_2,noun,,
-学習,がくしゅう,gakushuu,study; learning,JLPT_2,noun,interview,
+学習,がくしゅう,gakushuu,study; learning,JLPT_2,noun;suru verb,interview,transitive
 隠す,かくす,kakusu,to hide; to conceal,JLPT_3,verb,,transitive
 拡大,かくだい,kakudai,magnification; enlargement,JLPT_2,noun,,
 確認,かくにん,kakunin,affirmation; confirmation,JLPT_2,noun,top_used_verbs,
@@ -5758,7 +5758,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 前進,ぜんしん,zenshin,advance; drive; progress,JLPT_2,noun,,
 センター,センター,center,center,JLPT_2,noun,,
 全体,ぜんたい,zentai,whole; entirety; whatever (is the matter),JLPT_2,noun,interview,
-選択,せんたく,sentaku,selection; choice,JLPT_2,noun,interview,
+選択,せんたく,sentaku,selection; choice,JLPT_2,noun;suru verb,interview,transitive
 宣伝,せんでん,senden,advertisement; publicity,JLPT_2,noun,top_used_verbs,
 象,ぞう,zou,elephant,JLPT_3,noun,,
 騒音,そうおん,souon,noise,JLPT_2,noun,,
