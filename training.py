@@ -200,7 +200,6 @@ class Question:
             meaning.strip() for meaning in self.item.forbid_meaning.split(";") if meaning.strip()
         )
         kinds = ", ".join(kind for kind in self.item.kinds if kind) or "not specified"
-        transitivity = self.item.transitivity or "not applicable"
 
         print(Fore.RESET + f"\tWord: {self.item.word}")
         print(f"\tKana: {self.item.kana}")
@@ -211,7 +210,8 @@ class Question:
         if forbidden_meanings:
             print(Fore.RED + f"\tForbidden meanings: {forbidden_meanings}" + Fore.RESET)
         print(f"\tTypes: {kinds}")
-        print(f"\tTransitivity: {transitivity}")
+        if self.item.transitivity:
+            print(f"\tTransitivity: {self.item.transitivity}")
         contained_kanji = list_kanji(self.item.word)
         if contained_kanji:
             print("\tKanji:")
