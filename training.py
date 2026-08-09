@@ -301,19 +301,37 @@ class Session(ABC):
             choice = input(
                 f"{len(self.questions_word)} word questions found "
                 f"({block_count} blocks of up to {block_size}). "
-                f"Choose a block (1-{block_count}): "
-            ).strip()
-            try:
-                block_number = int(choice)
-            except ValueError:
-                block_number = 0
+                f"Choose one or several blocks (1-{block_count}), "
+                "or all (a|all): "
+            ).strip().lower()
 
-            if 1 <= block_number <= block_count:
-                start = (block_number - 1) * block_size
-                self.questions_word = self.questions_word[start:start + block_size]
+            if choice in ("a", "all"):
                 return
 
-            print(f"Please choose a number from 1 to {block_count}.")
+            try:
+                block_numbers = [
+                    int(value)
+                    for value in re.split(r"[\s,]+", choice)
+                    if value
+                ]
+            except ValueError:
+                block_numbers = []
+
+            if (block_numbers
+                    and all(1 <= number <= block_count for number in block_numbers)):
+                # Preserve the CSV/block order and ignore duplicate selections.
+                selected_blocks = set(block_numbers)
+                self.questions_word = [
+                    question
+                    for index, question in enumerate(self.questions_word)
+                    if index // block_size + 1 in selected_blocks
+                ]
+                return
+
+            print(
+                f"Please choose block numbers from 1 to {block_count}, "
+                "separated by spaces or commas, or enter a/all."
+            )
 
     @staticmethod
     def choose_word_field() -> tuple[str, list[str], list[str]]:
