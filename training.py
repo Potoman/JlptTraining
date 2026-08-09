@@ -342,22 +342,22 @@ class Session(ABC):
             return SessionTags(jlpt_levels, "interview", Session.choose_word_field())
 
         if mode == "t":
-            jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
-            jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
+            jlpt_input = input("What JLPT level to review : All (a|all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
+            jlpt_levels = None if (jlpt_input.strip().lower() == "all" or jlpt_input.strip().lower() == "a") else [int(level) for level in jlpt_input.split()]
             return SessionTags(jlpt_levels, "top_used_verbs", Session.choose_word_field())
 
         r = input("What test : Kanji (k), Word (w), Both (b) ?")
         kind = None
         if r in ["w", "b"]:
-            pos = input("What kind of word : All (all), Adjective (adj), Noun (noun), Adverb (adv), Verb (verb) ?")
+            pos = input("What kind of word : All (a|all), Adjective (adj), Noun (noun), Adverb (adv), Verb (verb) ?")
             kind = POS_CHOICES.get(pos)
 
         word_field = None
         if r in ["w", "b"]:
             word_field = Session.choose_word_field()
 
-        jlpt_input = input("What JLPT level to review : All (all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
-        jlpt_levels = None if jlpt_input.strip().lower() == "all" else [int(level) for level in jlpt_input.split()]
+        jlpt_input = input("What JLPT level to review : All (a|all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
+        jlpt_levels = None if (jlpt_input.strip().lower() == "all" or jlpt_input.strip().lower() == "a") else [int(level) for level in jlpt_input.split()]
         return SessionVocabulary(jlpt_levels, r, kind, word_field)
 
     def ask(self, subgroup_size: int = 4):
