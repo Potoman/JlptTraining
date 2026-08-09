@@ -1,14 +1,19 @@
 import csv
 from abc import ABC, abstractmethod
 from collections import deque
-from colorama import init, Back, Fore
+from colorama import init, Back, Fore, Style
 from difflib import SequenceMatcher
+from functools import lru_cache
 from pathlib import Path
 import argparse
 import random, re
 import json
 
 init(autoreset=True)
+
+# Pastel true-color backgrounds used for kanji in failed answers.
+KUN_READING_COLOR = "\033[48;2;189;235;255m\033[38;2;0;0;0m"  # pale sky blue
+ON_READING_COLOR = "\033[48;2;255;214;231m\033[38;2;0;0;0m"   # pale blush pink
 
 
 def print_radicals(radicals: list[str]):
@@ -36,6 +41,8 @@ class Kanji:
         self.jlpt_old = None if element["jlpt_old"] is None else int(element["jlpt_old"])
         self.jlpt_new = None if element["jlpt_new"] is None else int(element["jlpt_new"])
         self.meanings = ";".join(element["meanings"])
+        self.readings_on = element["readings_on"]
+        self.readings_kun = element["readings_kun"]
         self.radicals = None if element["wk_radicals"] is None else ";".join(element["wk_radicals"])
         self.burn_meanings = False
 
@@ -201,7 +208,7 @@ class Question:
         )
         kinds = ", ".join(kind for kind in self.item.kinds if kind) or "not specified"
 
-        print(Fore.RESET + f"\tWord: {self.item.word}")
+        print(Fore.RESET + f"\tWord: {color_kanji_readings(self.item)}")
         print(f"\tKana: {self.item.kana}")
         print(f"\tRomaji: {self.item.romaji}")
         print(f"\tMeaning: {self.item.meaning}")
@@ -421,7 +428,10 @@ class Session(ABC):
         for position, (question, failure) in enumerate(failed_questions, start=1):
             attempts = failure["attempts"]
             shown_values = ", ".join(
-                getattr(question.item, field) for field in question.field[1]
+                color_kanji_readings(question.item)
+                if field == "word" and isinstance(question.item, Word)
+                else getattr(question.item, field)
+                for field in question.field[1]
             )
             expected_answer = getattr(question.item, question.field[0])
             attempt_label = "attempt" if len(attempts) == 1 else "attempts"
@@ -690,6 +700,120 @@ def list_kanji(text: str) -> list[Kanji]:
         if letter in kanjis:
             tmp_kanjis.append(kanjis[letter])
     return tmp_kanjis
+
+
+def _hiragana(text: str) -> str:
+    """Normalize katakana before comparing it with kanji.json readings.
+
+    ``word.kana`` and the readings in kanji.json are not guaranteed to use the
+    same kana alphabet.  Comparing everything as hiragana avoids treating, for
+    example, ガク and がく as different readings.
+    """
+    return "".join(
+        chr(ord(character) - 0x60) if "ァ" <= character <= "ヶ" else character
+        for character in text
+    )
+
+
+def _reading_variants(reading: str) -> list[str]:
+    """Return the dictionary reading plus common compound sound changes.
+
+    The pronunciation found inside a word is sometimes different from the
+    isolated dictionary reading.  For example, 学 is listed as がく but is
+    pronounced がっ in 学校.  These variants let the matcher recognize a few
+    common changes; they are heuristics, not a complete model of Japanese.
+    """
+    reading = _hiragana(reading.lstrip("-").split(".", 1)[0].replace("-", ""))
+    variants = [reading]
+    voiced_initials = {
+        "か": "が", "き": "ぎ", "く": "ぐ", "け": "げ", "こ": "ご",
+        "さ": "ざ", "し": "じ", "す": "ず", "せ": "ぜ", "そ": "ぞ",
+        "た": "だ", "ち": "ぢ", "つ": "づ", "て": "で", "と": "ど",
+        "は": "ば", "ひ": "び", "ふ": "ぶ", "へ": "べ", "ほ": "ぼ",
+    }
+    if reading and reading[0] in voiced_initials:
+        variants.append(voiced_initials[reading[0]] + reading[1:])
+    if reading.endswith(("く", "き", "ち", "つ")):
+        variants.append(reading[:-1] + "っ")
+    if reading.endswith("ち"):
+        variants.append(reading[:-1])
+    return list(dict.fromkeys(variant for variant in variants if variant))
+
+
+def _kanji_reading_candidates(character: str) -> list[tuple[str, str]]:
+    kanji = kanjis.get(character)
+    if kanji is None:
+        return []
+
+    candidates = []
+    for reading_type, readings in (("kun", kanji.readings_kun), ("on", kanji.readings_on)):
+        for reading in readings:
+            candidates.extend((variant, reading_type) for variant in _reading_variants(reading))
+    return sorted(
+        set(candidates),
+        key=lambda candidate: (-len(candidate[0]), 0 if candidate[1] == "kun" else 1, candidate[0]),
+    )
+
+
+def _classify_kanji_readings(expression: str, kana: str) -> list[str | None]:
+    """Match each character in a word to its kun- or on-yomi reading.
+
+    A Word stores the complete kana pronunciation, but not the part belonging
+    to each kanji.  We therefore have to align the expression with that kana
+    and infer whether every matched kanji reading is kun- or on-yomi.
+
+    A kanji can have several candidate readings, so a choice that matches at
+    the current position may fail later in the word.  ``match`` consequently
+    uses backtracking, while ``lru_cache`` prevents the same pair of positions
+    from being evaluated repeatedly.
+    """
+    normalized_kana = _hiragana(kana)
+
+    @lru_cache(maxsize=None)
+    def match(expression_index: int, kana_index: int):
+        if expression_index == len(expression):
+            return () if kana_index == len(normalized_kana) else None
+
+        character = expression[expression_index]
+        candidates = _kanji_reading_candidates(character)
+        # 々 repeats the preceding kanji and therefore shares its candidates.
+        if character == "々" and expression_index:
+            candidates = _kanji_reading_candidates(expression[expression_index - 1])
+
+        if not candidates:
+            # Kana and punctuation must appear literally in the pronunciation;
+            # None tells the coloring step to leave this character unchanged.
+            literal = _hiragana(character)
+            if normalized_kana.startswith(literal, kana_index):
+                remainder = match(expression_index + 1, kana_index + len(literal))
+                if remainder is not None:
+                    return (None,) + remainder
+            return None
+
+        for reading, reading_type in candidates:
+            if normalized_kana.startswith(reading, kana_index):
+                remainder = match(expression_index + 1, kana_index + len(reading))
+                if remainder is not None:
+                    return (reading_type,) + remainder
+        return None
+
+    result = match(0, 0)
+    return list(result) if result is not None else [None] * len(expression)
+
+
+def color_kanji_readings(word: Word) -> str:
+    """Color kanji backgrounds for failed-answer output only.
+
+    Applying the colors is simple; most of the preceding code exists to infer
+    the reading type because Word does not store it per kanji.
+    """
+    reading_types = _classify_kanji_readings(word.word, word.kana)
+    backgrounds = {"kun": KUN_READING_COLOR, "on": ON_READING_COLOR}
+    return "".join(
+        backgrounds[reading_type] + character + Style.RESET_ALL
+        if reading_type is not None else character
+        for character, reading_type in zip(word.word, reading_types)
+    )
 
 
 def is_katakana_present(text: str):
