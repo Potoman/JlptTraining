@@ -359,17 +359,42 @@ class Session(ABC):
 
     @staticmethod
     def build_session() -> "Session":
-        mode = input("What do you want to learn : Vocabulary (v), Top used verbs (t) or Interview (i) ?")
-
-        if mode == "i":
-            jlpt_input = input("What JLPT level to review : All (a|all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
-            jlpt_levels = None if (jlpt_input.strip().lower() == "all" or jlpt_input.strip().lower() == "a") else [int(level) for level in jlpt_input.split()]
-            return SessionTags(jlpt_levels, "interview", Session.choose_word_field())
+        while True:
+            mode = input("What do you want to learn: Vocabulary (v) or Tag (t)? ").strip().lower()
+            if mode in ("v", "t"):
+                break
+            print("Please choose Vocabulary (v) or Tag (t).")
 
         if mode == "t":
+            available_tags = sorted({tag for word in words for tag in word.tags if tag})
+            if not available_tags:
+                raise ValueError("No tags were found in all_hiragana_with_pos.csv.")
+            while True:
+                tag_choice = input(
+                    "Which tag do you want to review?\n"
+                    + "\n".join(
+                        f"{index} - {available_tag}"
+                        for index, available_tag in enumerate(available_tags)
+                    )
+                    + "\nYour choice: "
+                ).strip()
+
+                if tag_choice in available_tags:
+                    tag = tag_choice
+                    break
+                try:
+                    tag_index = int(tag_choice)
+                    tag = available_tags[tag_index] if tag_index >= 0 else None
+                except (ValueError, IndexError):
+                    tag = None
+
+                if tag is not None:
+                    break
+                print("Please enter a tag name or one of the listed indexes.")
+
             jlpt_input = input("What JLPT level to review : All (a|all), or one/several levels (e.g. 1, 1 2, 2 4 5) ?")
             jlpt_levels = None if (jlpt_input.strip().lower() == "all" or jlpt_input.strip().lower() == "a") else [int(level) for level in jlpt_input.split()]
-            return SessionTags(jlpt_levels, "top_used_verbs", Session.choose_word_field())
+            return SessionTags(jlpt_levels, tag, Session.choose_word_field())
 
         r = input("What test : Kanji (k), Word (w), Both (b) ?")
         kind = None
