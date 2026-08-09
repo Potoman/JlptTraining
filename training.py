@@ -81,7 +81,8 @@ class Word:
         # First is what we have to guess;
         # Second is what is shown as help;
         # Third is additional information print on error.
-        return [('meaning', ['word', 'kana'], []),
+        return [('meaning', ['word'], []),
+                ('meaning', ['word', 'kana'], []),
                 ('romaji', ['word'], ['meaning']),
                 ('romaji', ['meaning'], ['word'])]
 
@@ -113,12 +114,15 @@ class Question:
         self.overlay_meaning = {}
         self.forbid_meaning = {}
         if isinstance(item, Word):
+            self._burn['meaning__word'] = item.burn_meaning
             self._burn['meaning__word_kana'] = item.burn_meaning
             self._burn['romaji__word'] = item.burn_romaji
             self._burn['romaji__meaning'] = item.burn_romaji
+            self.overlay_meaning['meaning__word'] = item.overlay_meaning
             self.overlay_meaning['meaning__word_kana'] = item.overlay_meaning
             self.overlay_meaning['romaji__word'] = ""
             self.overlay_meaning['romaji__meaning'] = ""
+            self.forbid_meaning['meaning__word'] = item.forbid_meaning
             self.forbid_meaning['meaning__word_kana'] = item.forbid_meaning
             self.forbid_meaning['romaji__word'] = ""
             self.forbid_meaning['romaji__meaning'] = ""
