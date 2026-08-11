@@ -959,7 +959,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 議題,ぎだい,gidai,topic of discussion; agenda,JLPT_1,noun,,
 鍛える,きたえる,kitaeru,to forge; to train; to discipline,JLPT_1,verb,,transitive
 気立て,きだて,kidate,good-natured; kind-hearted,JLPT_1,noun,,
-来る,きたる,kitaru,to come; to approach;,JLPT_5,verb,top_used_verbs,intransitive
+来る,きたる,kitaru,to come; to approach;,JLPT_1,verb,top_used_verbs,intransitive
 きちっと,きちっと,kichitto,exactly; perfectly,JLPT_1,adverb,,
 几帳面,きちょうめん,kichoumen,methodical; punctual; steady,JLPT_1,noun,,
 きっかり,きっかり,kikkari,exactly; precisely,JLPT_1,adverb,,
@@ -6657,7 +6657,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 贈り物,おくりもの,okurimono,a gift; a present,JLPT_4,noun,,
 泥棒,どろぼう,dorobou,thief; burglar,JLPT_4,noun,,
 ～製,～せい,~sei,made in ~,JLPT_4,noun,,
-注意,ちゅうい,chuui,caution; attention,JLPT_4,noun,top_used_verbs,both
+注意,ちゅうい,chuui,caution; attention,JLPT_4,noun;suru verb,top_used_verbs,both
 台風,たいふう,taifuu,typhoon,JLPT_4,noun,,
 日,ひ,hi,sun; sunshine; day,JLPT_4,noun,,
 ～軒,～けん,~ken,counter for houses,JLPT_4,noun,,
@@ -7117,7 +7117,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 御～,ご～,go~,honorable ~,JLPT_4,noun,,
 安心,あんしん,anshin,peace of mind; relief,JLPT_4,noun,,
 直る,なおる,naoru,to be fixed,JLPT_4,verb,top_used_verbs,intransitive
-集める,あつめる,atsumeru,to collect; to gather (v.t.); to assemble,JLPT_4,verb,top_used_verbs,transitive
+集める,あつめる,atsumeru,to collect; to gather (for both object and people together) (v.t.); to assemble,JLPT_4,verb,top_used_verbs,transitive
 直す,なおす,naosu,to correct (v.t.); to fix,JLPT_4,verb,top_used_verbs,transitive
 続く,つづく,tsuzuku,to be continued,JLPT_4,verb,top_used_verbs,intransitive
 先輩,せんぱい,senpai,senior members of a group,JLPT_4,noun,,
@@ -7226,7 +7226,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 競争,きょうそう,kyousou,competition; contest,JLPT_4,noun,,
 会議,かいぎ,kaigi,business meeting; conference,JLPT_4,noun,top_used_verbs,both
 湖,みずうみ,mizuumi,lake,JLPT_4,noun,,
-集まる,あつまる,atsumaru,to gather (v.i.); to collect,JLPT_4,verb,top_used_verbs,intransitive
+集まる,あつまる,atsumaru,2122 (v.i.); to collect,JLPT_4,verb,top_used_verbs,intransitive
 ～にくい,～にくい,~nikui,difficult to do ~,JLPT_4,adjective,,
 生活,せいかつ,seikatsu,living; life; to live,JLPT_4,noun;suru verb,,
 糸,いと,ito,thread,JLPT_4,noun,,
@@ -7672,7 +7672,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 机,つくえ,tsukue,desk,JLPT_5,noun,,
 作る,つくる,tsukuru,to make; to create,JLPT_5,verb,top_used_verbs,transitive
 つける,つける,tsukeru,to turn on (e.g.; a light); to take,JLPT_3,verb,,transitive
-勤める,つとめる,tsutomeru,to work (for),JLPT_5,verb,top_used_verbs,both
+勤める,つとめる,tsutomeru,to work for,JLPT_5,verb,top_used_verbs,both
 つまらない,つまらない,tsumaranai,boring; dull; insignificant,JLPT_5,adjective,,
 冷たい,つめたい,tsumetai,cold (things; people),JLPT_5,adjective,,
 強い,つよい,tsuyoi,strong; powerful,JLPT_5,adjective,,
