@@ -31,6 +31,10 @@ def get_back_color(field: str):
         return Back.RESET
 
 
+def wrap_back_color(field: str, text: str):
+    return f"{get_back_color(field)} {text} {Back.RESET}"
+
+
 class Kanji:
     def __init__(self, index: int, kanji: str, element):
         self.index = index
@@ -346,7 +350,7 @@ class Session(ABC):
             choice = str(index)
             exercise_choices[choice] = field
 
-            description = f"{choice} - From {' and '.join(shown_fields)} to {answer_field}"
+            description = f"{choice} - From {' and '.join(shown_fields)} to {wrap_back_color(answer_field, answer_field)}"
             if help_fields:
                 description += f" (help: {' and '.join(help_fields)})"
             exercise_descriptions.append(description)
