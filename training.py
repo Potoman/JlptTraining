@@ -274,6 +274,8 @@ class Question:
     def check_solution(self, response: str) -> (bool, float | None):
         if not response:
             return False, None
+        if self.field[0] == "romaji" and isinstance(self.item, Word):
+            response = normalize_romaji_response(response, self.item.kinds)
         solutions = re.sub(r'\s*\(.*?\)\s*', '', getattr(self.item, self.field[0])).split(";")
         solutions = solutions + self.overlay_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";")
         forbids = self.forbid_meaning[self.field[0] + '__' + '_'.join(self.field[1])].split(";")
@@ -713,6 +715,13 @@ try:
         kanjis[list(kanjis.keys())[index]].burn_meanings = lines[index] == 'o'
 except:
     print("Err")
+
+
+def normalize_romaji_response(response: str, kinds: list[str]) -> str:
+    """Ignore an optional trailing ``suru`` for noun/suru-verb entries."""
+    if "noun" in kinds and "suru verb" in kinds:
+        return re.sub(r"\s*suru\s*$", "", response)
+    return response
 
 
 def check_field(response: str, solutions: list[str], forbids: list[str], should_be_exact: bool) -> (bool, float | None):
