@@ -16,6 +16,10 @@ KUN_READING_COLOR = "\033[48;2;189;235;255m\033[38;2;0;0;0m"  # pale sky blue
 ON_READING_COLOR = "\033[48;2;255;214;231m\033[38;2;0;0;0m"   # pale blush pink
 
 
+def clean_field(field: str):
+    return "; ".join(x.strip() for x in field.split(";"))
+
+
 def print_radicals(radicals: list[str]):
     print("\t" + Back.LIGHTGREEN_EX + "Radicals" + Back.RESET + " : " + (",").join(radicals))
 
@@ -219,7 +223,7 @@ class Question:
         print(Fore.RESET + f"\tWord: {color_kanji_readings(self.item)}")
         print(f"\tKana: {self.item.kana}")
         print(f"\tRomaji: {self.item.romaji}")
-        print(f"\tMeaning: {self.item.meaning}")
+        print(f"\tMeaning: {clean_field(self.item.meaning)}")
         if overlay_meanings:
             print(f"\tAdditional meanings: {overlay_meanings}")
         if forbidden_meanings:
