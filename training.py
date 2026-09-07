@@ -424,7 +424,7 @@ class Session(ABC):
         jlpt_levels = None if (jlpt_input.strip().lower() == "all" or jlpt_input.strip().lower() == "a") else [int(level) for level in jlpt_input.split()]
         return SessionVocabulary(jlpt_levels, r, kind, word_field)
 
-    def ask(self, subgroup_size: int = 4):
+    def ask(self, subgroup_size: int = 7):
         if subgroup_size < 1:
             raise ValueError("subgroup_size must be greater than zero")
 
