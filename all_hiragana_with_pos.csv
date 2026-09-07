@@ -6657,7 +6657,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 贈り物,おくりもの,okurimono,a gift; a present,JLPT_4,noun,,
 泥棒,どろぼう,dorobou,thief; burglar,JLPT_4,noun,,
 ～製,～せい,~sei,made in ~,JLPT_4,noun,,
-注意,ちゅうい,chuui,caution; attention,JLPT_4,noun;suru verb,top_used_verbs,both
+注意,ちゅうい,chuui,caution; attention,JLPT_4,noun;suru verb,top_suru_verbs,both
 台風,たいふう,taifuu,typhoon,JLPT_4,noun,,
 日,ひ,hi,sun; sunshine; day,JLPT_4,noun,,
 ～軒,～けん,~ken,counter for houses,JLPT_4,noun,,
@@ -6705,7 +6705,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 時代,じだい,jidai,age; period; epoch; era,JLPT_4,noun,,
 申し上げる,もうしあげる,moushiageru,(humble)to say; to tell,JLPT_4,verb,,transitive
 ～式,～しき,~shiki,~ ceremony; ~ style,JLPT_4,noun,,
-出席,しゅっせき,shusseki,attendance;present;to attend;to be present,JLPT_4,noun;suru verb,top_used_verbs,intransitive
+出席,しゅっせき,shusseki,attendance;present;to attend;to be present,JLPT_4,noun;suru verb,top_suru_verbs,intransitive
 ～家,～か,~ka,person who is specialized in ~,JLPT_4,noun,,
 迎える,むかえる,mukaeru,to welcome; to meet; to greet,JLPT_4,verb,,transitive
 触る,さわる,sawaru,to touch; to feel,JLPT_4,verb,top_used_verbs,both
@@ -6716,7 +6716,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 季節,きせつ,kisetsu,season (in reference to weather),JLPT_4,noun,,
 寄る,よる,yoru,to stop by,JLPT_4,verb,,intransitive
 決まる,きまる,kimaru,to be set; fixed (v.i.),JLPT_4,verb,,intransitive
-開く,ひらく,hiraku,to open; to hold (an event),JLPT_4,verb,top_used_verbs,both
+開く,ひらく,hiraku,to open (expand); to hold (an event),JLPT_4,verb,top_used_verbs,both
 逃げる,にげる,nigeru,to escape; to run away,JLPT_4,verb,,intransitive
 だから,だから,dakara,so; therefore,JLPT_4,other,,
 残念,ざんねん,zannen,regret; regrettable,JLPT_4,adjective,,
@@ -6777,8 +6777,9 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 柔道,じゅうどう,juudou,judo,JLPT_4,noun,,
 決して,けっして,kesshite,never,JLPT_4,adverb,,
 事務所,じむしょ,jimusho,office,JLPT_4,noun,,
-連絡,れんらく,renraku,communication; contact; connection,JLPT_4,noun;suru verb,top_used_verbs,both
+連絡,れんらく,renraku,communication; contact; connection,JLPT_4,noun;suru verb,top_suru_verbs,both
 小学校,しょうがっこう,shougakkou,elementary school,JLPT_4,noun,,
+客,きゃく,kyaku,guest; customer,JLPT_4,noun,,
 客,きゃく,kyaku,guest; customer,JLPT_4,noun,,
 昔,むかし,mukashi,old days; past,JLPT_4,noun,,
 美しい,うつくしい,utsukushii,beautiful; lovely,JLPT_4,adjective,,
@@ -6874,14 +6875,14 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 味噌,みそ,miso,miso; bean paste,JLPT_4,noun,,
 お祝い,おいわい,oiwai,congratulation; celebration,JLPT_4,noun,,
 乗り物,のりもの,norimono,vehicle,JLPT_4,noun,,
-案内,あんない,annai,information; guidance,JLPT_4,noun;suru verb,top_used_verbs,transitive
+案内,あんない,annai,information; guidance,JLPT_4,noun;suru verb,top_suru_verbs,transitive
 通う,かよう,kayou,to go back and forth; to commute,JLPT_4,verb,,intransitive
 連れる,つれる,tsureru,to lead; to take (a person),JLPT_4,verb,,transitive
 技術,ぎじゅつ,gijutsu,technique;technology;engineering; skill,JLPT_4,noun,interview,
 小鳥,ことり,kotori,small bird,JLPT_4,noun,,
 下宿,げしゅく,geshuku,lodging; boarding house,JLPT_4,noun,,
 ジャム,ジャム,jam,jam,JLPT_4,noun,,
-招待,しょうたい,shoutai,invitation,JLPT_4,noun;suru verb,top_used_verbs,transitive
+招待,しょうたい,shoutai,invitation,JLPT_4,noun;suru verb,top_suru_verbs,transitive
 鏡,かがみ,kagami,mirror,JLPT_4,noun,,
 はず,はず,hazu,it should be so,JLPT_4,noun,,
 法律,ほうりつ,houritsu,law,JLPT_4,noun,,
@@ -6891,7 +6892,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 反対,はんたい,hantai,oppose; opposition; resistance,JLPT_4,noun; suru verb,top_used_verbs,intransitive
 おる,おる,oru,-- extra-modest expression for いる --,JLPT_4,verb,,both
 申す,もうす,mousu,-- extra-modest (humble) expression for 言う (いう) --,JLPT_4,verb,interview,transitive
-試験,しけん,shiken,an exam,JLPT_4,noun; suru verb,top_used_verbs,transitive
+試験,しけん,shiken,an exam,JLPT_4,noun; suru verb,top_suru_verbs,transitive
 真面目,まじめ,majime,diligent; serious,JLPT_4,noun,,
 ご覧になる,ごらんになる,goranninaru,-- honorific expression for みる --,JLPT_4,verb,,transitive
 店員,てんいん,tenin,clerk; shop-employee,JLPT_4,noun,,
@@ -6925,7 +6926,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 気持ち,きもち,kimochi,feeling; sensation; mood,JLPT_4,noun,,
 祖父,そふ,sofu,grandfather,JLPT_4,noun,,
 港,みなと,minato,harbor; port,JLPT_4,noun,,
-予約,よやく,yoyaku,reservation,JLPT_4,noun;suru verb,top_used_verbs,transitive
+予約,よやく,yoyaku,reservation,JLPT_4,noun;suru verb,top_suru_verbs,transitive
 凄い,すごい,sugoi,terrific; great,JLPT_4,adjective,,
 入学,にゅうがく,nyuugaku,entry to school or university,JLPT_4,noun;suru verb,,
 片付ける,かたづける,katazukeru,to (clean) tidy up; to put away,JLPT_4,verb,,transitive
@@ -6950,7 +6951,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 あんな,あんな,anna,such; like that,JLPT_4,adjective,,
 謝る,あやまる,ayamaru,to apologize,JLPT_4,verb,top_used_verbs,both
 昼間,ひるま,hiruma,daytime; during the day,JLPT_4,noun,,
-教育,きょういく,kyouiku,education,JLPT_4,noun; suru verb,top_used_verbs,transitive
+教育,きょういく,kyouiku,education,JLPT_4,noun; suru verb,top_suru_verbs,transitive
 女性,じょせい,josei,woman,JLPT_4,noun,,
 米,こめ,kome,uncooked rice,JLPT_4,noun,,
 邪魔,じゃま,jama,hindrance; intrusion,JLPT_4,adjective,,
@@ -6986,7 +6987,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 しばらく,しばらく,shibaraku,little while,JLPT_4,adverb,,
 特に,とくに,tokuni,particularly,JLPT_4,adverb,,
 空く,あく,aku,to open; to become empty (vacant),JLPT_3,verb,,both
-計画,けいかく,keikaku,plan; project; schedule,JLPT_4,noun;suru verb,top_used_verbs,transitive
+計画,けいかく,keikaku,plan; project; schedule,JLPT_4,noun;suru verb,top_suru_verbs,transitive
 通り,とおり,toori,~ Street; ~ Avenue,JLPT_4,noun,,
 下着,したぎ,shitagi,underwear,JLPT_4,noun,,
 経済,けいざい,keizai,economics; finance; economy,JLPT_4,noun,,
@@ -7019,7 +7020,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 産業,さんぎょう,sangyou,industry,JLPT_4,noun,interview,
 伝える,つたえる,tsutaeru,to convey (a message); to tell; to report,JLPT_4,verb,top_used_verbs,transitive
 お金持ち,かねもち; おかねもち,kanemochi;okanemochi,rich person,JLPT_4,noun,,
-説明,せつめい,setsumei,explanation,JLPT_4,noun,top_used_verbs,transitive
+説明,せつめい,setsumei,explanation,JLPT_4,noun; suru verb,top_suru_verbs,transitive
 島,しま,shima,island,JLPT_4,noun,mtg,
 道具,どうぐ,dougu,tool,JLPT_4,noun,,
 滑る,すべる,suberu,to slide; to slip,JLPT_4,verb,top_used_verbs,both
@@ -7161,14 +7162,14 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 首,くび,kubi,neck,JLPT_4,noun,,
 程,ほど,hodo,degree; extent,JLPT_4,noun,,
 代わり,かわり,kawari,substitute; replacement,JLPT_4,noun,,
-失敗,しっぱい,shippai,failure; mistake,JLPT_4,noun; suru verb,top_used_verbs,both
+失敗,しっぱい,shippai,failure; mistake,JLPT_4,noun; suru verb,top_suru_verbs,both
 工業,こうぎょう,kougyou,(manufacturing) industry,JLPT_4,noun,,
 移る,うつる,utsuru,to move (from a house); to transfer (from a department); to shift,JLPT_4,verb,,intransitive
 スーツケース,スーツケース,suitcase,suitcase,JLPT_4,noun,,
 ひげ,ひげ,hige,beard,JLPT_4,noun,,
 研究室,けんきゅうしつ,kenkyuushitsu,the professor's office; laboratory,JLPT_4,noun,,
 工場,こうじょう,koujou,factory,JLPT_4,noun,,
-紹介,しょうかい,shoukai,an introduction,JLPT_4,noun; suru verb,top_used_verbs,transitive
+紹介,しょうかい,shoukai,an introduction,JLPT_4,noun; suru verb,interview,transitive
 けれど; けれども,けれど; けれども,keredo;keredomo,but; although,JLPT_4,noun,,
 舟,ふね,fune,ship; boat,JLPT_4,noun,,
 動く,うごく,ugoku,to move,JLPT_4,verb,top_used_verbs,intransitive
@@ -7213,7 +7214,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 安全,あんぜん,anzen,safety; security,JLPT_4,adjective,interview,
 看護婦,かんごふ,kangofu,(female) nurse,JLPT_4,noun,,
 見物,けんぶつ,kenbutsu,sightseeing,JLPT_4,noun,,
-相談,そうだん,soudan,consultation,JLPT_4,noun;suru verb,top_used_verbs,transitive
+相談,そうだん,soudan,consultation,JLPT_4,noun;suru verb,job,transitive
 ガソリンスタンド,ガソリンスタンド,gasolinestand,gas station; service station,JLPT_4,noun,,
 テニス,テニス,tennis,tennis,JLPT_4,noun,,
 眠る,ねむる,nemuru,to sleep,JLPT_4,verb,,intransitive
@@ -7224,9 +7225,9 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 娘,むすめ,musume,daughter (humble),JLPT_4,noun,,
 湯,ゆ,yu,hot water,JLPT_4,noun,,
 競争,きょうそう,kyousou,competition; contest,JLPT_4,noun,,
-会議,かいぎ,kaigi,business meeting; conference,JLPT_4,noun,top_used_verbs,both
+会議,かいぎ,kaigi,business meeting; conference,JLPT_4,noun;suru verb,job,both
 湖,みずうみ,mizuumi,lake,JLPT_4,noun,,
-集まる,あつまる,atsumaru,2122 (v.i.); to collect,JLPT_4,verb,top_used_verbs,intransitive
+集まる,あつまる,atsumaru,to gather (v.i.); to collect,JLPT_4,verb,top_used_verbs,intransitive
 ～にくい,～にくい,~nikui,difficult to do ~,JLPT_4,adjective,,
 生活,せいかつ,seikatsu,living; life; to live,JLPT_4,noun;suru verb,,
 糸,いと,ito,thread,JLPT_4,noun,,
