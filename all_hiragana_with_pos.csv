@@ -6716,7 +6716,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 季節,きせつ,kisetsu,season (in reference to weather),JLPT_4,noun,,
 寄る,よる,yoru,to stop by,JLPT_4,verb,,intransitive
 決まる,きまる,kimaru,to be set; fixed (v.i.),JLPT_4,verb,,intransitive
-開く,ひらく,hiraku,to open (expand); to hold (an event),JLPT_4,verb,top_used_verbs,both
+開く,ひらく,hiraku,to open (expand); to hold (an event),JLPT_4,verb,top_used_verbs,intransitive
 逃げる,にげる,nigeru,to escape; to run away,JLPT_4,verb,,intransitive
 だから,だから,dakara,so; therefore,JLPT_4,other,,
 残念,ざんねん,zannen,regret; regrettable,JLPT_4,adjective,,
@@ -7262,7 +7262,7 @@ expression,reading,romaji,meaning,tags,kinds,tags,transitivity
 赤い,あかい,akai,red,JLPT_5,adjective,,
 明るい,あかるい,akarui,bright (in reference to personality or weather); cheerful,JLPT_5,adjective,,
 秋,あき,aki,fall (season),JLPT_3,noun,,
-開く,あく,aku,to open; to become open,JLPT_4,verb,top_used_verbs,both
+開く,あく,aku,to become open,JLPT_4,verb,top_used_verbs,both
 開ける,あける,akeru,to open,JLPT_3,verb,top_used_verbs,both
 上げる,あげる,ageru,to raise; to lift,JLPT_4,verb,,both
 朝,あさ,asa,morning,JLPT_5,noun,,
