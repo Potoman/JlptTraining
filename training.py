@@ -1,4 +1,3 @@
-import csv
 from abc import ABC, abstractmethod
 from collections import deque
 from colorama import init, Back, Fore, Style
@@ -71,6 +70,7 @@ class Kanji:
 class Word:
     def __init__(self, index: int, word, kana, romaji, meaning, jlpt_level, kinds, tags, transitivity):
         self.index = index
+        self.id = index + 1
         self.word = word
         self.kana = kana
         self.romaji = romaji
@@ -382,7 +382,7 @@ class Session(ABC):
         if mode == "t":
             available_tags = sorted({tag for word in words for tag in word.tags if tag})
             if not available_tags:
-                raise ValueError("No tags were found in all_hiragana_with_pos.csv.")
+                raise ValueError("No tags were found in dictionnary.json.")
             while True:
                 tag_choice = input(
                     "Which tag do you want to review?\n"
@@ -636,21 +636,46 @@ def load_kanji() -> dict[str, Kanji]:
     return kanjis
 
 
-words = []
+def load_words() -> list[Word]:
+    file_path = Path("dictionnary.json")
+    with file_path.open("r", encoding="utf-8") as f:
+        entries = json.load(f)
+
+    if not isinstance(entries, list):
+        raise ValueError("dictionnary.json must contain a JSON array.")
+
+    loaded_words = []
+    for expected_id, entry in enumerate(entries, start=1):
+        if not isinstance(entry, dict):
+            raise ValueError(f"Dictionary entry {expected_id} must be an object.")
+        if entry.get("id") != expected_id:
+            raise ValueError(
+                f"Dictionary entry {expected_id} has an invalid id: {entry.get('id')!r}."
+            )
+
+        try:
+            word = Word(
+                entry["id"] - 1,
+                entry["expression"],
+                entry["reading"],
+                entry["romaji"],
+                entry["meaning"],
+                entry["jlpt_level"],
+                entry["kinds"],
+                entry["tags"],
+                entry["transitivity"],
+            )
+        except KeyError as exc:
+            raise ValueError(
+                f"Dictionary entry {expected_id} is missing field {exc.args[0]!r}."
+            ) from exc
+        loaded_words.append(word)
+
+    return loaded_words
+
+
+words = load_words()
 kanjis = load_kanji()
-
-
-with open('all_hiragana_with_pos.csv', newline='', encoding='utf-8') as csvfile:
-    reader = csv.reader(csvfile)
-    next(reader)  # Ignore la première ligne (en-tête)
-    index = 0
-    for row in reader:
-        # row = [expression, reading, romaji, meaning, tags, kinds, tags]
-        index = index + 1
-        if len(row) != 8:
-            raise Exception("Malformed line : " + str(row))
-        word = Word(index - 1, *row)
-        words.append(word)
 
 try:
     path = Path("overlay_forbid_meaning.txt")

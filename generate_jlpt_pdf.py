@@ -36,7 +36,7 @@ def register_japanese_font():
 
 
 def collect_words(session: Session) -> list[Word]:
-    """Words a training Session would ask about, restored to CSV order
+    """Words a training Session would ask about, restored to dictionary order
     (Session.__init__ shuffles questions_word in place for quizzing)."""
     return sorted((question.item for question in session.questions_word), key=lambda word: word.index)
 
