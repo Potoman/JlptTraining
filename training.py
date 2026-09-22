@@ -171,6 +171,11 @@ class Question:
     def ask(self, prefix: str):
         print(f"{prefix} {', '.join([getattr(self.item, field) for field in self.field[1]])} : {get_back_color(self.field[0])}{self.field[0]}{Back.RESET} ?")
 
+    def question_type(self) -> str:
+        """Return a stable source-to-answer label for statistics."""
+        source = "_and_".join(self.field[1])
+        return f"{source}_to_{self.field[0]}"
+
     def burn(self):
         index = self.item.index
         _add_entry_file(index, "o", "burn_" + self.field[0] + ".txt")
@@ -283,6 +288,96 @@ class Question:
         return check_field(response, solutions, forbids, should_be_exact)
 
 
+class StatisticsStore:
+    """Persist success counts for every item and question type."""
+
+    def __init__(self, path: str | Path = "statistics.json"):
+        self.path = Path(path)
+        self.data = self._load()
+
+    def _load(self) -> dict:
+        if not self.path.exists():
+            return {"words": {}, "kanji": {}}
+
+        with self.path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        if not isinstance(data, dict):
+            raise ValueError(f"{self.path} must contain a JSON object.")
+        for section in ("words", "kanji"):
+            if section not in data:
+                data[section] = {}
+            elif not isinstance(data[section], dict):
+                raise ValueError(f"{self.path}: '{section}' must be a JSON object.")
+        return data
+
+    def record(self, question: Question, is_success: bool) -> dict[str, int]:
+        if isinstance(question.item, Word):
+            section = self.data["words"]
+            item_key = str(question.item.id)
+            item_label_key = "word"
+            item_label = question.item.word
+        else:
+            section = self.data["kanji"]
+            item_key = question.item.kanji
+            item_label_key = "kanji"
+            item_label = question.item.kanji
+
+        item_statistics = section.setdefault(
+            item_key,
+            {item_label_key: item_label, "questions": {}},
+        )
+        if not isinstance(item_statistics.get("questions"), dict):
+            raise ValueError(
+                f"{self.path}: invalid statistics for {item_label!r}."
+            )
+        item_statistics[item_label_key] = item_label
+
+        question_type = question.question_type()
+        statistics = item_statistics["questions"].setdefault(
+            question_type,
+            {"asked": 0, "success": 0},
+        )
+        try:
+            statistics["asked"] = int(statistics["asked"]) + 1
+            statistics["success"] = int(statistics["success"]) + int(is_success)
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError(
+                f"{self.path}: invalid counters for {item_label!r} "
+                f"and question type {question_type!r}."
+            ) from exc
+
+        self._save()
+        return statistics.copy()
+
+    def _save(self) -> None:
+        temporary_path = self.path.with_suffix(self.path.suffix + ".tmp")
+        with temporary_path.open("w", encoding="utf-8", newline="\n") as f:
+            json.dump(self.data, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        temporary_path.replace(self.path)
+
+
+def format_statistics_bar(statistics: dict[str, int], width: int = 20) -> str:
+    """Format a green-success/red-failure bar with the current percentage."""
+    asked = statistics["asked"]
+    success = statistics["success"]
+    percentage = success / asked if asked else 0.0
+    green_width = int(percentage * width + 0.5)
+    red_width = width - green_width
+    bar = (
+        Fore.LIGHTGREEN_EX
+        + "█" * green_width
+        + Fore.LIGHTRED_EX
+        + "█" * red_width
+        + Fore.RESET
+    )
+    return (
+        f"Statistics: [{bar}] {percentage:.1%} "
+        f"({success}/{asked} successful)"
+    )
+
+
 class Session(ABC):
     def __init__(self):
         self.last_question = None
@@ -301,6 +396,7 @@ class Session(ABC):
         self.bad_answer = 0
         self.score = 0.0
         self.failed_questions = {}
+        self.statistics = StatisticsStore()
 
     @abstractmethod
     def _build_questions(self) -> None:
@@ -572,6 +668,8 @@ class Session(ABC):
                 {"question_number": index, "attempts": []},
             )
             failure["attempts"].append((response, ratio))
+        statistics = self.statistics.record(question, is_ok)
+        print(format_statistics_bar(statistics))
         self.score = self.score + (0.0 if ratio is None else ratio)
         print("")
         self.last_question = question
