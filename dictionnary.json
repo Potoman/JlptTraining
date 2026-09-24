@@ -260,7 +260,7 @@
     "meaning": "agreement; consent; mutual understanding",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "intransitive"
   },
   {
@@ -458,7 +458,7 @@
     "meaning": "negotiation",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "both"
   },
   {
@@ -656,7 +656,7 @@
     "meaning": "purchase; buy",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -1833,7 +1833,7 @@
     "meaning": "use; adopt",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -3362,7 +3362,7 @@
     "meaning": "introduction; bringing in; leading in",
     "jlpt_level": "JLPT_1",
     "kinds": "noun;suru verb",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": "transitive"
   },
   {
@@ -3450,7 +3450,7 @@
     "meaning": "registration; register; record",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -4242,7 +4242,7 @@
     "meaning": "transactions; dealings; business",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -5221,7 +5221,7 @@
     "meaning": "appointment; nomination; ordination",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -7003,7 +7003,7 @@
     "meaning": "making use of; application; practical use",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -7091,7 +7091,7 @@
     "meaning": "inspection; reference; browse",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -7344,7 +7344,7 @@
     "meaning": "subscription; application",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "both"
   },
   {
@@ -8334,7 +8334,7 @@
     "meaning": "holding a meeting; open an exhibition",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -8378,7 +8378,7 @@
     "meaning": "cancellation; release; cancel",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -8565,7 +8565,7 @@
     "meaning": "development; exploitation",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": ""
   },
   {
@@ -9830,7 +9830,7 @@
     "meaning": "observation; guarding; surveillance",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -10193,7 +10193,7 @@
     "meaning": "planning; project",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -12217,7 +12217,7 @@
     "meaning": "transfer (to another office of a company)",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -12228,7 +12228,7 @@
     "meaning": "inspection; examination; checking",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -14560,7 +14560,7 @@
     "meaning": "promotion",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -16441,7 +16441,7 @@
     "meaning": "establishment; creation",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -17442,7 +17442,7 @@
     "meaning": "dealing with",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -17585,7 +17585,7 @@
     "meaning": "retirement (from office)",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -18124,7 +18124,7 @@
     "meaning": "achievement",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -18498,7 +18498,7 @@
     "meaning": "shortening; abbreviation; reduction",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -19884,7 +19884,7 @@
     "meaning": "offer; program sponsoring",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -21182,7 +21182,7 @@
     "meaning": "utterance; speech; proposal",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -21281,7 +21281,7 @@
     "meaning": "question",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -22326,7 +22326,7 @@
     "meaning": "come to work",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -22975,7 +22975,7 @@
     "meaning": "restoration; restitution; rehabilitation",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -23437,7 +23437,7 @@
     "meaning": "apportionment; sharing",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -24273,7 +24273,7 @@
     "meaning": "custody; safekeeping; storage",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -29729,7 +29729,7 @@
     "meaning": "end; close; termination",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -29828,7 +29828,7 @@
     "meaning": "going to work; at work",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -29850,7 +29850,7 @@
     "meaning": "official tour; business trip",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -30708,7 +30708,7 @@
     "meaning": "application; request; petition",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -31412,7 +31412,7 @@
     "meaning": "work (e.g.; film; book)",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -31654,7 +31654,7 @@
     "meaning": "connection; union; join; link; changing trains",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": ""
   },
   {
@@ -32215,7 +32215,7 @@
     "meaning": "measurement",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -33854,7 +33854,7 @@
     "meaning": "reply; answer",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -36406,7 +36406,7 @@
     "meaning": "training",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -37737,7 +37737,7 @@
     "meaning": "elimination; deletion",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -37748,7 +37748,7 @@
     "meaning": "creation; preparation; to make",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -38199,7 +38199,7 @@
     "meaning": "host; chairperson",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -41037,7 +41037,7 @@
     "meaning": "extension; prolongation",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -41136,7 +41136,7 @@
     "meaning": "receiving; dealing with",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -41576,7 +41576,7 @@
     "meaning": "specific; special; particular",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -42313,7 +42313,7 @@
     "meaning": "entry to a company",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -44854,7 +44854,7 @@
     "meaning": "editing; compilation; editorial (e.g.; committee)",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -44986,7 +44986,7 @@
     "meaning": "prevention; check",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -47879,7 +47879,7 @@
     "meaning": "regulation; adjustment; tuning",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -48143,7 +48143,7 @@
     "meaning": "notice; notification",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -48517,7 +48517,7 @@
     "meaning": "suspension; interruption; stoppage",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -49056,7 +49056,7 @@
     "meaning": "participation",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -49078,7 +49078,7 @@
     "meaning": "approval; agreement",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -49518,7 +49518,7 @@
     "meaning": "practice; execution (e.g.; program); realization",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -49540,7 +49540,7 @@
     "meaning": "enforcement; carry out; operation",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": ""
   },
   {
@@ -49628,7 +49628,7 @@
     "meaning": "leadership; guidance; coaching",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -49724,7 +49724,7 @@
     "expression": "支払う",
     "reading": "しはらう",
     "romaji": "shiharau",
-    "meaning": "to pay",
+    "meaning": "to pay (formal, business, rent, taxe)",
     "jlpt_level": "JLPT_3",
     "kinds": "verb",
     "tags": "top_used_verbs",
@@ -49958,7 +49958,7 @@
     "meaning": "finding employment",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "intransitive"
   },
   {
@@ -49980,7 +49980,7 @@
     "meaning": "amendment; correction",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -50046,7 +50046,7 @@
     "meaning": "concentration; focusing the mind",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -50299,7 +50299,7 @@
     "meaning": "use (same as 使うこと (つかうこと)); application; employment; utilization",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -50563,7 +50563,7 @@
     "meaning": "recognition; approval",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -51806,7 +51806,7 @@
     "meaning": "claim; demand; request",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -51850,7 +51850,7 @@
     "meaning": "success; hit",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "intransitive"
   },
   {
@@ -51949,7 +51949,7 @@
     "meaning": "growth",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "intransitive"
   },
   {
@@ -52048,7 +52048,7 @@
     "meaning": "sorting; arrangement",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -52136,7 +52136,7 @@
     "meaning": "plan; design",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": "transitive"
   },
   {
@@ -53533,7 +53533,7 @@
     "meaning": "request; dependence",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -53643,7 +53643,7 @@
     "meaning": "printing",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -54083,7 +54083,7 @@
     "meaning": "business; trade; management",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -54193,7 +54193,7 @@
     "meaning": "postponement; adjournment",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -55018,7 +55018,7 @@
     "meaning": "settlement; solution; resolution",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -55051,7 +55051,7 @@
     "meaning": "start; commencement; beginning",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -55084,7 +55084,7 @@
     "meaning": "betterment; improvement",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": ""
   },
   {
@@ -55414,7 +55414,7 @@
     "meaning": "affirmation; confirmation",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -56316,7 +56316,7 @@
     "meaning": "thanks; gratitude",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -56470,7 +56470,7 @@
     "meaning": "control; management (e.g.; of a business)",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -56481,7 +56481,7 @@
     "meaning": "completion; conclusion",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -57020,7 +57020,7 @@
     "meaning": "rest; break; intermission",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -57218,7 +57218,7 @@
     "meaning": "cooperation; collaboration",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -57240,7 +57240,7 @@
     "meaning": "permission; approval",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -57317,7 +57317,7 @@
     "meaning": "record; minutes; document",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -57328,7 +57328,7 @@
     "meaning": "argument; discussion; dispute",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -58032,7 +58032,7 @@
     "meaning": "calculation; reckoning",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -58076,7 +58076,7 @@
     "meaning": "contract; compact; agreement",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -58219,7 +58219,7 @@
     "meaning": "absence; non-attendance",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -58230,7 +58230,7 @@
     "meaning": "decision; determination",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -58461,7 +58461,7 @@
     "meaning": "consideration; examination; investigation",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -58637,7 +58637,7 @@
     "meaning": "exchange; swap",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -58692,7 +58692,7 @@
     "meaning": "contribution; services",
     "jlpt_level": "JLPT_2",
     "kinds": "noun;suru verb",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": "intransitive"
   },
   {
@@ -58703,7 +58703,7 @@
     "meaning": "advertisement",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -60452,7 +60452,7 @@
     "meaning": "order; command; decree",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -60551,7 +60551,7 @@
     "meaning": "interview",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": "intransitive"
   },
   {
@@ -61464,7 +61464,7 @@
     "meaning": "prediction; estimation",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -62428,7 +62428,7 @@
     "id": 5676,
     "expression": "尾",
     "reading": "お",
-    "romaji": "top_used_verbs",
+    "romaji": "o",
     "meaning": "tail; ridge",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
@@ -63367,7 +63367,7 @@
     "meaning": "advertisement; publicity",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -63411,7 +63411,7 @@
     "meaning": "operation; management; processing",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -63518,7 +63518,7 @@
     "expression": "注ぐ",
     "reading": "そそぐ",
     "romaji": "sosogu",
-    "meaning": "to pour (into)",
+    "meaning": "to pour (big quantity, into)",
     "jlpt_level": "JLPT_3",
     "kinds": "verb",
     "tags": "top_used_verbs",
@@ -64841,7 +64841,7 @@
     "meaning": "(in) charge",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -65006,7 +65006,7 @@
     "meaning": "lateness; late coming",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -65171,7 +65171,7 @@
     "meaning": "suspension; stoppage; discontinuance",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -65226,7 +65226,7 @@
     "meaning": "order; request",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -65248,7 +65248,7 @@
     "meaning": "survey; investigation",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -65553,7 +65553,7 @@
     "expression": "注ぐ",
     "reading": "つぐ",
     "romaji": "tsugu",
-    "meaning": "to pour (into)",
+    "meaning": "to pour (small quantity, into)",
     "jlpt_level": "JLPT_3",
     "kinds": "verb",
     "tags": "top_used_verbs",
@@ -65853,7 +65853,7 @@
     "meaning": "proposal; proposition; suggestion",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -66876,7 +66876,7 @@
     "meaning": "great effort; exertion; endeavor",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": "intransitive"
   },
   {
@@ -68427,7 +68427,7 @@
     "meaning": "discovery; detection; finding",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -68515,7 +68515,7 @@
     "meaning": "announcement; publication; presentation",
     "jlpt_level": "JLPT_3",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -68779,7 +68779,7 @@
     "meaning": "judgment; decision",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": ""
   },
   {
@@ -68801,7 +68801,7 @@
     "meaning": "sale; selling; marketing",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -68845,7 +68845,7 @@
     "meaning": "comparison",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -69164,7 +69164,7 @@
     "meaning": "assessment; evaluation",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": ""
   },
   {
@@ -69934,7 +69934,7 @@
     "meaning": "analysis",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs;interview",
+    "tags": "top_suru_verbs;interview",
     "transitivity": ""
   },
   {
@@ -70066,7 +70066,7 @@
     "meaning": "change; modification; alteration",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -70154,7 +70154,7 @@
     "meaning": "report; information",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -70220,7 +70220,7 @@
     "meaning": "call; visit",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -70330,7 +70330,7 @@
     "meaning": "preservation; conservation",
     "jlpt_level": "JLPT_2",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -71331,7 +71331,7 @@
     "meaning": "exact calculation; adjustment",
     "jlpt_level": "JLPT_1",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": ""
   },
   {
@@ -74323,7 +74323,7 @@
     "meaning": "prepare",
     "jlpt_level": "JLPT_4",
     "kinds": "noun;suru verb",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
@@ -75797,7 +75797,7 @@
     "meaning": "oppose; opposition; resistance",
     "jlpt_level": "JLPT_4",
     "kinds": "noun; suru verb",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "intransitive"
   },
   {
@@ -80161,7 +80161,7 @@
     "expression": "浴びる",
     "reading": "あびる",
     "romaji": "abiru",
-    "meaning": "to bathe; to shower",
+    "meaning": "to bath; to shower",
     "jlpt_level": "JLPT_3",
     "kinds": "verb",
     "tags": "top_used_verbs",
@@ -83112,7 +83112,7 @@
     "meaning": "question; inquiry",
     "jlpt_level": "JLPT_5",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "both"
   },
   {
@@ -84553,7 +84553,7 @@
     "meaning": "test",
     "jlpt_level": "JLPT_5",
     "kinds": "noun",
-    "tags": "top_used_verbs",
+    "tags": "top_suru_verbs",
     "transitivity": "transitive"
   },
   {
