@@ -312,16 +312,7 @@ class StatisticsStore:
         return data
 
     def record(self, question: Question, is_success: bool) -> dict[str, int]:
-        if isinstance(question.item, Word):
-            section = self.data["words"]
-            item_key = str(question.item.id)
-            item_label_key = "word"
-            item_label = question.item.word
-        else:
-            section = self.data["kanji"]
-            item_key = question.item.kanji
-            item_label_key = "kanji"
-            item_label = question.item.kanji
+        section, item_key, item_label_key, item_label = self._item_details(question)
 
         item_statistics = section.setdefault(
             item_key,
@@ -349,6 +340,43 @@ class StatisticsStore:
 
         self._save()
         return statistics.copy()
+
+    def statistics_for(self, question: Question) -> dict[str, int]:
+        """Return saved counters without creating or changing an entry."""
+        section, item_key, _item_label_key, item_label = self._item_details(question)
+        item_statistics = section.get(item_key, {})
+        statistics = item_statistics.get("questions", {}).get(
+            question.question_type(),
+            {"asked": 0, "success": 0},
+        )
+        try:
+            asked = int(statistics["asked"])
+            success = int(statistics["success"])
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError(
+                f"{self.path}: invalid counters for {item_label!r} "
+                f"and question type {question.question_type()!r}."
+            ) from exc
+        return {"asked": asked, "success": success}
+
+    def success_rate(self, question: Question) -> float:
+        statistics = self.statistics_for(question)
+        if statistics["asked"] == 0:
+            return 0.0
+        return statistics["success"] / statistics["asked"]
+
+    def _item_details(self, question: Question) -> tuple[dict, str, str, str]:
+        if isinstance(question.item, Word):
+            section = self.data["words"]
+            item_key = str(question.item.id)
+            item_label_key = "word"
+            item_label = question.item.word
+        else:
+            section = self.data["kanji"]
+            item_key = question.item.kanji
+            item_label_key = "kanji"
+            item_label = question.item.kanji
+        return section, item_key, item_label_key, item_label
 
     def _save(self) -> None:
         temporary_path = self.path.with_suffix(self.path.suffix + ".tmp")
@@ -385,8 +413,8 @@ class Session(ABC):
         self.questions_kanji = []
         self._build_questions()
         self._choose_questions_word_block()
-        random.shuffle(self.questions_word)
-        random.shuffle(self.questions_kanji)
+        self.statistics = StatisticsStore()
+        self._prepare_question_order()
         self.questions_word_length_initial = len(self.questions_word)
         self.questions_kanji_length_initial = len(self.questions_kanji)
         self.questions_length_initial = self.questions_word_length_initial + self.questions_kanji_length_initial
@@ -396,11 +424,37 @@ class Session(ABC):
         self.bad_answer = 0
         self.score = 0.0
         self.failed_questions = {}
-        self.statistics = StatisticsStore()
 
     @abstractmethod
     def _build_questions(self) -> None:
         """Populate self.questions_word and self.questions_kanji."""
+
+    def _prepare_question_order(self) -> None:
+        """Put low-success questions at the end so they are popped first."""
+        # Shuffle first so questions with identical rates do not always appear
+        # in dictionary order. The stable sort preserves that random tie order.
+        random.shuffle(self.questions_word)
+        random.shuffle(self.questions_kanji)
+        sort_key = self.statistics.success_rate
+        self.questions_word.sort(key=sort_key, reverse=True)
+        self.questions_kanji.sort(key=sort_key, reverse=True)
+
+    def _pop_worst_question(self) -> Question | None:
+        """Pop the lowest-rate question across the word and kanji pools."""
+        candidates = []
+        if self.questions_word:
+            candidates.append((self.statistics.success_rate(self.questions_word[-1]), "word"))
+        if self.questions_kanji:
+            candidates.append((self.statistics.success_rate(self.questions_kanji[-1]), "kanji"))
+        if not candidates:
+            return None
+
+        worst_rate = min(rate for rate, _pool in candidates)
+        worst_pools = [pool for rate, pool in candidates if rate == worst_rate]
+        selected_pool = random.choice(worst_pools)
+        if selected_pool == "word":
+            return self.questions_word.pop()
+        return self.questions_kanji.pop()
 
     def _choose_questions_word_block(self, block_size: int = 15) -> None:
         if len(self.questions_word) <= block_size:
@@ -429,7 +483,7 @@ class Session(ABC):
 
             if (block_numbers
                     and all(1 <= number <= block_count for number in block_numbers)):
-                # Preserve the CSV/block order and ignore duplicate selections.
+                # Preserve the dictionary/block order and ignore duplicate selections.
                 selected_blocks = set(block_numbers)
                 self.questions_word = [
                     question
@@ -529,15 +583,14 @@ class Session(ABC):
 
         def append_next_question() -> bool:
             nonlocal next_question_number
-            if not self.questions_word and not self.questions_kanji:
+            question = self._pop_worst_question()
+            if question is None:
                 return False
 
-            index = random.randint(0, len(self.questions_word) + len(self.questions_kanji) - 1)
-            if index < len(self.questions_word):
-                subgroup.append((self.questions_word.pop(), False, next_question_number))
+            subgroup.append((question, False, next_question_number))
+            if isinstance(question.item, Word):
                 self._pending_questions_word += 1
             else:
-                subgroup.append((self.questions_kanji.pop(), False, next_question_number))
                 self._pending_questions_kanji += 1
             next_question_number += 1
             return True
